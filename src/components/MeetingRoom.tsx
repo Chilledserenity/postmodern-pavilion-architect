@@ -47,6 +47,12 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
     setSubmittedChoice('');
   };
 
+  const handleAdvanceToScene2 = () => {
+    // Find the first option from scene 1 and use it to advance
+    // Since scene 1 doesn't have real options, we'll simulate advancing to scene 2
+    onChoiceSelect('advance-to-scene-2');
+  };
+
   const selectedOption = scene.options.find(opt => opt.id === submittedChoice);
   const isLastScene = sceneIndex === totalScenes - 1;
 
@@ -67,19 +73,24 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
           <div className="max-w-5xl mx-auto">
             {/* Scene Content - Sticky */}
             <div className="sticky top-24 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mb-8 z-20">
-              <SceneContent scene={scene} />
-            </div>
-            
-            {/* Strategy Cards */}
-            <div className="relative z-10">
-              <StrategyCards
-                options={scene.options}
-                selectedOption={selectedChoice}
-                onOptionSelect={handleCardSelect}
-                onSubmit={handleSubmitChoice}
-                canSubmit={!!selectedChoice}
+              <SceneContent 
+                scene={scene} 
+                onAdvanceToScene={scene.id === 1 ? handleAdvanceToScene2 : undefined}
               />
             </div>
+            
+            {/* Strategy Cards - Only show if scene has options */}
+            {scene.options && scene.options.length > 0 && (
+              <div className="relative z-10">
+                <StrategyCards
+                  options={scene.options}
+                  selectedOption={selectedChoice}
+                  onOptionSelect={handleCardSelect}
+                  onSubmit={handleSubmitChoice}
+                  canSubmit={!!selectedChoice}
+                />
+              </div>
+            )}
           </div>
         </div>
         

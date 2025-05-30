@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { MeetingRoom } from '@/components/MeetingRoom';
 import { WelcomeScreen } from '@/components/WelcomeScreen';
@@ -17,15 +18,19 @@ const Index = () => {
   };
 
   const handleSceneComplete = (selectedOptionId: string) => {
+    // Special handling for advancing from scene 1 to scene 2
+    if (selectedOptionId === 'advance-to-scene-2') {
+      setCurrentSceneIndex(1); // Go directly to scene 2 (index 1)
+      return;
+    }
+
     // Get the current scene's data using the currentSceneIndex
     const currentSceneObject = scenarioData.scenes[currentSceneIndex];
     // Find the specific option the player chose within that scene
     const selectedOption = currentSceneObject.options.find(opt => opt.id === selectedOptionId);
 
     if (!selectedOption) {
-      console.error(`Error: Could not find option with ID "<span class="math-inline">\{selectedOptionId\}" in scene "</span>{currentSceneObject.id}".`);
-      // It's good to log this error. You might decide to keep the student on the current scene
-      // or show an error message if this happens, though it shouldn't if your data is consistent.
+      console.error(`Error: Could not find option with ID "${selectedOptionId}" in scene "${currentSceneObject.id}".`);
       return;
     }
 
@@ -39,36 +44,26 @@ const Index = () => {
     const nextSceneId = selectedOption.nextScene;
 
     if (nextSceneId === "" || nextSceneId === undefined) {
-      // This usually means it's the end of a particular path or the final reflection scene.
-      // The "FeedbackModal" component already handles the "Restart" button for the very last scene of the game,
-      // so we don't need to change the scene here if this is the end.
       return;
     }
 
     // Find the array index of the next scene based on its ID from scenarioData.ts
-    // We convert both to strings to ensure consistent comparison (e.g., if IDs are numbers or stringy numbers like "6b0")
     const newSceneArrayIndex = scenarioData.scenes.findIndex(s => String(s.id) === String(nextSceneId));
 
     if (newSceneArrayIndex !== -1) {
-      // If the next scene is found, update the current scene index to move to it
       setCurrentSceneIndex(newSceneArrayIndex);
     } else {
-      // This case should ideally not happen if your scenarioData.ts is correct.
       console.error(`Error: Next scene with ID "${nextSceneId}" was not found in your scenarios data.`);
-      // As a fallback, you could try to go to the next scene in the array order, if one exists.
       if (currentSceneIndex < scenarioData.scenes.length - 1) {
         setCurrentSceneIndex(prev => prev + 1);
       } else {
-        // If already at the end and nextSceneId was invalid, something is wrong.
         console.error("Could not determine the next scene and already at the end of the scenario array.");
-        // You might want to restart the game or show an error message here.
       }
     }
   };
 
   const handleRestart = () => {
-    setGameStarted(false); // This will show the WelcomeScreen again
-    // currentSceneIndex and playerChoices will be reset when handleStartGame is called the next time the game starts.
+    setGameStarted(false);
   };
 
   // If the game hasn't started, show the welcome screen
@@ -79,7 +74,6 @@ const Index = () => {
   // A safety check to make sure currentSceneIndex is valid before trying to render a scene
   if (currentSceneIndex >= scenarioData.scenes.length || currentSceneIndex < 0) {
       console.error("Error: currentSceneIndex is out of bounds:", currentSceneIndex);
-      // Fallback to a safe state, like showing the WelcomeScreen, to prevent a crash
       return <WelcomeScreen onStart={handleStartGame} />;
   }
 
@@ -87,12 +81,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <MeetingRoom
-        scene={scenarioData.scenes[currentSceneIndex]} // Pass the data for the current scene
-        sceneIndex={currentSceneIndex}                 // Pass the current scene's index in the array
-        totalScenes={scenarioData.scenes.length}       // Total number of scenes
-        playerChoices={playerChoices}                  // The choices made so far
-        onChoiceSelect={handleSceneComplete}           // Function to call when a choice is made and feedback is closed
-        onRestart={handleRestart}                      // Function to call to restart the game
+        scene={scenarioData.scenes[currentSceneIndex]}
+        sceneIndex={currentSceneIndex}
+        totalScenes={scenarioData.scenes.length}
+        playerChoices={playerChoices}
+        onChoiceSelect={handleSceneComplete}
+        onRestart={handleRestart}
       />
     </div>
   );

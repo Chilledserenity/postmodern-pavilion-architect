@@ -1,18 +1,15 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Scene } from '@/types/scenario';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface SceneContentProps {
   scene: Scene;
+  onAdvanceToScene?: () => void;
 }
 
-export const SceneContent: React.FC<SceneContentProps> = ({ scene }) => {
-  const [isContextOpen, setIsContextOpen] = useState(false);
-
+export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToScene }) => {
   return (
     <div className="p-6">
       {/* Scene Title */}
@@ -25,36 +22,36 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene }) => {
         </p>
       </div>
       
-      {/* Collapsible Context Card */}
+      {/* Context Card */}
       <Card className="max-w-4xl mx-auto shadow-md border-0 bg-blue-50/50 mb-6">
         <CardContent className="p-6">
-          <Collapsible open={isContextOpen} onOpenChange={setIsContextOpen}>
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-semibold text-slate-800">Context</h2>
-              <CollapsibleTrigger asChild>
-                <Button variant="ghost" size="sm" className="p-2">
-                  {isContextOpen ? (
-                    <ChevronUp className="h-4 w-4" />
-                  ) : (
-                    <ChevronDown className="h-4 w-4" />
-                  )}
-                </Button>
-              </CollapsibleTrigger>
-            </div>
+          <div className="mb-6">
+            <h2 className="text-xl font-semibold text-slate-800 mb-4">Context</h2>
             
-            <CollapsibleContent className="space-y-4">
-              {/* Speaker Context */}
-              <div className="bg-white p-5 rounded-lg border-l-4 border-blue-500">
-                <p className="text-slate-700 italic text-base leading-relaxed whitespace-pre-line">
-                  {scene.context}
-                </p>
+            {/* Speaker Context */}
+            <div className="bg-white p-5 rounded-lg border-l-4 border-blue-500 mb-6">
+              <p className="text-slate-700 italic text-base leading-relaxed whitespace-pre-line">
+                {scene.context}
+              </p>
+            </div>
+
+            {/* Continue Button for Scene 1 */}
+            {scene.id === 1 && onAdvanceToScene && (
+              <div className="text-center">
+                <Button 
+                  onClick={onAdvanceToScene}
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  Continue to Strategy Selection
+                </Button>
               </div>
-            </CollapsibleContent>
-          </Collapsible>
+            )}
+          </div>
           
-          {/* Question - Always visible outside collapsible content */}
+          {/* Question - Always visible */}
           {scene.question && (
-            <div className="text-center mt-6">
+            <div className="text-center">
               <h3 className="text-xl font-semibold text-slate-800 mb-3">
                 {scene.question}
               </h3>
