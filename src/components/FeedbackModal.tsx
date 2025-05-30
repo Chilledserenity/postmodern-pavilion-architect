@@ -1,0 +1,112 @@
+
+import React from 'react';
+import { StrategyOption, Scene } from '@/types/scenario';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+
+interface FeedbackModalProps {
+  option: StrategyOption;
+  scene: Scene;
+  isLastScene: boolean;
+  onClose: () => void;
+  onRestart: () => void;
+}
+
+export const FeedbackModal: React.FC<FeedbackModalProps> = ({
+  option,
+  scene,
+  isLastScene,
+  onClose,
+  onRestart
+}) => {
+  const handleClose = () => {
+    if (isLastScene) {
+      onRestart();
+    } else {
+      onClose();
+    }
+  };
+
+  return (
+    <Dialog open={true} onOpenChange={handleClose}>
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="text-2xl font-bold text-slate-800">
+            Committee Feedback
+          </DialogTitle>
+        </DialogHeader>
+        
+        <div className="space-y-6">
+          {/* Choice Summary */}
+          <Card className={`border-2 ${option.isCorrect ? 'border-green-500 bg-green-50' : 'border-orange-500 bg-orange-50'}`}>
+            <CardContent className="p-6">
+              <h3 className="text-xl font-semibold text-slate-800 mb-2">
+                Your Choice: {option.title}
+              </h3>
+              <p className="text-slate-700 mb-4">{option.description}</p>
+              <div className={`p-4 rounded-lg ${option.isCorrect ? 'bg-green-100' : 'bg-orange-100'}`}>
+                <p className={`font-semibold ${option.isCorrect ? 'text-green-800' : 'text-orange-800'}`}>
+                  {option.isCorrect ? '✓ Excellent Strategy!' : '⚠ Consider This Approach'}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+          
+          {/* Detailed Feedback */}
+          <div className="space-y-4">
+            <div className="bg-slate-50 p-6 rounded-lg">
+              <h4 className="text-lg font-semibold text-slate-800 mb-3">Committee Response:</h4>
+              <p className="text-slate-700 mb-4 leading-relaxed">{option.feedback}</p>
+              
+              {option.lectureReference && (
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-blue-800 text-sm italic">{option.lectureReference}</p>
+                </div>
+              )}
+            </div>
+            
+            {!option.isCorrect && (
+              <div className="bg-slate-100 p-6 rounded-lg">
+                <h4 className="text-lg font-semibold text-slate-800 mb-3">Recommended Approach:</h4>
+                <p className="text-slate-700 leading-relaxed">
+                  {option.isCorrect ? scene.correctFeedback : scene.incorrectFeedback}
+                </p>
+              </div>
+            )}
+          </div>
+          
+          {/* Progress and Next Steps */}
+          <div className="text-center space-y-4">
+            {isLastScene ? (
+              <div className="space-y-4">
+                <div className="bg-green-50 p-6 rounded-lg border border-green-200">
+                  <h3 className="text-xl font-semibold text-green-800 mb-2">Challenge Complete!</h3>
+                  <p className="text-green-700">
+                    You've successfully navigated the postmodern pavilion design challenge. 
+                    Your understanding of complex architectural theory has been demonstrated through practical application.
+                  </p>
+                </div>
+                <Button
+                  onClick={onRestart}
+                  size="lg"
+                  className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold"
+                >
+                  Start New Challenge
+                </Button>
+              </div>
+            ) : (
+              <Button
+                onClick={onClose}
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold"
+              >
+                Continue to Next Challenge
+              </Button>
+            )}
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
