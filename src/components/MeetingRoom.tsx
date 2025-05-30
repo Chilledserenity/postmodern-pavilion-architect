@@ -48,8 +48,6 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
   };
 
   const handleAdvanceToScene2 = () => {
-    // Find the first option from scene 1 and use it to advance
-    // Since scene 1 doesn't have real options, we'll simulate advancing to scene 2
     onChoiceSelect('advance-to-scene-2');
   };
 
@@ -62,17 +60,19 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
       <div className="relative min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
         <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
         
-        {/* Progress Bar */}
+        {/* Progress Bar - Fixed at top with proper z-index */}
         <ProgressBar current={sceneIndex + 1} total={totalScenes} />
         
-        {/* Committee Panel */}
-        <CommitteePanel characters={scenarioData.characters} />
+        {/* Committee Panel - Adjusted top margin to account for progress bar */}
+        <div className="pt-20">
+          <CommitteePanel characters={scenarioData.characters} />
+        </div>
         
-        {/* Main Content Area */}
-        <div className="relative z-10 pt-32 pb-6 px-4">
+        {/* Main Content Area - Adjusted top padding */}
+        <div className="relative z-10 pt-8 pb-6 px-4">
           <div className="max-w-5xl mx-auto">
-            {/* Scene Content - Sticky */}
-            <div className="sticky top-24 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mb-8 z-20">
+            {/* Scene Content */}
+            <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mb-8">
               <SceneContent 
                 scene={scene} 
                 onAdvanceToScene={scene.id === 1 ? handleAdvanceToScene2 : undefined}

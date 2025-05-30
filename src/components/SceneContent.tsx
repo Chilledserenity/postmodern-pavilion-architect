@@ -1,8 +1,9 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Scene } from '@/types/scenario';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { ChevronDown, ChevronUp } from 'lucide-react';
 
 interface SceneContentProps {
   scene: Scene;
@@ -10,6 +11,8 @@ interface SceneContentProps {
 }
 
 export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToScene }) => {
+  const [isContextCollapsed, setIsContextCollapsed] = useState(false);
+
   return (
     <div className="p-6">
       {/* Scene Title */}
@@ -26,18 +29,40 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToSc
       <Card className="max-w-4xl mx-auto shadow-md border-0 bg-blue-50/50 mb-6">
         <CardContent className="p-6">
           <div className="mb-6">
-            <h2 className="text-xl font-semibold text-slate-800 mb-4">Context</h2>
-            
-            {/* Speaker Context */}
-            <div className="bg-white p-5 rounded-lg border-l-4 border-blue-500 mb-6">
-              <p className="text-slate-700 italic text-base leading-relaxed whitespace-pre-line">
-                {scene.context}
-              </p>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold text-slate-800">Context</h2>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsContextCollapsed(!isContextCollapsed)}
+                className="flex items-center gap-2"
+              >
+                {isContextCollapsed ? (
+                  <>
+                    <span className="text-sm">Show Context</span>
+                    <ChevronDown size={16} />
+                  </>
+                ) : (
+                  <>
+                    <span className="text-sm">Hide Context</span>
+                    <ChevronUp size={16} />
+                  </>
+                )}
+              </Button>
             </div>
+            
+            {/* Speaker Context - Collapsible */}
+            {!isContextCollapsed && (
+              <div className="bg-white p-5 rounded-lg border-l-4 border-blue-500 mb-6">
+                <p className="text-slate-700 italic text-base leading-relaxed whitespace-pre-line">
+                  {scene.context}
+                </p>
+              </div>
+            )}
 
-            {/* Continue Button for Scene 1 */}
-            {scene.id === 1 && onAdvanceToScene && (
-              <div className="text-center">
+            {/* Continue Button for Scene 1 - Only show if not collapsed */}
+            {scene.id === 1 && onAdvanceToScene && !isContextCollapsed && (
+              <div className="text-center mb-6">
                 <Button 
                   onClick={onAdvanceToScene}
                   size="lg"
