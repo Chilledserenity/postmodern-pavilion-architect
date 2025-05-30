@@ -22,7 +22,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
   onRestart,
   onRetry
 }) => {
-  const handleClose = () => {
+  const handleContinue = () => {
     if (isLastScene) {
       onRestart();
     } else {
@@ -31,7 +31,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
   };
 
   return (
-    <Dialog open={true} onOpenChange={handleClose}>
+    <Dialog open={true} onOpenChange={() => {}}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-slate-800">
@@ -110,7 +110,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
                   </Button>
                 ) : (
                   <Button
-                    onClick={onClose}
+                    onClick={handleContinue}
                     size="lg"
                     className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold"
                   >
