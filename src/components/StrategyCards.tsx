@@ -40,18 +40,6 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
     return 'grid-cols-1'; // Single column for better readability of long content
   };
 
-  const getFirstTwoSentences = (text: string) => {
-    const sentences = text.split('.').filter(s => s.trim().length > 0);
-    if (sentences.length <= 2) return text;
-    return sentences.slice(0, 2).join('.') + '.';
-  };
-
-  const getRemainingText = (text: string) => {
-    const sentences = text.split('.').filter(s => s.trim().length > 0);
-    if (sentences.length <= 2) return '';
-    return sentences.slice(2).join('.').trim() + (sentences.length > 2 ? '.' : '');
-  };
-
   return (
     <div className="space-y-8">
       <ScrollArea className="h-[70vh] w-full rounded-md">
@@ -60,9 +48,6 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
             const isSelected = selectedOption === option.id;
             const isExpanded = expandedOption === option.id;
             const optionLabel = getOptionLabel(index);
-            const firstTwoSentences = getFirstTwoSentences(option.approach);
-            const remainingText = getRemainingText(option.approach);
-            const hasMoreText = remainingText.length > 0;
             
             return (
               <Card
@@ -84,31 +69,29 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                       </div>
                       <span className="text-lg">{option.title}</span>
                     </div>
-                    {hasMoreText && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          toggleExpanded(option.id);
-                        }}
-                        className="p-2"
-                      >
-                        {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                      </Button>
-                    )}
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleExpanded(option.id);
+                      }}
+                      className="p-2"
+                    >
+                      {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                    </Button>
                   </CardTitle>
                   <CardDescription className="text-slate-600 text-base leading-relaxed">
-                    {firstTwoSentences}
+                    {option.description}
                   </CardDescription>
                 </CardHeader>
                 
-                {isExpanded && hasMoreText && (
+                {isExpanded && (
                   <CardContent className="pt-0">
                     <div className="bg-slate-50 p-6 rounded-lg border-l-4 border-blue-500">
                       <div className="prose prose-sm max-w-none">
                         <p className="text-slate-700 leading-relaxed whitespace-pre-line">
-                          {remainingText}
+                          {option.approach}
                         </p>
                       </div>
                     </div>
