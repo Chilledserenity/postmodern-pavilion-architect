@@ -57,44 +57,44 @@ export const scenarioData: ScenarioData = {
       question: "How will your pavilion communicate meaningfully with Wynyard Quarter's diverse audiences—from local families to architecture professionals—without excluding anyone?",
       options: [
         {
-          id: 2a,
+          id: "2a",
           title: "Multivalent Communication Strategy",
           description: "Our approach recognizes that different groups read architectural elements differently, following Charles Jencks' concept of multivalent communication. The pavilion's design elements work on multiple levels—families will engage with welcoming forms and comfortable spaces, while those familiar with architectural history will recognize references to both classical proportions and contemporary design strategies. Local communities can interpret certain forms through their own cultural lenses, while visitors might read them differently. This layered approach means the building can communicate meaningfully with diverse audiences without requiring everyone to understand the same messages.",
           approach: "Pluralistic architectural meaning",
           isCorrect: true,
           feedback: "Dr. Chen responds with clear approval: 'This demonstrates excellent understanding of Jencks' multivalent architecture. You're showing how the same building can speak to different audiences through different interpretative frameworks, rather than trying to make everyone see the same thing.'\n\nMaria Santos adds enthusiastically: 'The key insight here is that you're not dumbing down the architecture for popular audiences or making it overly complex for professionals. You're creating genuine richness that people can engage with at their own level of interest and knowledge.'\n\nJames Mitchell nods: 'This approach acknowledges that communities bring their own interpretative abilities to architecture. You're respecting people's intelligence while creating multiple entry points for engagement.'\n\nDr. Patel concludes: 'You're demonstrating how postmodern architecture succeeds by embracing interpretative diversity rather than trying to control how people understand the building. That's sophisticated community engagement.'",
           lectureReference: "Perfect application of Jencks' multivalent communication theory",
-          nextScene: 3
+          nextScene: "3"
         },
         {
-          id: 2b, 
+          id: "2b", 
           title: "Symbolic Encoding Strategy",
           description: "We're embedding symbolic content that reveals itself through interpretation. The structural grid combines proportional systems from both European and Pacific traditions, while the three main spaces represent past, present, and future. Materials work symbolically too—stone base for geological foundation, lighter structures above for human activity. This follows Roland Barthes' ideas about cultural codes operating beneath surface appearances, creating architecture that rewards deeper engagement and cultural knowledge.",
           approach: "Cultural code integration",
           isCorrect: false,
           feedback: "Dr. Patel responds with visible concern: 'I'm afraid this approach reflects exactly the kind of tokenistic multiculturalism that postmodern theorists warned against. You're describing what James Clifford called \"cultural display\" rather than genuine pluralism.'\n\nDr. Chen adds: 'Roland Barthes never wrote about architectural cultural codes in the way you've described. His approach was much more subtle—he advocated for understanding how meaning operates in everyday culture, not for embedding academic symbols that require specialized knowledge to decode.'\n\nMaria Santos looks frustrated: 'This kind of approach often makes communities feel like their cultures are being used as decoration rather than genuinely respected. It's what critics call \"diversity theater\"—visible symbols without meaningful inclusion.'\n\nJames Mitchell concludes: 'There's also a practical issue. Static cultural symbols can't accommodate the dynamic, evolving nature of how communities actually use spaces. You're designing a museum display, not a living community building.'",
           lectureReference: "Review the lecture section on 'Pluralism or Multivalence' where Jencks explains that pluralism works through architectural richness that can support diverse interpretations, not through symbolic decoration.",
-          nextScene: 2
+          nextScene: "2"
         },
         {
-          id: 2c,
+          id: "2c",
           title: "Direct Communicative Strategy",
           description: "We believe in functional clarity and honest expression. The rectangular plan clearly indicates community meeting use, while large glazed openings signal transparency. Following Louis Sullivan's 'form follows function,' every element has a clear purpose. We're avoiding what Charles Jencks called 'semantic confusion' by ensuring intuitive organization and appropriate materials that speak their structural language.",
           approach: "Functional transparency", 
           isCorrect: false,
           feedback: "Dr. Chen responds with barely concealed concern: 'I'm afraid there are significant misunderstandings in your approach. First, Charles Jencks never used the term \"semantic confusion\"—in fact, he advocated for what he called \"multivalent\" architecture that deliberately embraces multiple meanings rather than avoiding them.'\n\nJames Mitchell adds: 'More fundamentally, you're describing classic modernist principles—Sullivan's functionalism, honest material expression—but we specifically briefed for a postmodern approach. Jencks famously declared modernism \"dead\" precisely because this kind of reductive communication failed to engage with contemporary cultural complexity.'\n\nMaria Santos looks confused: 'Are you suggesting architectural communication should be limited to functional expression? What about the cultural, social, and symbolic dimensions that make buildings meaningful to communities?'\n\nDr. Patel concludes: 'Robert Venturi never advocated for meaningful simplicity—quite the opposite. His famous response to Mies van der Rohe's \"less is more\" was \"less is a bore.\" He argued for complexity and contradiction as essential to meaningful architecture.'",
           lectureReference: "Review the lecture section on 'Charles Jencks' where it explains that Jencks declared 'Modern architecture dies in St Luis, Missouri on July 15th, 1972 at 3:22 pm' because modernist approaches like Sullivan's functionalism failed to engage with community needs.",
-          nextScene: 2
+          nextScene: "2"
         },
         {
-          id: 2d,
+          id: "2d",
           title: "Community Interpretation Strategy", 
           description: "Our approach follows what Jencks calls 'user-generated meaning'—instead of prescribing how the space should be used, we're creating a neutral framework that communities can interpret and adapt according to their own needs. The building's forms are deliberately ambiguous to avoid imposing specific cultural readings. We'll provide basic infrastructure—power, water, flexible lighting—and let different community groups bring their own furniture, decorations, and spatial arrangements.",
           approach: "User-generated meaning",
           isCorrect: false,
           feedback: "Dr. Chen responds with mixed concern: 'While community agency is certainly important to postmodern theory, I'm not sure Jencks ever advocated for \"user-generated meaning\" in quite this way. There's a difference between multivalent architecture and architecturally neutral space.'\n\nMaria Santos looks puzzled: 'This sounds like you're asking communities to do the architect's job. If we wanted a generic rental hall, we wouldn't need a design competition. We're looking for architecture that actively supports diverse uses, not just gets out of the way.'\n\nJames Mitchell adds: 'There's also a practical concern. Different community groups have very different resources. Some can afford elaborate setups, others can't. Your approach might inadvertently create inequality in who can effectively use the space.'\n\nDr. Patel concludes: 'Postmodern pluralism isn't about architectural neutrality—it's about architectural richness that can accommodate different interpretations. Jencks advocated for buildings with strong character that could still speak to diverse audiences, not blank slates.'",
           lectureReference: "Review the lecture section on 'Pluralism or Multivalence' where it explains that Jencks believed 'form and function must be dissociated' but through architectural richness, not neutrality.",
-          nextScene: 2
+          nextScene: "2"
         }
       ],
       correctFeedback: "Excellent response demonstrating deep understanding of multivalent communication and postmodern theory.",
@@ -108,44 +108,44 @@ export const scenarioData: ScenarioData = {
       question: "How will your design achieve genuine spatial and functional pluralism that serves different community needs and cultural practices?",
       options: [
         {
-          id: 3a,
+          id: "3a",
           title: "Spatial Pluralism Strategy",
           description: "Our pluralistic approach creates what Charles Jencks calls 'architectural variety' through diverse spatial experiences within a coherent whole. The pavilion includes intimate alcoves for quiet conversation, medium-scale gathering areas for community meetings, and a large flexible hall for major events. Each space has different acoustic properties, lighting conditions, and sight lines to support different activities and cultural practices. We've also designed transitional zones that allow people to move gradually between public and private experiences, respecting different cultural approaches to social interaction.",
           approach: "Architectural variety through space",
           isCorrect: true,
           feedback: "Dr. Chen responds with evident approval: 'This demonstrates sophisticated understanding of how pluralism actually works in architecture. You're describing what Jencks meant by architectural variety—not just visual differences, but functional and experiential diversity that serves different community needs.'\n\nMaria Santos adds enthusiastically: 'The transitional zones are particularly important. Different cultures have very different concepts of privacy and social interaction. Your spatial strategy acknowledges this without stereotyping any particular group.'\n\nJames Mitchell nods: 'This is practical pluralism. You're showing how theoretical concepts translate into livable spaces that can actually accommodate the diversity of activities we expect this pavilion to host.'\n\nDr. Patel concludes: 'Your approach respects cultural differences without tokenism. The variety of spatial experiences allows different communities to use the building in ways that feel appropriate to them, while maintaining architectural coherence.'",
           lectureReference: "Excellent application of Jencks' architectural variety principle - functional diversity that serves authentic community differences.",
-          nextScene: 4
+          nextScene: "4"
         },
         {
-          id: 3b,
+          id: "3b",
           title: "Cultural Symbols Integration", 
           description: "We're incorporating symbolic elements from Auckland's major cultural communities throughout the design. The entrance features geometric patterns inspired by Māori kowhaiwhai, while the main gathering space includes Pacific navigation motifs and Asian-influenced garden elements. European classical proportions provide the underlying organizational structure. This follows what Robert Venturi described as 'inclusive symbolism'—bringing together diverse cultural languages in one architectural composition that represents our multicultural society.",
           approach: "Multicultural representation",
           isCorrect: false,
           feedback: "Dr. Patel responds with visible concern: 'I'm afraid this approach reflects exactly the kind of tokenistic multiculturalism that postmodern theorists warned against. You're describing what James Clifford called \"cultural display\" rather than genuine pluralism.'\n\nDr. Chen adds: 'Robert Venturi never wrote about \"inclusive symbolism\" in the way you've described. His approach was much more subtle—he advocated for complexity and contradiction, not direct cultural representation through decorative symbols.'\n\nMaria Santos looks frustrated: 'This kind of approach often makes communities feel like their cultures are being used as decoration rather than genuinely respected. It's what critics call \"diversity theater\"—visible symbols without meaningful inclusion.'\n\nJames Mitchell concludes: 'There's also a practical issue. Static cultural symbols can't accommodate the dynamic, evolving nature of how communities actually use spaces. You're designing a museum display, not a living community building.'",
           lectureReference: "Review the lecture section on 'Pluralism or Multivalence' where it explains that genuine pluralism creates 'strength through unity (whilst also maintaining diverse identities)' through spatial and functional diversity, not symbolic decoration.",
-          nextScene: 3
+          nextScene: "3"
         },
         {
-          id: 3c,
+          id: "3c",
           title: "Universal Accessibility Approach",
           description: "Our strategy focuses on creating spaces that work equally well for everyone, regardless of cultural background or architectural knowledge. We're following what Jencks called 'democratic modernism'—clean, simple forms with excellent functionality and barrier-free access. The design avoids specific cultural references that might exclude some groups, instead emphasizing universal human needs like shelter, gathering, and social connection. High-quality materials and generous proportions ensure the space feels welcoming to all users.",
           approach: "Democratic design principles",
           isCorrect: false,
           feedback: "Dr. Chen responds with surprise: 'Charles Jencks never advocated for \"democratic modernism\"—quite the opposite. He famously criticized modernism's universalist claims as a form of cultural imperialism that ignored local differences and community specificities.'\n\nJames Mitchell adds: 'You're describing classic modernist principles, but we specifically briefed for a postmodern approach. Jencks argued that designing for \"everyone equally\" often means designing for no one in particular.'\n\nMaria Santos looks concerned: 'Universal design for disability access is crucial, but cultural universalism is problematic. The idea that we can avoid cultural references and create neutral spaces often privileges dominant cultural norms while appearing to be inclusive.'\n\nDr. Patel concludes: 'This approach reflects what postmodern critics identified as modernism's fundamental failure—the assumption that human needs are universal when they're actually deeply shaped by cultural, social, and historical contexts.'",
           lectureReference: "Review the lecture section on '5 causes of failure of M' where it explains that Modernist architecture failed because it 'could exclude important problems only at the risk of separating his architecture from the experience of life and the needs of society.'",
-          nextScene: 3
+          nextScene: "3"
         },
         {
-          id: 3d,
+          id: "3d",
           title: "Community Framework Strategy",
           description: "We're creating what we call an 'adaptable community framework'—basic architectural infrastructure that different groups can customize for their specific needs. The pavilion provides structural supports, utilities, and weather protection, but communities bring their own furniture arrangements, decorative elements, and activity programming. This approach recognizes that trying to design for all cultures simultaneously often satisfies none, so instead we're providing a neutral but high-quality foundation that can accommodate diverse cultural practices.",
           approach: "Flexible architectural framework",
           isCorrect: false,
           feedback: "James Mitchell responds thoughtfully: 'The adaptability concept has merit from a functional standpoint, and recognizing the limitations of trying to satisfy all cultures simultaneously shows practical awareness.'\n\nHowever, Dr. Chen raises concerns: 'While flexibility is valuable, postmodern pluralism isn't about architectural neutrality. Jencks advocated for buildings with character and meaning that could still accommodate diverse interpretations—not generic frameworks.'\n\nMaria Santos adds: 'There's also an equity issue. Different community groups have very different resources for customization. Some organizations can afford elaborate setups, others can't, which could create unequal access to quality space.'\n\nDr. Patel concludes: 'The challenge is creating architecture that has enough character to be meaningful while remaining flexible enough to serve diverse needs. Pure neutrality often becomes bland rather than pluralistic.'",
           lectureReference: "Review the lecture section on 'Antoni Gaudi and Ricardo Bofill' where Gaudi is described as creating 'recognisable style without being necessarily branded, and capable of producing highly bespoke works' that combine 'architectural richness' with functional flexibility.",
-          nextScene: 3
+          nextScene: "3"
         }
       ],
       correctFeedback: "Your spatial pluralism approach demonstrates authentic understanding of inclusive design principles!",
