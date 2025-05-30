@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Scene } from '@/types/scenario';
 import { CommitteePanel } from '@/components/CommitteePanel';
@@ -57,7 +58,7 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
   };
 
   const selectedOption = scene.options.find(opt => opt.id === submittedChoice);
-  const isLastScene = sceneIndex === totalScenes - 1;
+  const isLastScene = sceneIndex === scenarioData.scenes.length - 1;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 to-blue-100">
@@ -72,7 +73,7 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
         
         {/* Progress Bar - Fixed directly below committee panel with NO gap */}
         <div className="fixed top-[100px] left-0 right-0 z-40">
-          <ProgressBar current={sceneIndex + 1} total={totalScenes} />
+          <ProgressBar current={sceneIndex + 1} total={scenarioData.scenes.length} />
         </div>
         
         {/* Main Content Area - Adjusted top padding */}
