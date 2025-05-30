@@ -8,7 +8,7 @@ export const scenarioData: ScenarioData = {
     {
       id: "dr-chen",
       name: "Dr. Sarah Chen",
-      title: "Lead Design Critic",
+      title: "Architectural Historian",
       description: "Postmodern theory specialist with focus on semiotic analysis",
       personality: "Analytical and intellectually rigorous, values theoretical depth",
       avatar: "/api/placeholder/400/400"
@@ -16,175 +16,222 @@ export const scenarioData: ScenarioData = {
     {
       id: "james-mitchell",
       name: "James Mitchell",
-      title: "Community Representative",
-      description: "Local community advocate representing public interests",
+      title: "Urban Planner",
+      description: "Community representative and practical planning advocate",
       personality: "Pragmatic and people-focused, concerned with accessibility",
       avatar: "/api/placeholder/400/400"
     },
     {
       id: "maria-santos",
       name: "Maria Santos",
-      title: "Cultural Heritage Advisor",
-      description: "Expert in Māori culture and Pacific Island architectural traditions",
-      personality: "Diplomatic yet firm about cultural sensitivity and representation",
+      title: "Community Advocate",
+      description: "Local community representative focused on inclusive design",
+      personality: "Passionate about community needs and genuine inclusivity",
       avatar: "/api/placeholder/400/400"
     },
     {
       id: "dr-patel",
-      name: "Dr. Raj Patel",
-      title: "Sustainability Consultant",
-      description: "Environmental design specialist and postmodern critique scholar",
-      personality: "Detail-oriented and environmentally conscious, questions assumptions",
+      name: "Dr. Awhina Patel",
+      title: "Cultural Heritage Representative",
+      description: "Expert in cultural representation and diversity in architecture",
+      personality: "Thoughtful about cultural sensitivity and meaningful engagement",
       avatar: "/api/placeholder/400/400"
     }
   ],
   scenes: [
     {
       id: 1,
-      title: "Architectural Communication Strategy",
-      description: "Your first challenge is developing a communication approach for your pavilion design.",
-      context: "Dr. Chen leans forward: 'The committee needs to understand how you'll communicate your design's meaning to diverse audiences. Postmodern architecture rejects the modernist assumption of universal symbolic understanding.'",
-      question: "What communication strategy will you employ for your pavilion?",
+      title: "Introduction and Project Brief",
+      description: "Welcome to the concept design review meeting for the Wynyard Point community pavilion.",
+      context: "Thank you for coming. As you know, Wynyard Quarter is a unique waterfront area with a rich history and a diverse community. We're looking for a pavilion design that can become a vibrant gathering place. In our brief we asked designers for a postmodern approach – something creative, symbolic, and tuned to context, in contrast to the bland modernist boxes we often see. We're excited to hear how you've tackled this challenge. Please walk us through your concept.",
+      question: "Before we get into details, tell us about the design philosophy behind this pavilion. What is the concept or approach that guided your design?",
       options: [
         {
-          id: "multivalent",
-          title: "Multivalent Communication",
-          description: "Multiple meaning layers allowing different interpretations",
-          approach: "Design elements that can be read differently by various audiences",
+          id: "iconic-representation",
+          title: "Iconic Representation Strategy",
+          description: "Use recognizable forms that people connect with through visual similarity",
+          approach: "Create pavilion profile echoing Auckland's volcanic cones, with entrance referencing harbour vessels",
+          isCorrect: false,
+          feedback: "Your reference to iconic representation shows understanding of Pierce's semiotic categories, and the connection to Jencks' work is appropriate. However, while this approach creates recognition, we're wondering about depth of engagement. Does the building have anything more to say after that initial recognition?",
+          lectureReference: "This relates to Pierce's iconic signs, but consider Jencks' concept of multivalent architecture for deeper communication."
+        },
+        {
+          id: "symbolic-encoding",
+          title: "Symbolic Encoding Strategy", 
+          description: "Embed symbolic content that reveals itself through interpretation",
+          approach: "Integrate proportional systems from multiple traditions, with spaces representing past, present, and future",
+          isCorrect: false,
+          feedback: "Your symbolic approach demonstrates theoretical knowledge, but we're concerned about accessibility. If the symbolic content requires specialized knowledge to decode, are you creating architecture that speaks only to the initiated?",
+          lectureReference: "While Barthes' cultural codes are relevant, consider Jencks' critique of architecture that excludes non-specialists."
+        },
+        {
+          id: "direct-communicative",
+          title: "Direct Communicative Strategy",
+          description: "Focus on functional clarity and honest architectural expression",
+          approach: "Use rectangular plan for clear meeting use, large glazed openings for transparency",
+          isCorrect: false,
+          feedback: "This describes classic modernist principles - Sullivan's functionalism and architectural honesty - but we specifically briefed for a postmodern approach. Jencks famously declared modernism 'dead' precisely because this reductive communication failed to engage with cultural complexity.",
+          lectureReference: "Review Jencks' critique of modernist communication and Venturi's 'less is a bore' response to Mies."
+        },
+        {
+          id: "multivalent-communication",
+          title: "Multivalent Communication Strategy",
+          description: "Create architecture that communicates on multiple levels simultaneously",
+          approach: "Design elements readable differently by families, architects, and diverse community members",
           isCorrect: true,
-          feedback: "Excellent! This demonstrates understanding of postmodern semiotic theory.",
-          lectureReference: "As discussed in Lecture 3: 'Multivalent strategies acknowledge that architecture communicates differently to different people.'"
-        },
-        {
-          id: "symbolic",
-          title: "Symbolic Communication",
-          description: "Clear symbolic references with intended meanings",
-          approach: "Use universally recognized symbols and forms",
-          isCorrect: false,
-          feedback: "This approach risks modernist assumptions about universal understanding.",
-          lectureReference: "Remember from Lecture 2: 'Postmodernism questions the modernist belief in universal symbols.'"
-        },
-        {
-          id: "direct",
-          title: "Direct Communication",
-          description: "Explicit signage and educational materials",
-          approach: "Rely primarily on text and explanatory elements",
-          isCorrect: false,
-          feedback: "While clear, this doesn't engage with architectural communication theory.",
-          lectureReference: "Consider Lecture 3's discussion of architecture as a communicative medium beyond text."
-        },
-        {
-          id: "neutral",
-          title: "Neutral Communication",
-          description: "Minimize symbolic content for broad appeal",
-          approach: "Create forms that avoid specific cultural references",
-          isCorrect: false,
-          feedback: "Neutrality itself carries cultural assumptions that postmodernism challenges.",
-          lectureReference: "Lecture 4 emphasized: 'There is no culturally neutral architecture.'"
+          feedback: "Excellent! This demonstrates real understanding of postmodern communication theory. Your reference to multivalent architecture directly addresses Jencks' central insight that the best buildings speak to diverse audiences without talking down to any of them.",
+          lectureReference: "This perfectly applies Jencks' concept of multivalent architecture and time-binding principles."
         }
       ],
-      correctFeedback: "Your multivalent approach shows sophisticated understanding of postmodern communication theory!",
-      incorrectFeedback: "Consider how postmodern theory challenges assumptions about architectural communication."
+      correctFeedback: "Outstanding understanding of multivalent communication principles!",
+      incorrectFeedback: "Consider how postmodern theory challenges assumptions about architectural communication and audience."
     },
     {
       id: 2,
-      title: "Pluralistic Design Approach",
-      description: "Maria Santos asks about your approach to cultural representation and spatial diversity.",
-      context: "Maria Santos speaks thoughtfully: 'Wynyard Point sits at the intersection of Māori, Pacific, and European histories. How will your pavilion acknowledge this complexity without tokenism?'",
-      question: "How will you approach cultural pluralism in your design?",
+      title: "Design Communication Strategy",
+      description: "The committee wants to understand how your pavilion will communicate with Wynyard Point's diverse audiences.",
+      context: "Dr. Sarah Chen leans forward with genuine interest. 'Your opening remarks about contextual postmodernism have caught our attention. This pavilion will be encountered by thousands of people - families on weekend outings, tourists, office workers, architectural students. How exactly will your design communicate with this incredibly diverse audience? What's your strategy for making architecture that speaks meaningfully to people?'",
+      question: "How will your design communicate effectively with Auckland's diverse community?",
       options: [
         {
-          id: "spatial-pluralism",
-          title: "Spatial Pluralism",
-          description: "Different spaces reflecting different cultural approaches",
-          approach: "Create varied spatial experiences honoring multiple traditions",
+          id: "iconic-forms",
+          title: "Iconic Representation Strategy",
+          description: "Use recognizable forms through visual similarity",
+          approach: "Pavilion profile echoes volcanic cones, entrance references sailing vessels, weathering steel matches industrial context",
+          isCorrect: false,
+          feedback: "Your iconic approach shows understanding of Pierce's semiotic categories. The volcanic cone reference is clever - most Aucklanders would recognize that profile. However, while this creates recognition, what happens after that initial moment? Does the building have more to communicate?",
+          lectureReference: "Pierce's iconic signs work through similarity, but consider Jencks' multivalent communication for deeper engagement."
+        },
+        {
+          id: "symbolic-content",
+          title: "Symbolic Encoding Strategy",
+          description: "Embed symbolic content requiring interpretation",
+          approach: "Structural grid combines European and Pacific proportional systems, three spaces represent temporal progression",
+          isCorrect: false,
+          feedback: "Your symbolic approach shows theoretical sophistication, but we're concerned about accessibility. If symbolic content requires specialized knowledge to decode, are you creating what Jencks criticized as architecture speaking only to the initiated?",
+          lectureReference: "While Barthes' cultural codes are relevant, postmodernism aims to communicate with diverse audiences, not just cultural elites."
+        },
+        {
+          id: "functional-clarity",
+          title: "Direct Communicative Strategy", 
+          description: "Emphasize functional clarity and honest expression",
+          approach: "Rectangular plan indicates community use, glazed openings signal transparency, materials express structure",
+          isCorrect: false,
+          feedback: "You're describing classic modernist principles - Sullivan's functionalism and architectural honesty. But we specifically briefed for postmodern approach. Jencks declared modernism 'dead' because this reductive communication failed to engage cultural complexity.",
+          lectureReference: "Review Jencks' critique of modernist universalism and Venturi's 'complexity and contradiction' principles."
+        },
+        {
+          id: "multivalent-approach",
+          title: "Multivalent Communication Strategy",
+          description: "Create multiple communication levels simultaneously",
+          approach: "Families see inviting community spaces, architects read sophisticated geometric systems, building practices time-binding",
           isCorrect: true,
-          feedback: "Excellent understanding of how space can embody cultural diversity!",
-          lectureReference: "This reflects Lecture 5's concept: 'Spatial pluralism creates authentic cultural dialogue.'"
-        },
-        {
-          id: "cultural-tokenism",
-          title: "Cultural Tokenism",
-          description: "Surface-level decorative elements from various cultures",
-          approach: "Add cultural motifs and patterns as aesthetic features",
-          isCorrect: false,
-          feedback: "This superficial approach doesn't engage meaningfully with cultural complexity.",
-          lectureReference: "Lecture 5 warned against 'tokenistic gestures that commodify culture.'"
-        },
-        {
-          id: "universalism",
-          title: "Cultural Universalism",
-          description: "Focus on universal human experiences and needs",
-          approach: "Design for shared human activities and emotions",
-          isCorrect: false,
-          feedback: "Universalism can erase important cultural differences and histories.",
-          lectureReference: "Remember Lecture 4: 'Universal solutions often reflect dominant cultural perspectives.'"
-        },
-        {
-          id: "framework",
-          title: "Cultural Framework",
-          description: "Establish guidelines for appropriate cultural engagement",
-          approach: "Create protocols for cultural consultation and representation",
-          isCorrect: false,
-          feedback: "While important, frameworks alone don't constitute architectural design strategy.",
-          lectureReference: "Lecture 5 emphasized that 'process must translate into spatial experience.'"
+          feedback: "Excellent! This demonstrates real understanding of multivalent architecture. Families see inviting spaces with playful forms, architects read sophisticated geometric systems, and the building connects to Wynyard's character without nostalgic copying. This is genuine inclusivity.",
+          lectureReference: "Perfect application of Jencks' multivalent communication - buildings that speak to diverse audiences without condescension."
         }
       ],
-      correctFeedback: "Your spatial pluralism approach demonstrates sophisticated cultural sensitivity!",
-      incorrectFeedback: "Consider how architectural space itself can embody cultural respect and dialogue."
+      correctFeedback: "Your multivalent approach demonstrates sophisticated understanding of inclusive postmodern communication!",
+      incorrectFeedback: "Consider how postmodern architecture can speak meaningfully to diverse audiences simultaneously."
     },
     {
       id: 3,
+      title: "Pluralistic Design Approach",
+      description: "The committee explores how your design will achieve genuine cultural pluralism in one of the world's most diverse cities.",
+      context: "Maria Santos leans forward with intensity: 'Auckland has over 200 different ethnicities. We've seen too many projects that claim to be inclusive but speak mainly to educated middle-class audiences. Others try to represent diversity through superficial cultural symbols that feel tokenistic. We need to understand exactly how your design will achieve genuine pluralism.'",
+      question: "How will your pavilion design achieve authentic pluralism for Auckland's diverse communities?",
+      options: [
+        {
+          id: "spatial-pluralism",
+          title: "Spatial Pluralism Strategy",
+          description: "Create diverse spatial experiences within coherent whole",
+          approach: "Include intimate alcoves, medium gathering areas, flexible hall with different acoustic and lighting conditions",
+          isCorrect: true,
+          feedback: "This demonstrates sophisticated understanding of how pluralism actually works in architecture. You're describing what Jencks meant by architectural variety - not just visual differences, but functional and experiential diversity that serves different community needs without tokenism.",
+          lectureReference: "Excellent application of Jencks' architectural variety principle - functional diversity that serves authentic community differences."
+        },
+        {
+          id: "cultural-symbols",
+          title: "Cultural Symbols Integration",
+          description: "Incorporate symbolic elements from major cultural communities",
+          approach: "Entrance features Māori kowhaiwhai, Pacific navigation motifs, Asian garden elements, European proportions",
+          isCorrect: false,
+          feedback: "This approach reflects exactly the tokenistic multiculturalism that postmodern theorists warned against. You're describing cultural display rather than genuine pluralism. This makes communities feel their cultures are decoration rather than genuinely respected.",
+          lectureReference: "Review Jencks' concept of pluralism vs. tokenism - genuine inclusion works through spatial flexibility, not symbolic decoration."
+        },
+        {
+          id: "universal-accessibility",
+          title: "Universal Accessibility Approach",
+          description: "Create spaces that work equally well for everyone",
+          approach: "Clean simple forms, excellent functionality, barrier-free access avoiding specific cultural references",
+          isCorrect: false,
+          feedback: "You're describing classic modernist universalism, not postmodern pluralism. Jencks criticized modernism's universalist claims as cultural imperialism that ignored local differences. Designing for 'everyone equally' often means designing for no one in particular.",
+          lectureReference: "Review Jencks' critique of modernist universalism - postmodern pluralism embraces difference rather than avoiding it."
+        },
+        {
+          id: "interpretive-flexibility",
+          title: "Interpretive Flexibility Strategy",
+          description: "Create neutral framework for community interpretation",
+          approach: "Deliberately ambiguous forms with basic infrastructure, letting groups bring their own arrangements",
+          isCorrect: false,
+          feedback: "While community agency is important, this confuses architectural neutrality with postmodern pluralism. Jencks advocated for buildings with strong character that could still speak to diverse audiences, not blank slates that ask communities to do the architect's job.",
+          lectureReference: "Postmodern pluralism works through architectural richness that accommodates different interpretations, not generic neutrality."
+        }
+      ],
+      correctFeedback: "Your spatial pluralism approach demonstrates authentic understanding of inclusive design principles!",
+      incorrectFeedback: "Consider how genuine pluralism works through spatial variety rather than symbolic representation or neutrality."
+    },
+    {
+      id: 4,
       title: "Historical Context & Site Response",
-      description: "Dr. Patel questions your approach to the site's industrial heritage and future development.",
-      context: "Dr. Patel adjusts his glasses: 'Wynyard Point transforms from industrial port to public space. How will your pavilion engage with this temporal complexity—past, present, and future layers?'",
-      question: "How will you address the site's historical complexity?",
+      description: "The committee challenges you to address Wynyard Quarter's complex transformation from industrial port to mixed-use development.",
+      context: "Dr. Patel gestures toward the window where construction cranes punctuate the skyline. 'Wynyard Quarter has undergone dramatic transformation - from working industrial port to upscale development. This raises fundamental questions about how new architecture should relate to place and history. The postmodern theorists criticized modernism's tabula rasa approach but also warned against nostalgic historicism.'",
+      question: "How will your pavilion relate to Wynyard Quarter's layered history - both the industrial past and ongoing transformation?",
       options: [
         {
           id: "time-binding",
           title: "Time-binding Integration",
-          description: "Layer different temporal references in design elements",
-          approach: "Weave industrial heritage, current use, and future aspirations together",
+          description: "Create connections between past and present without nostalgic imitation",
+          approach: "Incorporate weathered steel referencing industrial materiality, preserve existing foundations as landscape features",
           isCorrect: true,
-          feedback: "Excellent application of time-binding principles!",
-          lectureReference: "This embodies Lecture 6's concept: 'Time-binding creates meaningful historical dialogue.'"
+          feedback: "This demonstrates excellent understanding of Jencks' time-binding concept. You're describing genuine historical connection without pastiche - using industrial materials in new ways rather than copying old forms. This creates temporal layering where different eras remain visible and interconnected.",
+          lectureReference: "Perfect application of Jencks' time-binding - connecting past and present without nostalgic imitation or historical erasure."
         },
         {
-          id: "pastiche",
-          title: "Historical Pastiche",
-          description: "Combine nostalgic references to different historical periods",
-          approach: "Mix architectural styles from various eras for visual interest",
+          id: "radical-eclecticism",
+          title: "Radical Eclecticism Approach",
+          description: "Playfully mix architectural styles from different periods",
+          approach: "Combine warehouse aesthetics, classical columns, maritime details, and glass curtain walls in ironic collage",
           isCorrect: false,
-          feedback: "Pastiche risks superficial historicism without meaningful engagement.",
-          lectureReference: "Lecture 6 distinguished between 'nostalgic pastiche and critical historical engagement.'"
+          feedback: "While you show awareness of postmodern attitudes toward history, you're misunderstanding key concepts. Jencks never advocated for arbitrary historical pastiche - he actually criticized mindless pastiche as postmodernism's weakness, not its strength.",
+          lectureReference: "Review Jencks' distinction between meaningful historical engagement and superficial pastiche - time-binding differs from arbitrary mixing."
         },
         {
-          id: "preservation",
-          title: "Heritage Preservation",
-          description: "Maintain and restore existing industrial structures",
-          approach: "Focus on conserving authentic historical elements",
+          id: "heritage-preservation",
+          title: "Heritage Preservation Focus",
+          description: "Prioritize authentic historical preservation and interpretation",
+          approach: "Material matching with surviving structures, traditional construction methods, interpretive displays",
           isCorrect: false,
-          feedback: "Pure preservation doesn't address contemporary needs and future possibilities.",
-          lectureReference: "Lecture 6 noted: 'Static preservation can museumify living spaces.'"
+          feedback: "This approach misunderstands postmodern attitudes toward history. You're describing heritage preservation methodology, not contemporary architecture. The goal isn't to create a museum environment but to design for current needs while acknowledging historical context.",
+          lectureReference: "Postmodern architecture creates new possibilities informed by history, not theme park recreations of the past."
         },
         {
-          id: "futuristic",
-          title: "Futuristic Vision",
-          description: "Design for future technological and social possibilities",
-          approach: "Create forward-looking spaces that anticipate change",
+          id: "future-oriented",
+          title: "Future-oriented Transformation",
+          description: "Embrace transformation toward high-tech urban district",
+          approach: "Clean contemporary forms for young professionals and international visitors, complement corporate towers",
           isCorrect: false,
-          feedback: "Future-focus alone disconnects from site history and current context.",
-          lectureReference: "Remember Lecture 6: 'Disconnected futurism repeats modernist errors.'"
+          feedback: "This describes exactly the modernist approach Jencks opposed. The tabula rasa mentality ignores historical context in favor of abstract future visions, disconnecting architecture from place and community while serving only a narrow demographic.",
+          lectureReference: "Review postmodernism as critique of modernist future-oriented abstraction that ignores local context and community."
         }
       ],
-      correctFeedback: "Your time-binding approach shows sophisticated temporal thinking!",
-      incorrectFeedback: "Consider how architecture can meaningfully engage multiple time periods simultaneously."
+      correctFeedback: "Your time-binding approach demonstrates sophisticated understanding of postmodern historical engagement!",
+      incorrectFeedback: "Consider how postmodern architecture can engage meaningfully with history without copying or ignoring it."
     },
     {
-      id: 4,
+      id: 5,
       title: "Balancing Popular & Architectural Appeal",
-      description: "James Mitchell raises concerns about accessibility and public engagement with your design.",
-      context: "James Mitchell speaks earnestly: 'This pavilion needs to work for everyone—architecture students, families, tourists, local workers. How do you balance sophisticated design with broad appeal?'",
+      description: "James Mitchell raises concerns about accessibility and public engagement with your sophisticated design approach.",
+      context: "James Mitchell speaks earnestly: 'This pavilion needs to work for everyone—architecture students, families, tourists, local workers. How do you balance sophisticated design with broad appeal without talking down to anyone?'",
       question: "How will you balance architectural sophistication with popular accessibility?",
       options: [
         {
@@ -193,8 +240,8 @@ export const scenarioData: ScenarioData = {
           description: "Multiple levels of engagement for different audiences",
           approach: "Design elements readable at different levels of architectural literacy",
           isCorrect: true,
-          feedback: "Perfect understanding of how architecture can communicate across knowledge levels!",
-          lectureReference: "This reflects Lecture 7's principle: 'Layered design creates inclusive sophistication.'"
+          feedback: "Perfect understanding of how architecture can communicate across knowledge levels! This reflects the layered design principle that creates inclusive sophistication without condescension.",
+          lectureReference: "This exemplifies postmodern communication theory - architecture that works immediately while offering deeper engagement for those who seek it."
         },
         {
           id: "democratic-simplification",
@@ -202,77 +249,77 @@ export const scenarioData: ScenarioData = {
           description: "Reduce complexity for broader understanding",
           approach: "Simplify design elements to ensure universal comprehension",
           isCorrect: false,
-          feedback: "Oversimplification can condescend to public intelligence and reduce architectural richness.",
-          lectureReference: "Lecture 7 warned against 'dumbing down design' as patronizing."
+          feedback: "Oversimplification can condescend to public intelligence and reduce architectural richness. This approach risks 'dumbing down' design in a patronizing way.",
+          lectureReference: "Postmodern theory advocates for complexity that serves diverse audiences, not simplification that assumes limited public capacity."
         },
         {
-          id: "programming",
+          id: "programming-focus",
           title: "Activity Programming",
           description: "Focus on popular activities and functions",
           approach: "Design around events, markets, and recreational activities",
           isCorrect: false,
-          feedback: "Programming alone doesn't address architectural communication challenges.",
-          lectureReference: "Lecture 7 emphasized that 'good programming requires good spatial design.'"
+          feedback: "Programming alone doesn't address architectural communication challenges. Good programming requires good spatial design to support it effectively.",
+          lectureReference: "While programming is important, architecture should communicate through spatial experience, not just functional accommodation."
         },
         {
-          id: "interpretive",
+          id: "interpretive-education",
           title: "Interpretive Education",
           description: "Provide educational materials explaining design concepts",
           approach: "Add interpretive signage and guided tour programs",
           isCorrect: false,
-          feedback: "External interpretation doesn't integrate architectural communication into the design itself.",
-          lectureReference: "Remember Lecture 7: 'Architecture should communicate through experience, not just explanation.'"
+          feedback: "External interpretation doesn't integrate architectural communication into the design itself. Architecture should communicate through experience, not just explanation.",
+          lectureReference: "Postmodern architecture should be multivalent in its spatial design, not dependent on external educational materials."
         }
       ],
-      correctFeedback: "Your layered approach demonstrates sophisticated understanding of inclusive design!",
-      incorrectFeedback: "Consider how architecture can be both sophisticated and accessible without compromise."
+      correctFeedback: "Your layered approach demonstrates sophisticated understanding of inclusive design communication!",
+      incorrectFeedback: "Consider how architecture can be both sophisticated and accessible through design strategy rather than simplification."
     },
     {
-      id: 5,
+      id: 6,
       title: "Committee Decision & Design Reflection",
-      description: "The committee reviews your comprehensive approach and asks for final reflection.",
-      context: "Dr. Chen nods approvingly: 'Your approach shows sophisticated understanding of postmodern principles. Before we conclude, let's examine how your strategy compares to a key postmodern precedent.'",
+      description: "The committee reviews your comprehensive approach and asks for final reflection on postmodern precedents.",
+      context: "Dr. Chen nods approvingly: 'Your approach shows sophisticated understanding of postmodern principles. Before we conclude, let's examine how your strategy compares to a key postmodern precedent - the Vanna Venturi House.'",
       question: "Reflecting on the Vanna Venturi House as a postmodern precedent, how does your pavilion embody similar principles?",
       options: [
         {
           id: "complexity-contradiction",
           title: "Complexity and Contradiction",
           description: "Embrace ambiguity and multiple readings in design",
-          approach: "Create architectural elements that can be interpreted multiple ways",
+          approach: "Create architectural elements that can be interpreted multiple ways, avoiding modernist clarity",
           isCorrect: true,
-          feedback: "Excellent connection to Venturi's seminal postmodern principles!",
-          lectureReference: "This directly applies Lecture 8's analysis: 'Venturi championed complexity over simplicity.'"
+          feedback: "Excellent connection to Venturi's seminal postmodern principles! Your understanding of complexity over simplicity demonstrates deep grasp of how postmodern architecture challenges modernist assumptions.",
+          lectureReference: "This directly applies Venturi's 'Complexity and Contradiction' principles - architecture that embraces ambiguity over false clarity."
         },
         {
           id: "historical-reference",
           title: "Historical Reference",
           description: "Include classical and vernacular architectural elements",
-          approach: "Reference traditional architectural forms and details",
+          approach: "Reference traditional architectural forms and details appropriately",
           isCorrect: false,
-          feedback: "While Venturi used historical references, the key innovation was how he used them complexly.",
-          lectureReference: "Lecture 8 noted: 'Venturi's historicism was critical, not nostalgic.'"
+          feedback: "While Venturi used historical references, the key innovation was how he used them complexly and ambiguously, not simply referencing traditional forms.",
+          lectureReference: "Venturi's historicism was critical and complex, not nostalgic - he transformed historical elements rather than copying them."
         },
         {
           id: "symbolic-communication",
           title: "Symbolic Communication",
           description: "Use clear architectural symbols and signs",
-          approach: "Incorporate recognizable symbolic elements",
+          approach: "Incorporate recognizable symbolic elements for public understanding",
           isCorrect: false,
-          feedback: "Venturi was more interested in ambiguous symbols than clear ones.",
-          lectureReference: "Remember Lecture 8: 'Venturi preferred 'both/and' to 'either/or' thinking.'"
+          feedback: "Venturi was more interested in ambiguous symbols than clear ones. He preferred 'both/and' complexity to 'either/or' clarity.",
+          lectureReference: "Remember Venturi's preference for ambiguous communication over modernist clarity - 'both/and' rather than 'either/or'."
         },
         {
           id: "material-honesty",
           title: "Material Honesty",
           description: "Express structural and material properties clearly",
-          approach: "Show how the building is constructed and what it's made from",
+          approach: "Show honest construction and material properties",
           isCorrect: false,
-          feedback: "Material honesty was more of a modernist principle that Venturi questioned.",
-          lectureReference: "Lecture 8 explained how 'Venturi challenged modernist orthodoxies including material expression.'"
+          feedback: "Material honesty was a modernist principle that Venturi questioned. He was more interested in architectural complexity than structural expression.",
+          lectureReference: "Venturi challenged modernist orthodoxies including material expression - he valued architectural meaning over structural honesty."
         }
       ],
-      correctFeedback: "Outstanding! You've successfully applied postmodern theory to contemporary design challenges.",
-      incorrectFeedback: "Consider how Venturi's key innovations challenge modernist assumptions about architectural clarity."
+      correctFeedback: "Outstanding! You've successfully applied postmodern theory to contemporary design challenges with sophisticated understanding.",
+      incorrectFeedback: "Consider how Venturi's key innovations challenged modernist assumptions about architectural clarity and communication."
     }
   ]
 };
