@@ -1,20 +1,3 @@
-
-import React, { useState } from 'react';
-import { MeetingRoom } from '@/components/MeetingRoom';
-import { WelcomeScreen } from '@/components/WelcomeScreen';
-import { ScenarioData } from '@/types/scenario';
-import { scenarioData } from '@/data/scenarios';
-
-const Index = () => {
-  const [gameStarted, setGameStarted] = useState(false);
-  const [currentScene, setCurrentScene] = useState(0);
-  const [playerChoices, setPlayerChoices] = useState<Record<number, string>>({});
-
-  const handleStartGame = () => {
-    setGameStarted(true);
-  };
-
-// src/pages/Index.tsx
 import React, { useState } from 'react';
 import { MeetingRoom } from '@/components/MeetingRoom';
 import { WelcomeScreen } from '@/components/WelcomeScreen';
