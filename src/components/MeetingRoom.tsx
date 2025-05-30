@@ -63,13 +63,15 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
         <CommitteePanel characters={scenarioData.characters} />
         
         {/* Main Content Area */}
-        <div className="relative z-10 pt-32 pb-12 px-4">
-          <div className="max-w-6xl mx-auto">
-            {/* Scene Content */}
-            <SceneContent scene={scene} />
+        <div className="relative z-10 pt-32 pb-6 px-4">
+          <div className="max-w-5xl mx-auto">
+            {/* Scene Content - Sticky */}
+            <div className="sticky top-24 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mb-8 z-20">
+              <SceneContent scene={scene} />
+            </div>
             
             {/* Strategy Cards */}
-            <div className="mt-12">
+            <div className="relative z-10">
               <StrategyCards
                 options={scene.options}
                 selectedOption={selectedChoice}
