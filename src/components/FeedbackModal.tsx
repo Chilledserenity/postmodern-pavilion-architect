@@ -99,8 +99,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
               </div>
             ) : (
               <div className="flex gap-4 justify-center">
-                {/* Show retry button if answer was incorrect */}
-                {!option.isCorrect && (
+                {!option.isCorrect ? (
                   <Button
                     onClick={onRetry}
                     size="lg"
@@ -109,9 +108,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
                   >
                     Try Again
                   </Button>
-                )}
-                {/* Only show continue button if answer was correct */}
-                {option.isCorrect && (
+                ) : (
                   <Button
                     onClick={onClose}
                     size="lg"

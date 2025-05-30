@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Scene } from '@/types/scenario';
 import { CommitteePanel } from '@/components/CommitteePanel';
@@ -72,7 +71,7 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
         </div>
         
         {/* Progress Bar - Fixed directly below committee panel with NO gap */}
-        <div className="fixed top-[100px] left-0 right-0 z-40 -mt-px">
+        <div className="fixed top-[100px] left-0 right-0 z-40">
           <ProgressBar current={sceneIndex + 1} total={totalScenes} />
         </div>
         
