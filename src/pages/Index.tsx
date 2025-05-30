@@ -9,8 +9,8 @@ const Index = () => {
   const [currentSceneIndex, setCurrentSceneIndex] = useState(0);
   const [playerChoices, setPlayerChoices] = useState<Record<number | string, string>>({});
 
-  // Calculate total scenes from scenario data (count all scenes except scene 1 which is intro)
-  const totalScenes = scenarioData.scenes.length - 1; // Subtract 1 to exclude the intro scene
+  // Calculate total scenes that have questions/options (scenes 2 and 3 have options)
+  const totalScenes = scenarioData.scenes.filter(scene => scene.options && scene.options.length > 0).length;
 
   const handleStartGame = () => {
     setCurrentSceneIndex(0);

@@ -40,15 +40,16 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
     return 'grid-cols-1'; // Single column for better readability of long content
   };
 
-  const getFirstSentence = (text: string) => {
+  const getFirstTwoSentences = (text: string) => {
     const sentences = text.split('.').filter(s => s.trim().length > 0);
-    return sentences.length > 0 ? sentences[0].trim() + '.' : text.substring(0, 100) + '...';
+    if (sentences.length <= 2) return text;
+    return sentences.slice(0, 2).join('.') + '.';
   };
 
   const getRemainingText = (text: string) => {
     const sentences = text.split('.').filter(s => s.trim().length > 0);
-    if (sentences.length <= 1) return '';
-    return sentences.slice(1).join('.').trim() + (sentences.length > 1 ? '.' : '');
+    if (sentences.length <= 2) return '';
+    return sentences.slice(2).join('.').trim() + (sentences.length > 2 ? '.' : '');
   };
 
   return (
@@ -59,7 +60,7 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
             const isSelected = selectedOption === option.id;
             const isExpanded = expandedOption === option.id;
             const optionLabel = getOptionLabel(index);
-            const firstSentence = getFirstSentence(option.approach);
+            const firstTwoSentences = getFirstTwoSentences(option.approach);
             const remainingText = getRemainingText(option.approach);
             const hasMoreText = remainingText.length > 0;
             
@@ -98,7 +99,7 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                     )}
                   </CardTitle>
                   <CardDescription className="text-slate-600 text-base leading-relaxed">
-                    {firstSentence}
+                    {firstTwoSentences}
                   </CardDescription>
                 </CardHeader>
                 

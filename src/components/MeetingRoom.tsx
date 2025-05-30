@@ -72,12 +72,12 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
         </div>
         
         {/* Progress Bar - Fixed directly below committee panel with NO gap */}
-        <div className="fixed top-[100px] left-0 right-0 z-40">
+        <div className="fixed top-[100px] left-0 right-0 z-40 -mt-px">
           <ProgressBar current={sceneIndex + 1} total={totalScenes} />
         </div>
         
-        {/* Main Content Area - Adjusted top padding for both fixed elements */}
-        <div className="relative z-10 pt-[140px] pb-6 px-4">
+        {/* Main Content Area - Adjusted top padding to eliminate gap */}
+        <div className="relative z-10 pt-[135px] pb-6 px-4">
           <div className="max-w-5xl mx-auto">
             {/* Scene Content */}
             <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mb-8">
