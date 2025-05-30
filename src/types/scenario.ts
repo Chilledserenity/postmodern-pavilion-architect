@@ -20,7 +20,7 @@ export interface StrategyOption {
 }
 
 export interface Scene {
-  id: number;
+  id: number | string;
   title: string;
   description: string;
   context: string;
