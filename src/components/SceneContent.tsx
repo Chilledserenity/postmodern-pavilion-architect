@@ -12,6 +12,7 @@ interface SceneContentProps {
 
 export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToScene }) => {
   const [isContextCollapsed, setIsContextCollapsed] = useState(false);
+  const isScene1 = scene.id === 1;
 
   return (
     <div className="p-6">
@@ -31,28 +32,31 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToSc
           <div className="mb-6">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-semibold text-slate-800">Context</h2>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setIsContextCollapsed(!isContextCollapsed)}
-                className="flex items-center gap-2"
-              >
-                {isContextCollapsed ? (
-                  <>
-                    <span className="text-sm">Show Context</span>
-                    <ChevronDown size={16} />
-                  </>
-                ) : (
-                  <>
-                    <span className="text-sm">Hide Context</span>
-                    <ChevronUp size={16} />
-                  </>
-                )}
-              </Button>
+              {/* Only show collapse button for scene 1 */}
+              {isScene1 && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setIsContextCollapsed(!isContextCollapsed)}
+                  className="flex items-center gap-2"
+                >
+                  {isContextCollapsed ? (
+                    <>
+                      <span className="text-sm">Show Context</span>
+                      <ChevronDown size={16} />
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-sm">Hide Context</span>
+                      <ChevronUp size={16} />
+                    </>
+                  )}
+                </Button>
+              )}
             </div>
             
-            {/* Speaker Context - Collapsible */}
-            {!isContextCollapsed && (
+            {/* Context text - collapsible only for scene 1 */}
+            {(!isScene1 || !isContextCollapsed) && (
               <div className="bg-white p-5 rounded-lg border-l-4 border-blue-500 mb-6">
                 <p className="text-slate-700 italic text-base leading-relaxed whitespace-pre-line">
                   {scene.context}
@@ -74,7 +78,7 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToSc
             )}
           </div>
           
-          {/* Question - Always visible */}
+          {/* Question - Always visible for scenes with questions */}
           {scene.question && (
             <div className="text-center">
               <h3 className="text-xl font-semibold text-slate-800 mb-3">

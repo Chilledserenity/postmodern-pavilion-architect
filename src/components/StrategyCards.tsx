@@ -40,6 +40,11 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
     return 'grid-cols-1'; // Single column for better readability of long content
   };
 
+  const getFirstLine = (text: string) => {
+    const sentences = text.split('.').filter(s => s.trim().length > 0);
+    return sentences.length > 0 ? sentences[0].trim() + '.' : text.substring(0, 100) + '...';
+  };
+
   return (
     <div className="space-y-8">
       <ScrollArea className="h-[70vh] w-full rounded-md">
@@ -48,6 +53,7 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
             const isSelected = selectedOption === option.id;
             const isExpanded = expandedOption === option.id;
             const optionLabel = getOptionLabel(index);
+            const firstLine = getFirstLine(option.approach);
             
             return (
               <Card
@@ -56,9 +62,7 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                   isSelected
                     ? 'ring-4 ring-blue-500 shadow-xl bg-blue-50/50'
                     : 'hover:shadow-lg bg-white/90'
-                } backdrop-blur-sm border-0 ${
-                  isSelected && !isExpanded ? 'opacity-100' : isSelected ? 'opacity-100' : expandedOption && !isExpanded ? 'opacity-60' : 'opacity-100'
-                }`}
+                } backdrop-blur-sm border-0`}
                 onClick={() => onOptionSelect(option.id)}
               >
                 <CardHeader className="pb-4">
@@ -84,35 +88,18 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                     </Button>
                   </CardTitle>
                   <CardDescription className="text-slate-600 text-base leading-relaxed">
-                    {option.description}
+                    {firstLine}
                   </CardDescription>
                 </CardHeader>
                 
                 {isExpanded && (
                   <CardContent className="pt-0">
                     <div className="bg-slate-50 p-6 rounded-lg border-l-4 border-blue-500">
-                      <h4 className="text-sm font-semibold text-slate-700 mb-3 uppercase tracking-wide">
-                        Detailed Approach:
-                      </h4>
                       <div className="prose prose-sm max-w-none">
                         <p className="text-slate-700 leading-relaxed whitespace-pre-line">
                           {option.approach}
                         </p>
                       </div>
-                    </div>
-                  </CardContent>
-                )}
-                
-                {!isExpanded && (
-                  <CardContent className="pt-0">
-                    <div className="bg-slate-50 p-4 rounded-lg">
-                      <p className="text-sm text-slate-700 font-medium mb-2">Approach Preview:</p>
-                      <p className="text-sm text-slate-600 line-clamp-3">
-                        {option.approach.substring(0, 120)}...
-                      </p>
-                      <p className="text-xs text-blue-600 mt-2 font-medium">
-                        Click arrow to read full approach →
-                      </p>
                     </div>
                   </CardContent>
                 )}

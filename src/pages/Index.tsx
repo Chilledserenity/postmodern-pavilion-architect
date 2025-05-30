@@ -2,31 +2,29 @@
 import React, { useState } from 'react';
 import { MeetingRoom } from '@/components/MeetingRoom';
 import { WelcomeScreen } from '@/components/WelcomeScreen';
-import { scenarioData } from '@/data/scenarios'; // Your scenario data
+import { scenarioData } from '@/data/scenarios';
 
 const Index = () => {
   const [gameStarted, setGameStarted] = useState(false);
-  // This state now holds the *index* of the current scene in the scenes array
   const [currentSceneIndex, setCurrentSceneIndex] = useState(0);
-  // This state will store the choices made by the player, using the scene's ID as the key
   const [playerChoices, setPlayerChoices] = useState<Record<number | string, string>>({});
 
+  // Calculate total scenes from scenario data
+  const totalScenes = scenarioData.scenes.length;
+
   const handleStartGame = () => {
-    setCurrentSceneIndex(0); // Always start from the first scene (index 0)
-    setPlayerChoices({});    // Clear any previous choices
+    setCurrentSceneIndex(0);
+    setPlayerChoices({});
     setGameStarted(true);
   };
 
   const handleSceneComplete = (selectedOptionId: string) => {
-    // Special handling for advancing from scene 1 to scene 2
     if (selectedOptionId === 'advance-to-scene-2') {
-      setCurrentSceneIndex(1); // Go directly to scene 2 (index 1)
+      setCurrentSceneIndex(1);
       return;
     }
 
-    // Get the current scene's data using the currentSceneIndex
     const currentSceneObject = scenarioData.scenes[currentSceneIndex];
-    // Find the specific option the player chose within that scene
     const selectedOption = currentSceneObject.options.find(opt => opt.id === selectedOptionId);
 
     if (!selectedOption) {
@@ -34,20 +32,17 @@ const Index = () => {
       return;
     }
 
-    // Record the player's choice, using the scene's actual ID (e.g., 2, 3, "6b0") as the key
     setPlayerChoices(prev => ({
       ...prev,
       [currentSceneObject.id]: selectedOptionId
     }));
 
-    // Get the ID of the next scene from the chosen option
     const nextSceneId = selectedOption.nextScene;
 
     if (nextSceneId === "" || nextSceneId === undefined) {
       return;
     }
 
-    // Find the array index of the next scene based on its ID from scenarioData.ts
     const newSceneArrayIndex = scenarioData.scenes.findIndex(s => String(s.id) === String(nextSceneId));
 
     if (newSceneArrayIndex !== -1) {
@@ -66,24 +61,21 @@ const Index = () => {
     setGameStarted(false);
   };
 
-  // If the game hasn't started, show the welcome screen
   if (!gameStarted) {
     return <WelcomeScreen onStart={handleStartGame} />;
   }
 
-  // A safety check to make sure currentSceneIndex is valid before trying to render a scene
   if (currentSceneIndex >= scenarioData.scenes.length || currentSceneIndex < 0) {
       console.error("Error: currentSceneIndex is out of bounds:", currentSceneIndex);
       return <WelcomeScreen onStart={handleStartGame} />;
   }
 
-  // If the game has started and currentSceneIndex is valid, show the MeetingRoom with the current scene
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <MeetingRoom
         scene={scenarioData.scenes[currentSceneIndex]}
         sceneIndex={currentSceneIndex}
-        totalScenes={scenarioData.scenes.length}
+        totalScenes={totalScenes}
         playerChoices={playerChoices}
         onChoiceSelect={handleSceneComplete}
         onRestart={handleRestart}

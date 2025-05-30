@@ -47,6 +47,12 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
     setSubmittedChoice('');
   };
 
+  const handleRetry = () => {
+    setShowFeedback(false);
+    setSelectedChoice('');
+    setSubmittedChoice('');
+  };
+
   const handleAdvanceToScene2 = () => {
     onChoiceSelect('advance-to-scene-2');
   };
@@ -60,16 +66,18 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
       <div className="relative min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
         <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
         
-        {/* Progress Bar - Fixed at top with proper z-index */}
-        <ProgressBar current={sceneIndex + 1} total={totalScenes} />
-        
-        {/* Committee Panel - Adjusted top margin to account for progress bar */}
-        <div className="pt-20">
+        {/* Committee Panel - Fixed at top with highest z-index */}
+        <div className="fixed top-0 left-0 right-0 z-50">
           <CommitteePanel characters={scenarioData.characters} />
         </div>
         
-        {/* Main Content Area - Adjusted top padding */}
-        <div className="relative z-10 pt-8 pb-6 px-4">
+        {/* Progress Bar - Fixed below committee panel */}
+        <div className="fixed top-[120px] left-0 right-0 z-40">
+          <ProgressBar current={sceneIndex + 1} total={totalScenes} />
+        </div>
+        
+        {/* Main Content Area - Adjusted top padding for both fixed elements */}
+        <div className="relative z-10 pt-48 pb-6 px-4">
           <div className="max-w-5xl mx-auto">
             {/* Scene Content */}
             <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mb-8">
@@ -102,6 +110,7 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
             isLastScene={isLastScene}
             onClose={handleFeedbackClose}
             onRestart={onRestart}
+            onRetry={handleRetry}
           />
         )}
       </div>

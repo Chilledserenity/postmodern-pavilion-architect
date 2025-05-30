@@ -11,6 +11,7 @@ interface FeedbackModalProps {
   isLastScene: boolean;
   onClose: () => void;
   onRestart: () => void;
+  onRetry: () => void;
 }
 
 export const FeedbackModal: React.FC<FeedbackModalProps> = ({
@@ -18,7 +19,8 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
   scene,
   isLastScene,
   onClose,
-  onRestart
+  onRestart,
+  onRetry
 }) => {
   const handleClose = () => {
     if (isLastScene) {
@@ -96,13 +98,26 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
                 </Button>
               </div>
             ) : (
-              <Button
-                onClick={onClose}
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold"
-              >
-                Continue to Next Challenge
-              </Button>
+              <div className="flex gap-4 justify-center">
+                {/* Show retry button if answer was incorrect */}
+                {!option.isCorrect && (
+                  <Button
+                    onClick={onRetry}
+                    size="lg"
+                    variant="outline"
+                    className="border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-4 text-lg font-semibold"
+                  >
+                    Try Again
+                  </Button>
+                )}
+                <Button
+                  onClick={onClose}
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold"
+                >
+                  Continue to Next Challenge
+                </Button>
+              </div>
             )}
           </div>
         </div>
