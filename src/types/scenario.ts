@@ -16,6 +16,7 @@ export interface StrategyOption {
   isCorrect: boolean;
   feedback: string;
   lectureReference?: string;
+  nextScene?: string;
 }
 
 export interface Scene {

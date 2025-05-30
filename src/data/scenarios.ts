@@ -1,3 +1,4 @@
+
 import { ScenarioData } from '@/types/scenario';
 
 export const scenarioData: ScenarioData = {
@@ -39,7 +40,7 @@ export const scenarioData: ScenarioData = {
   ],
   scenes: [
     {
-      id: "1",
+      id: 1,
       title: "Welcome to the Design Review",
       description: "Introduction to the committee and project context",
       context: "Welcome to the ArchHTC237 Postmodern Pavilion Design Challenge. You are a young architect presenting your proposal for a community pavilion at Wynyard Point, Auckland.\n\nThe review committee consists of four distinguished professionals, each bringing their own expertise and perspective to evaluate your design. Your challenge is to demonstrate understanding of postmodern architectural principles while creating a design that serves Auckland's diverse communities.\n\nThis is not about creating detailed drawings or technical specifications—it's about showing how postmodern theory translates into thoughtful design decisions that address real community needs.\n\nYour success will be measured by how well you apply concepts like multivalent communication, time-binding, and spatial pluralism to create architecture that speaks to both popular culture and architectural sophistication.\n\nRemember: Charles Jencks argued that the best postmodern architecture communicates on multiple levels simultaneously. Your pavilion should do the same.",
@@ -49,7 +50,7 @@ export const scenarioData: ScenarioData = {
       incorrectFeedback: ""
     },
     {
-      id: "2",
+      id: 2,
       title: "Architectural Communication Strategy", 
       description: "How will your design communicate with diverse audiences?",
       context: "The committee settles back in their chairs, their initial impressions clearly positive. You've just finished outlining your basic pavilion concept—a flexible community space that can accommodate everything from small cultural gatherings to large public events.\n\nDr. Chen adjusts her glasses and leans forward with scholarly intensity. 'Your functional program sounds comprehensive,' she begins, 'but I'm particularly interested in your communication strategy. Wynyard Quarter attracts an incredibly diverse range of people—local families, international tourists, architecture students, business professionals, elderly residents, young children.'\n\nMaria Santos nods enthusiastically: 'That's exactly right. We need architecture that doesn't talk down to anyone or exclude anyone. Some buildings seem designed only for people with architecture degrees, while others are so simplified they become bland.'\n\nJames Mitchell adds: 'Charles Jencks wrote extensively about this challenge—how can architecture speak meaningfully to both popular culture and professional architectural discourse? It's one of postmodernism's central concerns.'\n\nDr. Patel concludes with a direct challenge: 'So here's our first substantive question: How exactly will your design communicate with this incredibly diverse audience? What's your strategy for ensuring the pavilion speaks meaningfully to different groups without excluding anyone?'",
