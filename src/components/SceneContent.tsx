@@ -11,7 +11,7 @@ interface SceneContentProps {
 }
 
 export const SceneContent: React.FC<SceneContentProps> = ({ scene }) => {
-  const [isContextOpen, setIsContextOpen] = useState(true);
+  const [isContextOpen, setIsContextOpen] = useState(false); // Changed to false by default
 
   return (
     <div className="p-6">
@@ -26,7 +26,7 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene }) => {
       </div>
       
       {/* Collapsible Context Card */}
-      <Card className="max-w-4xl mx-auto shadow-md border-0 bg-blue-50/50">
+      <Card className="max-w-4xl mx-auto shadow-md border-0 bg-blue-50/50 mb-6">
         <CardContent className="p-6">
           <Collapsible open={isContextOpen} onOpenChange={setIsContextOpen}>
             <div className="flex items-center justify-between mb-4">
@@ -51,14 +51,16 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene }) => {
               </div>
               
               {/* Question */}
-              <div className="text-center">
-                <h3 className="text-xl font-semibold text-slate-800 mb-3">
-                  {scene.question}
-                </h3>
-                <p className="text-slate-600 text-sm">
-                  Select your strategic approach below:
-                </p>
-              </div>
+              {scene.question && (
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold text-slate-800 mb-3">
+                    {scene.question}
+                  </h3>
+                  <p className="text-slate-600 text-sm">
+                    Select your strategic approach below:
+                  </p>
+                </div>
+              )}
             </CollapsibleContent>
           </Collapsible>
         </CardContent>
