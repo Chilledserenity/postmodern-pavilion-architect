@@ -40,7 +40,7 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
     return 'grid-cols-1'; // Single column for better readability of long content
   };
 
-  const getFirstLine = (text: string) => {
+  const getFirstSentence = (text: string) => {
     const sentences = text.split('.').filter(s => s.trim().length > 0);
     return sentences.length > 0 ? sentences[0].trim() + '.' : text.substring(0, 100) + '...';
   };
@@ -59,8 +59,9 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
             const isSelected = selectedOption === option.id;
             const isExpanded = expandedOption === option.id;
             const optionLabel = getOptionLabel(index);
-            const firstLine = getFirstLine(option.approach);
+            const firstSentence = getFirstSentence(option.approach);
             const remainingText = getRemainingText(option.approach);
+            const hasMoreText = remainingText.length > 0;
             
             return (
               <Card
@@ -82,7 +83,7 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                       </div>
                       <span className="text-lg">{option.title}</span>
                     </div>
-                    {remainingText && (
+                    {hasMoreText && (
                       <Button
                         variant="ghost"
                         size="sm"
@@ -97,11 +98,11 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                     )}
                   </CardTitle>
                   <CardDescription className="text-slate-600 text-base leading-relaxed">
-                    {firstLine}
+                    {firstSentence}
                   </CardDescription>
                 </CardHeader>
                 
-                {isExpanded && remainingText && (
+                {isExpanded && hasMoreText && (
                   <CardContent className="pt-0">
                     <div className="bg-slate-50 p-6 rounded-lg border-l-4 border-blue-500">
                       <div className="prose prose-sm max-w-none">

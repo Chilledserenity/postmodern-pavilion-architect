@@ -55,7 +55,7 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToSc
               )}
             </div>
             
-            {/* Context text - collapsible only for scene 1 */}
+            {/* Context text - collapsible only for scene 1, always visible for others */}
             {(!isScene1 || !isContextCollapsed) && (
               <div className="bg-white p-5 rounded-lg border-l-4 border-blue-500 mb-6">
                 <p className="text-slate-700 italic text-base leading-relaxed whitespace-pre-line">

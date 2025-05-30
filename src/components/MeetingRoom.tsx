@@ -66,18 +66,18 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
       <div className="relative min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
         <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
         
-        {/* Committee Panel - Fixed at top with highest z-index */}
+        {/* Committee Panel - Fixed at top */}
         <div className="fixed top-0 left-0 right-0 z-50">
           <CommitteePanel characters={scenarioData.characters} />
         </div>
         
-        {/* Progress Bar - Fixed directly below committee panel with no gap */}
+        {/* Progress Bar - Fixed directly below committee panel with NO gap */}
         <div className="fixed top-[100px] left-0 right-0 z-40">
           <ProgressBar current={sceneIndex + 1} total={totalScenes} />
         </div>
         
         {/* Main Content Area - Adjusted top padding for both fixed elements */}
-        <div className="relative z-10 pt-48 pb-6 px-4">
+        <div className="relative z-10 pt-[140px] pb-6 px-4">
           <div className="max-w-5xl mx-auto">
             {/* Scene Content */}
             <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mb-8">
