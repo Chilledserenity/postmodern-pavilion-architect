@@ -9,8 +9,8 @@ const Index = () => {
   const [currentSceneIndex, setCurrentSceneIndex] = useState(0);
   const [playerChoices, setPlayerChoices] = useState<Record<number | string, string>>({});
 
-  // Calculate total scenes from scenario data
-  const totalScenes = scenarioData.scenes.length;
+  // Calculate total scenes from scenario data (count scenes that have actual questions/options)
+  const totalScenes = scenarioData.scenes.filter(scene => scene.options && scene.options.length > 0).length;
 
   const handleStartGame = () => {
     setCurrentSceneIndex(0);
@@ -19,6 +19,8 @@ const Index = () => {
   };
 
   const handleSceneComplete = (selectedOptionId: string) => {
+    console.log('Scene complete with option:', selectedOptionId);
+    
     if (selectedOptionId === 'advance-to-scene-2') {
       setCurrentSceneIndex(1);
       return;
@@ -37,23 +39,29 @@ const Index = () => {
       [currentSceneObject.id]: selectedOptionId
     }));
 
+    // Check if there's a specific nextScene defined
     const nextSceneId = selectedOption.nextScene;
+    console.log('Next scene ID from option:', nextSceneId);
 
-    if (nextSceneId === "" || nextSceneId === undefined) {
-      return;
+    if (nextSceneId && nextSceneId !== "" && nextSceneId !== undefined) {
+      // Find the scene with the matching ID
+      const newSceneArrayIndex = scenarioData.scenes.findIndex(s => String(s.id) === String(nextSceneId));
+      console.log('Found scene at index:', newSceneArrayIndex);
+      
+      if (newSceneArrayIndex !== -1) {
+        setCurrentSceneIndex(newSceneArrayIndex);
+        return;
+      } else {
+        console.error(`Error: Next scene with ID "${nextSceneId}" was not found in scenarios data.`);
+      }
     }
 
-    const newSceneArrayIndex = scenarioData.scenes.findIndex(s => String(s.id) === String(nextSceneId));
-
-    if (newSceneArrayIndex !== -1) {
-      setCurrentSceneIndex(newSceneArrayIndex);
+    // If no specific nextScene, advance to next scene in sequence
+    if (currentSceneIndex < scenarioData.scenes.length - 1) {
+      setCurrentSceneIndex(prev => prev + 1);
     } else {
-      console.error(`Error: Next scene with ID "${nextSceneId}" was not found in your scenarios data.`);
-      if (currentSceneIndex < scenarioData.scenes.length - 1) {
-        setCurrentSceneIndex(prev => prev + 1);
-      } else {
-        console.error("Could not determine the next scene and already at the end of the scenario array.");
-      }
+      console.log("Reached end of scenarios");
+      // Could add end-of-game logic here if needed
     }
   };
 

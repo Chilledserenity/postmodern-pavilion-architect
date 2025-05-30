@@ -71,8 +71,8 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
           <CommitteePanel characters={scenarioData.characters} />
         </div>
         
-        {/* Progress Bar - Fixed below committee panel */}
-        <div className="fixed top-[120px] left-0 right-0 z-40">
+        {/* Progress Bar - Fixed directly below committee panel with no gap */}
+        <div className="fixed top-[100px] left-0 right-0 z-40">
           <ProgressBar current={sceneIndex + 1} total={totalScenes} />
         </div>
         

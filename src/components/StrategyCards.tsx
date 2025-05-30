@@ -45,6 +45,12 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
     return sentences.length > 0 ? sentences[0].trim() + '.' : text.substring(0, 100) + '...';
   };
 
+  const getRemainingText = (text: string) => {
+    const sentences = text.split('.').filter(s => s.trim().length > 0);
+    if (sentences.length <= 1) return '';
+    return sentences.slice(1).join('.').trim() + (sentences.length > 1 ? '.' : '');
+  };
+
   return (
     <div className="space-y-8">
       <ScrollArea className="h-[70vh] w-full rounded-md">
@@ -54,6 +60,7 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
             const isExpanded = expandedOption === option.id;
             const optionLabel = getOptionLabel(index);
             const firstLine = getFirstLine(option.approach);
+            const remainingText = getRemainingText(option.approach);
             
             return (
               <Card
@@ -75,29 +82,31 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                       </div>
                       <span className="text-lg">{option.title}</span>
                     </div>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleExpanded(option.id);
-                      }}
-                      className="p-2"
-                    >
-                      {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                    </Button>
+                    {remainingText && (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleExpanded(option.id);
+                        }}
+                        className="p-2"
+                      >
+                        {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      </Button>
+                    )}
                   </CardTitle>
                   <CardDescription className="text-slate-600 text-base leading-relaxed">
                     {firstLine}
                   </CardDescription>
                 </CardHeader>
                 
-                {isExpanded && (
+                {isExpanded && remainingText && (
                   <CardContent className="pt-0">
                     <div className="bg-slate-50 p-6 rounded-lg border-l-4 border-blue-500">
                       <div className="prose prose-sm max-w-none">
                         <p className="text-slate-700 leading-relaxed whitespace-pre-line">
-                          {option.approach}
+                          {remainingText}
                         </p>
                       </div>
                     </div>
