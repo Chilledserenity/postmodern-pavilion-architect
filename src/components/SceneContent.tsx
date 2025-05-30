@@ -11,7 +11,7 @@ interface SceneContentProps {
 }
 
 export const SceneContent: React.FC<SceneContentProps> = ({ scene }) => {
-  const [isContextOpen, setIsContextOpen] = useState(false); // Changed to false by default
+  const [isContextOpen, setIsContextOpen] = useState(false);
 
   return (
     <div className="p-6">
@@ -49,20 +49,20 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene }) => {
                   {scene.context}
                 </p>
               </div>
-              
-              {/* Question */}
-              {scene.question && (
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold text-slate-800 mb-3">
-                    {scene.question}
-                  </h3>
-                  <p className="text-slate-600 text-sm">
-                    Select your strategic approach below:
-                  </p>
-                </div>
-              )}
             </CollapsibleContent>
           </Collapsible>
+          
+          {/* Question - Always visible outside collapsible content */}
+          {scene.question && (
+            <div className="text-center mt-6">
+              <h3 className="text-xl font-semibold text-slate-800 mb-3">
+                {scene.question}
+              </h3>
+              <p className="text-slate-600 text-sm">
+                Select your strategic approach below:
+              </p>
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>
