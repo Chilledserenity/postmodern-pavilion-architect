@@ -72,7 +72,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
               <div className="bg-slate-100 p-6 rounded-lg">
                 <h4 className="text-lg font-semibold text-slate-800 mb-3">Recommended Approach:</h4>
                 <p className="text-slate-700 leading-relaxed">
-                  {option.isCorrect ? scene.correctFeedback : scene.incorrectFeedback}
+                  {scene.incorrectFeedback}
                 </p>
               </div>
             )}
@@ -110,13 +110,16 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
                     Try Again
                   </Button>
                 )}
-                <Button
-                  onClick={onClose}
-                  size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold"
-                >
-                  Continue to Next Challenge
-                </Button>
+                {/* Only show continue button if answer was correct */}
+                {option.isCorrect && (
+                  <Button
+                    onClick={onClose}
+                    size="lg"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold"
+                  >
+                    Continue to Next Challenge
+                  </Button>
+                )}
               </div>
             )}
           </div>
