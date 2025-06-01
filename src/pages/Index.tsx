@@ -9,8 +9,8 @@ const Index = () => {
   const [currentSceneIndex, setCurrentSceneIndex] = useState(0);
   const [playerChoices, setPlayerChoices] = useState<Record<number | string, string>>({});
 
-  // Calculate total scenes that have questions/options (scenes 2 and 3 have options)
-  const totalScenes = scenarioData.scenes.filter(scene => scene.options && scene.options.length > 0).length;
+  // Calculate total scenes that have questions/options (scenes 2, 3, 4, 5, 6a, 6b have options)
+  const totalScenesWithQuestions = scenarioData.scenes.filter(scene => scene.options && scene.options.length > 0).length;
 
   const handleStartGame = () => {
     setCurrentSceneIndex(0);
@@ -83,7 +83,7 @@ const Index = () => {
       <MeetingRoom
         scene={scenarioData.scenes[currentSceneIndex]}
         sceneIndex={currentSceneIndex}
-        totalScenes={totalScenes}
+        totalScenes={totalScenesWithQuestions}
         playerChoices={playerChoices}
         onChoiceSelect={handleSceneComplete}
         onRestart={handleRestart}

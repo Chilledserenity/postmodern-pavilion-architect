@@ -4,6 +4,7 @@ import { StrategyOption, Scene } from '@/types/scenario';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { scenarioData } from '@/data/scenarios';
 
 interface FeedbackModalProps {
   option: StrategyOption;
@@ -22,8 +23,11 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
   onRestart,
   onRetry
 }) => {
+  // Determine if this is actually the final scene (scene 7 or last scene with options)
+  const isActuallyLastScene = scene.id === 7 || scene.id === scenarioData.scenes[scenarioData.scenes.length - 1].id;
+  
   const handleContinue = () => {
-    if (isLastScene) {
+    if (isActuallyLastScene) {
       onRestart();
     } else {
       onClose();
@@ -80,7 +84,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
           
           {/* Progress and Next Steps */}
           <div className="text-center space-y-4">
-            {isLastScene ? (
+            {isActuallyLastScene ? (
               <div className="space-y-4">
                 <div className="bg-green-50 p-6 rounded-lg border border-green-200">
                   <h3 className="text-xl font-semibold text-green-800 mb-2">Challenge Complete!</h3>
