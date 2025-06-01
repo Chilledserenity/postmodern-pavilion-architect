@@ -4,7 +4,7 @@ import { StrategyOption, Scene } from '@/types/scenario';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { scenarioData } from '@/data/scenarios';
+import { updatedScenarioData } from '@/data/updatedScenarios';
 
 interface FeedbackModalProps {
   option: StrategyOption;
@@ -24,7 +24,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
   onRetry
 }) => {
   // Determine if this is actually the final scene (scene 7 or last scene with options)
-  const isActuallyLastScene = scene.id === 7 || scene.id === scenarioData.scenes[scenarioData.scenes.length - 1].id;
+  const isActuallyLastScene = scene.id === 7 || scene.id === updatedScenarioData.scenes[updatedScenarioData.scenes.length - 1].id;
   
   const handleContinue = () => {
     if (isActuallyLastScene) {

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { MeetingRoom } from '@/components/MeetingRoom';
 import { WelcomeScreen } from '@/components/WelcomeScreen';
-import { scenarioData } from '@/data/scenarios';
+import { updatedScenarioData } from '@/data/updatedScenarios';
 
 const Index = () => {
   const [gameStarted, setGameStarted] = useState(false);
@@ -10,7 +10,7 @@ const Index = () => {
   const [playerChoices, setPlayerChoices] = useState<Record<number | string, string>>({});
 
   // Calculate total scenes that have questions/options (scenes 2, 3, 4, 5, 6a, 6b have options)
-  const totalScenesWithQuestions = scenarioData.scenes.filter(scene => scene.options && scene.options.length > 0).length;
+  const totalScenesWithQuestions = updatedScenarioData.scenes.filter(scene => scene.options && scene.options.length > 0).length;
 
   const handleStartGame = () => {
     setCurrentSceneIndex(0);
@@ -26,7 +26,7 @@ const Index = () => {
       return;
     }
 
-    const currentSceneObject = scenarioData.scenes[currentSceneIndex];
+    const currentSceneObject = updatedScenarioData.scenes[currentSceneIndex];
     const selectedOption = currentSceneObject.options?.find(opt => opt.id === selectedOptionId);
 
     if (!selectedOption) {
@@ -45,7 +45,7 @@ const Index = () => {
 
     if (nextSceneId && nextSceneId !== "" && nextSceneId !== undefined) {
       // Find the scene with the matching ID
-      const newSceneArrayIndex = scenarioData.scenes.findIndex(s => String(s.id) === String(nextSceneId));
+      const newSceneArrayIndex = updatedScenarioData.scenes.findIndex(s => String(s.id) === String(nextSceneId));
       console.log('Found scene at index:', newSceneArrayIndex);
       
       if (newSceneArrayIndex !== -1) {
@@ -57,7 +57,7 @@ const Index = () => {
     }
 
     // If no specific nextScene, advance to next scene in sequence
-    if (currentSceneIndex < scenarioData.scenes.length - 1) {
+    if (currentSceneIndex < updatedScenarioData.scenes.length - 1) {
       setCurrentSceneIndex(prev => prev + 1);
     } else {
       console.log("Reached end of scenarios");
@@ -73,7 +73,7 @@ const Index = () => {
     return <WelcomeScreen onStart={handleStartGame} />;
   }
 
-  if (currentSceneIndex >= scenarioData.scenes.length || currentSceneIndex < 0) {
+  if (currentSceneIndex >= updatedScenarioData.scenes.length || currentSceneIndex < 0) {
       console.error("Error: currentSceneIndex is out of bounds:", currentSceneIndex);
       return <WelcomeScreen onStart={handleStartGame} />;
   }
@@ -81,7 +81,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <MeetingRoom
-        scene={scenarioData.scenes[currentSceneIndex]}
+        scene={updatedScenarioData.scenes[currentSceneIndex]}
         sceneIndex={currentSceneIndex}
         totalScenes={totalScenesWithQuestions}
         playerChoices={playerChoices}

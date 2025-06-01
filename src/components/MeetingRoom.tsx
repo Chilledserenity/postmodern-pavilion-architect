@@ -6,7 +6,7 @@ import { SceneContent } from '@/components/SceneContent';
 import { ProgressBar } from '@/components/ProgressBar';
 import { StrategyCards } from '@/components/StrategyCards';
 import { FeedbackModal } from '@/components/FeedbackModal';
-import { scenarioData } from '@/data/scenarios';
+import { updatedScenarioData } from '@/data/updatedScenarios';
 
 interface MeetingRoomProps {
   scene: Scene;
@@ -58,7 +58,7 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
   };
 
   const selectedOption = scene.options.find(opt => opt.id === submittedChoice);
-  const isLastScene = sceneIndex === scenarioData.scenes.length - 1;
+  const isLastScene = sceneIndex === updatedScenarioData.scenes.length - 1;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 to-blue-100">
@@ -68,12 +68,12 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
         
         {/* Committee Panel - Fixed at top */}
         <div className="fixed top-0 left-0 right-0 z-50">
-          <CommitteePanel characters={scenarioData.characters} />
+          <CommitteePanel characters={updatedScenarioData.characters} />
         </div>
         
         {/* Progress Bar - Fixed directly below committee panel with NO gap */}
         <div className="fixed top-[100px] left-0 right-0 z-40">
-          <ProgressBar current={sceneIndex + 1} total={scenarioData.scenes.length} />
+          <ProgressBar current={sceneIndex + 1} total={updatedScenarioData.scenes.length} />
         </div>
         
         {/* Main Content Area - Adjusted top padding */}
