@@ -64,7 +64,7 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
     <div className="min-h-screen bg-gradient-to-br from-slate-100 to-blue-100">
       {/* Meeting Room Background */}
       <div className="relative min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
-        <div className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/lovable-uploads/575b600e-3bf1-4e7f-adf6-a4e0cd8e0bc1.png')] bg-cover bg-center opacity-20"></div>
         
         {/* Committee Panel - Fixed at top */}
         <div className="fixed top-0 left-0 right-0 z-50">

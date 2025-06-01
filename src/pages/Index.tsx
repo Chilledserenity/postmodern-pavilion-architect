@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { MeetingRoom } from '@/components/MeetingRoom';
 import { WelcomeScreen } from '@/components/WelcomeScreen';
@@ -40,7 +39,7 @@ const Index = () => {
     }));
 
     // Check if there's a specific nextScene defined
-    const nextSceneId = selectedOption.nextScene;
+    const nextSceneId = (selectedOption as any).nextScene;
     console.log('Next scene ID from option:', nextSceneId);
 
     if (nextSceneId && nextSceneId !== "" && nextSceneId !== undefined) {
