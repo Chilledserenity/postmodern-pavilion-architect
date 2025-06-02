@@ -23,8 +23,8 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
             </CardDescription>
           </CardHeader>
           
-          {/* Adjusted CardContent padding for overall gutter control */}
-          <CardContent className="space-y-10 px-6 md:px-10 lg:px-12"> {/* Increased consistent padding */}
+          {/* Further increased CardContent padding for better side gutters */}
+          <CardContent className="space-y-10 px-6 sm:px-8 md:px-12 lg:px-16"> {/* Adjusted padding values */}
             {/* Committee Section */}
             <div className="mb-8">
               <h3 className="text-2xl md:text-3xl font-semibold text-slate-800 mb-8 text-center">Meet The Committee</h3>
@@ -44,7 +44,6 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
             </div>
 
             {/* Mission, Learning Objectives, and Assessment Section */}
-            {/* Removed specific horizontal padding from this grid, relies on CardContent padding now */}
             <div className="grid md:grid-cols-3 gap-x-6 lg:gap-x-10 gap-y-8 pt-6">
               <div className="space-y-3 md:col-span-1">
                 <h4 className="text-xl font-semibold text-slate-800 mb-2">Your Mission</h4>
@@ -72,7 +71,6 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
                 </ul>
               </div>
               
-              {/* Assessment section styling updated to match others */}
               <div className="space-y-3 md:col-span-1">
                 <h4 className="text-xl font-semibold text-slate-800 mb-2">Assessment</h4>
                 <p className="text-slate-600 leading-relaxed">
@@ -80,15 +78,15 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
                 </p>
                 <ul className="space-y-2 text-slate-600">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span> {/* Neutral bullet */}
+                    <span className="w-2 h-2 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     2 marks for completion
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span> {/* Neutral bullet */}
+                    <span className="w-2 h-2 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     2 marks for thoughtful reflection
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span> {/* Neutral bullet */}
+                    <span className="w-2 h-2 bg-slate-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     Detailed feedback for all choices
                   </li>
                 </ul>
