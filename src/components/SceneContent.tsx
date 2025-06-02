@@ -11,7 +11,8 @@ interface SceneContentProps {
 export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToScene }) => {
   return (
     <div className="p-6">
-      <div className="text-center mb-6">
+      {/* Scene Title and Description */}
+      <div className="text-center mb-4"> {/* REDUCED: from mb-6 to mb-4 */}
         <h1 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">
           {scene.title}
         </h1>
@@ -22,19 +23,20 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToSc
       
       <Card className="max-w-4xl mx-auto shadow-md border-0 bg-blue-50/50 mb-6">
         <CardContent className="p-6">
-          {/* NEW: Image specifically for Scene 1, above the Context */}
+          {/* Image specifically for Scene 1, above the Context */}
           {scene.id === 1 && (
-            <div className="mb-6 flex justify-center">
+            <div className="mb-4 flex justify-center"> {/* REDUCED: from mb-6 to mb-4 */}
               <img 
                 src="/backgrounds/wynyard_meeting_room_bg.jpg" 
                 alt="Wynyard Quarter Meeting Setting" 
                 className="max-w-full md:max-w-md lg:max-w-lg rounded-lg shadow-lg object-contain"
-                style={{ maxHeight: '250px' }} // Constrain height to prevent it from being too tall
+                style={{ maxHeight: '250px' }} 
               />
             </div>
           )}
 
-          <div className="mb-6"> {/* Container for Context heading and text */}
+          {/* Container for Context heading and text */}
+          <div className="mb-6"> 
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-semibold text-slate-800">Context</h2>
             </div>
@@ -47,6 +49,7 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToSc
               </div>
             )}
 
+            {/* Continue Button for Scene 1 */}
             {scene.id === 1 && onAdvanceToScene && scene.context && (
               <div className="text-center mb-6">
                 <Button 
@@ -60,6 +63,7 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToSc
             )}
           </div>
           
+          {/* Question section */}
           {scene.question && (
             <div className="text-center">
               <h3 className="text-xl font-semibold text-slate-800 mb-3">
