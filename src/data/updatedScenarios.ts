@@ -9,7 +9,7 @@ export const updatedScenarioData = {
       "title": "Committee Chair - Architectural Theory",
       "description": "Leading expert in postmodern architectural theory and practice",
       "personality": "Intellectually rigorous, values theoretical depth and practical application",
-      "avatar": "/api/placeholder/80/80"
+      "avatar": "/avatars/dr_chen_avatar.png" // UPDATED
     },
     {
       "id": "maria-santos",
@@ -17,7 +17,7 @@ export const updatedScenarioData = {
       "title": "Community Planning Representative",
       "description": "Specialist in community engagement and inclusive design processes",
       "personality": "Pragmatic, focused on real-world community benefits and accessibility",
-      "avatar": "/api/placeholder/80/80"
+      "avatar": "/avatars/maria_santos_avatar.png" // UPDATED
     },
     {
       "id": "james-mitchell",
@@ -25,7 +25,7 @@ export const updatedScenarioData = {
       "title": "Design Review Board",
       "description": "Professional architect with extensive public project experience",
       "personality": "Practical, concerned with feasibility and implementation",
-      "avatar": "/api/placeholder/80/80"
+      "avatar": "/avatars/james_mitchell_avatar.png" // UPDATED
     },
     {
       "id": "dr-patel",
@@ -33,7 +33,7 @@ export const updatedScenarioData = {
       "title": "Urban Design Specialist",
       "description": "Expert in contemporary city planning and public space design",
       "personality": "Analytical, interested in broader urban implications",
-      "avatar": "/api/placeholder/80/80"
+      "avatar": "/avatars/dr_patel_avatar.jpg" // UPDATED
     }
   ],
   "scenes": [
