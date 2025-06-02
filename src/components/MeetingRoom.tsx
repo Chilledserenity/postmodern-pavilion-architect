@@ -10,7 +10,7 @@ import { updatedScenarioData } from '@/data/updatedScenarios';
 interface MeetingRoomProps {
   scene: Scene;
   sceneIndex: number;
-  totalScenes: number; // Keep this prop for clarity, though ProgressBar might recalculate
+  totalScenes: number;
   playerChoices: Record<number | string, string>;
   onChoiceSelect: (choice: string) => void;
   onRestart: () => void;
@@ -19,7 +19,7 @@ interface MeetingRoomProps {
 export const MeetingRoom: React.FC<MeetingRoomProps> = ({
   scene,
   sceneIndex,
-  // totalScenes, // Not directly used if ProgressBar calculates its own total
+  // totalScenes, // Prop not directly used if ProgressBar internally calculates
   playerChoices,
   onChoiceSelect,
   onRestart
@@ -62,14 +62,16 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
   const currentProgress = sceneIndex + 1;
   const totalProgressScenes = updatedScenarioData.scenes.length;
 
-  // Assuming CommitteePanel is approx 5rem (80px) + 1px border
-  // Assuming ProgressBar is approx 2rem (32px) + 1px border
-  const committeePanelHeight = 'calc(5rem + 1px)';
+  // Refined height calculations:
+  // CommitteePanel: py-3 (1.5rem) + h-12 avatar (3rem) + 1px border = 4.5rem + 1px
+  const committeePanelHeight = 'calc(4.5rem + 1px)';
+  // ProgressBar: py-3 (1.5rem) + h-2 progress (0.5rem) + 1px border = 2rem + 1px
   const progressBarHeight = 'calc(2rem + 1px)';
-  const totalFixedHeaderHeight = `calc(${committeePanelHeight} + ${progressBarHeight})`; // This will be calc(7rem + 2px)
+  // Total height of fixed elements
+  const totalFixedHeaderHeight = `calc(${committeePanelHeight} + ${progressBarHeight})`; // Should be calc(6.5rem + 2px)
 
-  // New desired padding top for main content to increase space below ProgressBar
-  const mainContentPaddingTop = `calc(${totalFixedHeaderHeight} + 2rem)`; // e.g., calc(7rem + 2px + 2rem) = calc(9rem + 2px)
+  // Desired gap below ProgressBar (e.g., 2rem) + totalFixedHeaderHeight
+  const mainContentPaddingTop = `calc(${totalFixedHeaderHeight} + 2rem)`; // Results in calc(8.5rem + 2px)
 
   return (
     <div className="min-h-screen bg-slate-100">
@@ -79,10 +81,12 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
           <CommitteePanel characters={updatedScenarioData.characters} />
         </div>
         
+        {/* ProgressBar position precisely calculated */}
         <div className={`fixed left-0 right-0 z-40`} style={{ top: committeePanelHeight }}>
           <ProgressBar current={currentProgress} total={totalProgressScenes} />
         </div>
         
+        {/* Main Content Area padding precisely calculated */}
         <div className={`relative z-10 pb-6 px-4`} style={{ paddingTop: mainContentPaddingTop }}>
           <div className="max-w-5xl mx-auto">
             <div className="bg-white/90 backdrop-blur-md rounded-lg shadow-xl mb-8">
