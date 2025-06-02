@@ -24,7 +24,6 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
 }) => {
   const [expandedOption, setExpandedOption] = useState<string | null>(null);
   const isMobile = useMediaQuery('(max-width: 768px)');
-  const isTablet = useMediaQuery('(max-width: 1024px)');
   
   const getOptionLabel = (index: number) => {
     return String.fromCharCode(65 + index); // A, B, C, D
@@ -34,16 +33,10 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
     setExpandedOption(expandedOption === optionId ? null : optionId);
   };
 
-  const getGridCols = () => {
-    if (isMobile) return 'grid-cols-1';
-    if (isTablet) return 'grid-cols-1';
-    return 'grid-cols-1'; // Single column for better readability of long content
-  };
-
   return (
-    <div className="space-y-8">
-      <ScrollArea className="h-[70vh] w-full rounded-md">
-        <div className={`grid ${getGridCols()} gap-6 p-4`}>
+    <div className="space-y-6">
+      <ScrollArea className="h-[65vh] w-full rounded-md">
+        <div className="grid grid-cols-1 gap-4 p-4">
           {options.map((option, index) => {
             const isSelected = selectedOption === option.id;
             const isExpanded = expandedOption === option.id;
@@ -52,22 +45,22 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
             return (
               <Card
                 key={option.id}
-                className={`cursor-pointer transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl ${
+                className={`cursor-pointer transition-all duration-300 transform hover:scale-[1.01] hover:shadow-lg ${
                   isSelected
                     ? 'ring-4 ring-blue-500 shadow-xl bg-blue-50/50'
-                    : 'hover:shadow-lg bg-white/90'
+                    : 'hover:shadow-md bg-white/90'
                 } backdrop-blur-sm border-0`}
                 onClick={() => onOptionSelect(option.id)}
               >
-                <CardHeader className="pb-4">
-                  <CardTitle className="text-xl font-semibold text-slate-800 flex items-center justify-between">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg font-semibold text-slate-800 flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
+                      <div className={`w-7 h-7 rounded-full flex items-center justify-center text-white font-bold text-sm ${
                         isSelected ? 'bg-blue-500' : 'bg-slate-400'
                       }`}>
                         {isSelected ? '✓' : optionLabel}
                       </div>
-                      <span className="text-lg">{option.title}</span>
+                      <span className="text-base leading-tight">{option.title}</span>
                     </div>
                     <Button
                       variant="ghost"
@@ -76,21 +69,21 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                         e.stopPropagation();
                         toggleExpanded(option.id);
                       }}
-                      className="p-2"
+                      className="p-1 h-8 w-8"
                     >
-                      {isExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                      {isExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                     </Button>
                   </CardTitle>
-                  <CardDescription className="text-slate-600 text-base leading-relaxed">
+                  <CardDescription className="text-slate-600 text-sm leading-relaxed ml-10">
                     {option.description}
                   </CardDescription>
                 </CardHeader>
                 
                 {isExpanded && (
-                  <CardContent className="pt-0">
-                    <div className="bg-slate-50 p-6 rounded-lg border-l-4 border-blue-500">
+                  <CardContent className="pt-0 pb-4">
+                    <div className="bg-slate-50 p-4 rounded-lg border-l-4 border-blue-500 ml-10">
                       <div className="prose prose-sm max-w-none">
-                        <p className="text-slate-700 leading-relaxed whitespace-pre-line">
+                        <p className="text-slate-700 leading-relaxed whitespace-pre-line text-sm">
                           {option.approach}
                         </p>
                       </div>
@@ -104,12 +97,12 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
       </ScrollArea>
       
       {/* Submit Button */}
-      <div className="text-center sticky bottom-0 bg-gradient-to-t from-slate-50 to-transparent pt-6">
+      <div className="text-center sticky bottom-0 bg-gradient-to-t from-slate-50 to-transparent pt-4">
         <Button
           onClick={onSubmit}
           disabled={!canSubmit}
           size="lg"
-          className={`px-12 py-4 text-lg font-semibold transition-all duration-300 ${
+          className={`px-10 py-3 text-base font-semibold transition-all duration-300 ${
             canSubmit
               ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg hover:shadow-xl transform hover:scale-105'
               : 'bg-slate-300 text-slate-500 cursor-not-allowed'

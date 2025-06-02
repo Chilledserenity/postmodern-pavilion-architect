@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { MeetingRoom } from '@/components/MeetingRoom';
 import { WelcomeScreen } from '@/components/WelcomeScreen';
@@ -8,7 +9,7 @@ const Index = () => {
   const [currentSceneIndex, setCurrentSceneIndex] = useState(0);
   const [playerChoices, setPlayerChoices] = useState<Record<number | string, string>>({});
 
-  // Calculate total scenes that have questions/options (scenes 2, 3, 4, 5, 6a, 6b have options)
+  // Calculate total scenes that have questions/options
   const totalScenesWithQuestions = updatedScenarioData.scenes.filter(scene => scene.options && scene.options.length > 0).length;
 
   const handleStartGame = () => {
@@ -38,11 +39,11 @@ const Index = () => {
       [currentSceneObject.id]: selectedOptionId
     }));
 
-    // Check if there's a specific nextScene defined
+    // Check if there's a specific nextScene defined in the option
     const nextSceneId = (selectedOption as any).nextScene;
     console.log('Next scene ID from option:', nextSceneId);
 
-    if (nextSceneId && nextSceneId !== "" && nextSceneId !== undefined) {
+    if (nextSceneId !== undefined && nextSceneId !== null && nextSceneId !== "") {
       // Find the scene with the matching ID
       const newSceneArrayIndex = updatedScenarioData.scenes.findIndex(s => String(s.id) === String(nextSceneId));
       console.log('Found scene at index:', newSceneArrayIndex);
@@ -60,7 +61,6 @@ const Index = () => {
       setCurrentSceneIndex(prev => prev + 1);
     } else {
       console.log("Reached end of scenarios");
-      // Could add end-of-game logic here if needed
     }
   };
 
