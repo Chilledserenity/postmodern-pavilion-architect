@@ -1,9 +1,8 @@
-
-import React, { useState } from 'react';
+import React from 'react'; // Removed useState as isContextCollapsed is no longer needed
 import { Scene } from '@/types/scenario';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+// Removed ChevronDown, ChevronUp as they are no longer needed
 
 interface SceneContentProps {
   scene: Scene;
@@ -11,8 +10,8 @@ interface SceneContentProps {
 }
 
 export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToScene }) => {
-  const [isContextCollapsed, setIsContextCollapsed] = useState(false);
-  const isScene1 = scene.id === 1;
+  // const [isContextCollapsed, setIsContextCollapsed] = useState(false); // REMOVED
+  // const isScene1 = scene.id === 1; // No longer needed for collapse logic directly here
 
   return (
     <div className="p-6">
@@ -32,31 +31,11 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToSc
           <div className="mb-6">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-semibold text-slate-800">Context</h2>
-              {/* Only show collapse button for scene 1 */}
-              {isScene1 && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setIsContextCollapsed(!isContextCollapsed)}
-                  className="flex items-center gap-2"
-                >
-                  {isContextCollapsed ? (
-                    <>
-                      <span className="text-sm">Show Context</span>
-                      <ChevronDown size={16} />
-                    </>
-                  ) : (
-                    <>
-                      <span className="text-sm">Hide Context</span>
-                      <ChevronUp size={16} />
-                    </>
-                  )}
-                </Button>
-              )}
+              {/* "Hide Context" button REMOVED */}
             </div>
             
-            {/* Context text - collapsible only for scene 1, always visible for others */}
-            {(!isScene1 || !isContextCollapsed) && (
+            {/* Context text - always visible if scene.context exists */}
+            {scene.context && (
               <div className="bg-white p-5 rounded-lg border-l-4 border-blue-500 mb-6">
                 <p className="text-slate-700 italic text-base leading-relaxed whitespace-pre-line">
                   {scene.context}
@@ -64,8 +43,8 @@ export const SceneContent: React.FC<SceneContentProps> = ({ scene, onAdvanceToSc
               </div>
             )}
 
-            {/* Continue Button for Scene 1 - Only show if not collapsed */}
-            {scene.id === 1 && onAdvanceToScene && !isContextCollapsed && (
+            {/* Continue Button for Scene 1 - Only show if context is present and it's Scene 1 */}
+            {scene.id === 1 && onAdvanceToScene && scene.context && (
               <div className="text-center mb-6">
                 <Button 
                   onClick={onAdvanceToScene}
