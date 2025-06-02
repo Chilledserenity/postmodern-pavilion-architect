@@ -1,4 +1,3 @@
-
 import { ScenarioData } from '@/types/scenario';
 
 export const updatedScenarioData: ScenarioData = {
