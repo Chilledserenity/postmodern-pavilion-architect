@@ -10,7 +10,7 @@ import { updatedScenarioData } from '@/data/updatedScenarios';
 interface MeetingRoomProps {
   scene: Scene;
   sceneIndex: number;
-  totalScenes: number;
+  totalScenes: number; // Keep this prop for clarity, though ProgressBar might recalculate
   playerChoices: Record<number | string, string>;
   onChoiceSelect: (choice: string) => void;
   onRestart: () => void;
@@ -19,7 +19,7 @@ interface MeetingRoomProps {
 export const MeetingRoom: React.FC<MeetingRoomProps> = ({
   scene,
   sceneIndex,
-  // totalScenes prop is not directly used here for ProgressBar, as ProgressBar calculates from updatedScenarioData.scenes.length
+  // totalScenes, // Not directly used if ProgressBar calculates its own total
   playerChoices,
   onChoiceSelect,
   onRestart
@@ -62,22 +62,28 @@ export const MeetingRoom: React.FC<MeetingRoomProps> = ({
   const currentProgress = sceneIndex + 1;
   const totalProgressScenes = updatedScenarioData.scenes.length;
 
+  // Assuming CommitteePanel is approx 5rem (80px) + 1px border
+  // Assuming ProgressBar is approx 2rem (32px) + 1px border
+  const committeePanelHeight = 'calc(5rem + 1px)';
+  const progressBarHeight = 'calc(2rem + 1px)';
+  const totalFixedHeaderHeight = `calc(${committeePanelHeight} + ${progressBarHeight})`; // This will be calc(7rem + 2px)
+
+  // New desired padding top for main content to increase space below ProgressBar
+  const mainContentPaddingTop = `calc(${totalFixedHeaderHeight} + 2rem)`; // e.g., calc(7rem + 2px + 2rem) = calc(9rem + 2px)
+
   return (
-    <div className="min-h-screen bg-slate-100"> {/* Simplified main page background */}
+    <div className="min-h-screen bg-slate-100">
       <div className="relative min-h-screen">
-        {/* REMOVED: Full page background overlay div is gone */}
         
         <div className="fixed top-0 left-0 right-0 z-50">
           <CommitteePanel characters={updatedScenarioData.characters} />
         </div>
         
-        {/* ProgressBar position adjusted: assumes CommitteePanel is 5rem + 1px (border) tall */}
-        <div className="fixed top-[calc(5rem+1px)] left-0 right-0 z-40"> {/* ADJUSTED for zero gap */}
+        <div className={`fixed left-0 right-0 z-40`} style={{ top: committeePanelHeight }}>
           <ProgressBar current={currentProgress} total={totalProgressScenes} />
         </div>
         
-        {/* Main Content Area padding adjusted: CommitteePanel (5rem+1px) + ProgressBar (2rem+1px) = 7rem+2px */}
-        <div className="relative z-10 pt-[calc(7rem+2px)] pb-6 px-4"> {/* ADJUSTED for zero gap */}
+        <div className={`relative z-10 pb-6 px-4`} style={{ paddingTop: mainContentPaddingTop }}>
           <div className="max-w-5xl mx-auto">
             <div className="bg-white/90 backdrop-blur-md rounded-lg shadow-xl mb-8">
               <SceneContent 
