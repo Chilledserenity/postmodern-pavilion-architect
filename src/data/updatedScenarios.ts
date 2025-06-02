@@ -29,11 +29,11 @@ export const updatedScenarioData = {
     },
     {
       "id": "dr-patel",
-      "name": "Dr. Raj Patel",
+      "name": "Dr. Awhina Patel",
       "title": "Urban Design Specialist",
       "description": "Expert in contemporary city planning and public space design",
       "personality": "Analytical, interested in broader urban implications",
-      "avatar": "/avatars/dr_patel_avatar.jpg" // UPDATED
+      "avatar": "/avatars/dr_patel_avatar.png" // UPDATED
     }
   ],
   "scenes": [
