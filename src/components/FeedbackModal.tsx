@@ -72,7 +72,7 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
               )}
             </div>
             
-            {!option.isCorrect && (
+            {!option.isCorrect && scene.incorrectFeedback && (
               <div className="bg-slate-100 p-6 rounded-lg">
                 <h4 className="text-lg font-semibold text-slate-800 mb-3">Recommended Approach:</h4>
                 <p className="text-slate-700 leading-relaxed">
