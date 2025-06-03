@@ -1,147 +1,113 @@
 import { ScenarioData } from '@/types/scenario';
 
 export const updatedScenarioData: ScenarioData = {
-  title: "Postmodern Pavilion Design Challenge",
-  description: "An immersive architectural design experience for university students studying postmodernism.",
+  title: "ArchHTC237 Postmodern Pavilion Design Challenge",
+  description: "An interactive architectural design scenario exploring postmodern principles",
   characters: [
     {
       id: "dr-chen",
-      name: "Dr. Sarah Chen",
-      title: "Architectural Historian",
-      description: "Leading expert in postmodern architectural theory and practice.",
-      personality: "Intellectually rigorous, values theoretical depth and practical application.",
+      name: "Dr. Chen",
+      title: "Architectural Historian", 
+      description: "Postmodern theory and semiotics specialist",
+      personality: "Analytical and theoretical, values conceptual rigor",
       avatar: "/avatars/dr_chen_avatar.png"
-    },
-    {
-      id: "maria-santos",
-      name: "Maria Santos",
-      title: "Community Advocate",
-      description: "Specialist in community engagement and inclusive design processes.",
-      personality: "Passionate and inclusive, represents community interests.",
-      avatar: "/avatars/maria_santos_avatar.png"
     },
     {
       id: "james-mitchell",
       name: "James Mitchell",
-      title: "Urban Planner",
-      description: "Professional architect with extensive public project experience.",
-      personality: "Practical and collaborative, focuses on real-world application.",
+      title: "Urban Planning Consultant",
+      description: "Community engagement and site context expert", 
+      personality: "Practical and collaborative, focuses on real-world application",
       avatar: "/avatars/james_mitchell_avatar.png"
     },
     {
-      id: "dr-awhina-patel",
-      name: "Dr. Awhina Patel",
-      title: "Cultural Heritage Representative",
-      description: "Expert in multicultural design and historical context expert.",
-      personality: "Thoughtful and sensitive, bridges culture and design.",
-      avatar: "/avatars/dr_patel_avatar.png" // Ensure this avatar file exists for Dr. Awhina Patel
+      id: "maria-santos", 
+      name: "Maria Santos",
+      title: "Community Advocate",
+      description: "Cultural diversity and public engagement specialist",
+      personality: "Passionate and inclusive, represents community interests",
+      avatar: "/avatars/maria_santos_avatar.png"
+    },
+    {
+      id: "dr-patel",
+      name: "Dr. Patel", 
+      title: "Cultural Heritage Specialist",
+      description: "Multicultural design and historical context expert",
+      personality: "Thoughtful and sensitive, bridges culture and design",
+      avatar: "/avatars/dr_patel_avatar.png"
     }
   ],
   scenes: [
-    // Scene 1: Introduction and Briefing
     {
-      id: 1,
-      title: "Introduction and Briefing",
-      description: "The design review meeting begins. The committee outlines the project brief and expectations for a postmodern approach.",
-      context: `The scenario opens with the student (as a junior architect or designer) arriving at a concept design review meeting for a proposed community pavilion at Wynyard Point. The review committee is introduced: it includes an Urban Planner (James Mitchell), an Architectural Historian (Dr. Sarah Chen), a Community Advocate (Maria Santos), and a Cultural Heritage Representative (Dr. Awhina Patel) from the local community. Each has a stake in the project’s outcome. The chair of the committee (James Mitchell, as Urban Planner) outlines the context:
-
-“Thank you for coming. As you know, Wynyard Quarter is a unique waterfront area with a rich history and a diverse community. We’re looking for a pavilion design that can become a vibrant gathering place. In our brief we asked designers for a postmodern approach – something creative, symbolic, and tuned to context, in contrast to the bland modernist boxes we often see. We’re excited to hear how you’ve tackled this challenge. Please walk us through your concept.”
-
-The student is thus reminded that a Postmodern design ethos is expected. The atmosphere is polite but professional. The committee signals that they will be asking questions focusing on different aspects: the overall design concept, how it reflects local culture, how it fits the site and practical needs, and how it will appeal to everyday people. The student has a chance to mentally prepare as the first question comes from the Architectural Historian, who is curious about the philosophical direction of the design.`,
+      id: "advance-to-scene-2",
+      title: "Welcome to the Design Review",
+      description: "Introduction to the committee and project context",
+      context: "Welcome to the ArchHTC237 Postmodern Pavilion Design Challenge. You are a young architect presenting your proposal for a community pavilion at Wynyard Point, Auckland.\n\nThe review committee consists of four distinguished professionals, each bringing their own expertise and perspective to evaluate your design. Your challenge is to demonstrate understanding of postmodern architectural principles while creating a design that serves Auckland's diverse communities.\n\nThis is not about creating detailed drawings or technical specifications—it's about showing how postmodern theory translates into thoughtful design decisions that address real community needs.\n\nYour success will be measured by how well you apply concepts like multivalent communication, time-binding, and spatial pluralism to create architecture that speaks to both popular culture and architectural sophistication.\n\nRemember: Charles Jencks argued that the best postmodern architecture communicates on multiple levels simultaneously. Your pavilion should do the same.",
       question: "",
-      options: [],
-      correctFeedback: "",
-      incorrectFeedback: ""
-    },
-    // Scene 2: Design Communication Strategy
-    {
-      id: 2,
-      title: "Design Communication Strategy",
-      description: "How will your design communicate meaningfully with Wynyard Quarter's diverse audiences—from local families to architecture professionals—without excluding anyone?",
-      context: `The committee settles back in their chairs, their initial impressions of your contextual postmodern approach clearly positive. The afternoon light streams through the floor-to-ceiling windows of the Wynyard Quarter meeting room, illuminating the harbour beyond where old industrial cranes stand as silent monuments to the area's maritime past.
-
-Dr. Sarah Chen, the Architectural Historian, leans forward with genuine interest. "Your opening remarks about contextual postmodernism have certainly caught our attention. But now we need to understand the specifics." She gestures toward the presentation screen. "This pavilion will be encountered by thousands of people - families on weekend outings, tourists discovering Auckland, office workers grabbing lunch, architectural students on field trips. How exactly will your design communicate with this incredibly diverse audience? What's your strategy for making architecture that speaks meaningfully to people?"
-
-The Urban Planner, James Mitchell, adds with a slight smile, "And please, help us understand this in concrete terms. We've sat through too many presentations where architects speak in abstract generalities about 'creating dialogue' without explaining how a building actually does that."
-
-The Community Advocate, Maria Santos, nods emphatically. "Exactly. We need to know that this isn't just architecture for architects. How will regular Aucklanders - people who've never studied design theory - actually connect with this building?"
-
-The Cultural Heritage Representative, Dr. Awhina Patel, concludes the committee's challenge: "Communication in architecture isn't neutral. Every design choice sends messages, whether intentional or not. We want to understand what messages your pavilion will send, and to whom."`,
-      question: "Your response:",
       options: [
         {
-          id: "s2-opA-iconic-representation",
-          title: "Iconic Representation Strategy",
-          description: `Our strategy uses iconic forms that people recognize through visual similarity. The pavilion's profile echoes Auckland's volcanic cones, while the entrance references harbour sailing vessels. We're using weathering steel to match the industrial structures around Wynyard, creating visual continuity. This follows Charles Jencks' approach to architectural iconography - familiar elements recomposed in new ways that create both recognition and interest.`,
-          approach: `Our strategy uses iconic forms that people recognize through visual similarity. The pavilion's profile echoes Auckland's volcanic cones, while the entrance references harbour sailing vessels. We're using weathering steel to match the industrial structures around Wynyard, creating visual continuity. This follows Charles Jencks' approach to architectural iconography - familiar elements recomposed in new ways that create both recognition and interest.`,
-          isCorrect: true, // Partially correct, allows scenario to continue.
-          feedback: `Dr. Chen nods thoughtfully. "Your reference to iconic representation shows you understand Pierce's semiotic categories, and the connection to Jencks' work is appropriate. The volcanic cone reference is particularly clever - most Aucklanders would recognize that profile even if they couldn't articulate why."
-
-James Mitchell seems impressed by the practical application: "The weathering steel detail demonstrates real understanding of how architectural communication works over time - the building will literally develop a visual conversation with its industrial context."
-
-However, Maria Santos raises a concern: "While this approach will certainly create recognition, I'm wondering about depth of engagement. Pierce's iconic signs work through similarity, but what happens after that initial recognition? Does the building have anything more to say?"
-
-Dr. Awhina Patel adds: "There's also the question of whose visual vocabulary you're drawing from. Auckland's volcanic landscape is certainly recognizable, but it represents just one layer of this place's identity. Your approach seems to prioritize geological and maritime references - what about the cultural and social layers?"
-
-Scenario Outcome: This is a solid postmodern approach that demonstrates understanding of iconic communication, but the committee wants to explore whether your strategy has sufficient depth and inclusivity. The scenario continues, but they'll be looking for more sophisticated responses in subsequent decisions.`,
-          lectureReference: ""
-        },
-        {
-          id: "s2-opB-symbolic-encoding",
-          title: "Symbolic Encoding Strategy",
-          description: `We're embedding symbolic content that reveals itself through interpretation. The structural grid combines proportional systems from both European and Pacific traditions, while the three main spaces represent past, present, and future. Materials work symbolically too - stone base for geological foundation, lighter structures above for human activity. This follows Roland Barthes' ideas about cultural codes operating beneath surface appearances.`,
-          approach: `We're embedding symbolic content that reveals itself through interpretation. The structural grid combines proportional systems from both European and Pacific traditions, while the three main spaces represent past, present, and future. Materials work symbolically too - stone base for geological foundation, lighter structures above for human activity. This follows Roland Barthes' ideas about cultural codes operating beneath surface appearances.`,
-          isCorrect: false, //  <-- MAKE SURE THIS LINE IS EXACTLY LIKE THIS (no extra quotes on "isCorrect")
-          feedback: `Dr. Awhina Patel responds with interest: "Your reference to symbolic communication shows sophisticated understanding of how meaning operates in architecture. The proportional system integration is particularly thoughtful - it suggests genuine engagement with cultural plurality rather than superficial decoration."
-
-However, Dr. Chen raises a critical concern: "While I appreciate the theoretical sophistication, I'm worried about accessibility. Barthes' cultural codes work for those who already possess the cultural knowledge to decode them. What about visitors who don't have background in architectural history or cultural symbolism? Are you creating what Jencks criticized as architecture that speaks only to the initiated?"
-
-James Mitchell adds: "There's also a practical issue. If the symbolic content requires interpretation to be meaningful, how do you ensure that interpretation actually happens? Are you planning interpretive materials, or do you expect the architecture to communicate these meanings independently?"
-
-Maria Santos voices the community perspective: "This sounds intellectually rich, but I'm concerned it might create barriers rather than bridges. If someone needs specialized knowledge to 'get' the building, does that make it exclusive rather than inclusive?"
-
-Scenario Outcome: Your symbolic approach demonstrates theoretical knowledge, but the committee has significant concerns about accessibility and inclusivity. This path leads to critical feedback about postmodernism's goal of speaking to diverse audiences, not just cultural elites. You'll need to address these concerns in subsequent decisions to avoid scenario failure.`,
-          lectureReference: ""
-        },
-        {
-          id: "s2-opC-direct-communicative",
-          title: "Direct Communicative Strategy",
-          description: `We believe in functional clarity and honest expression. The rectangular plan clearly indicates community meeting use, while large glazed openings signal transparency. Following Louis Sullivan's 'form follows function,' every element has a clear purpose. We're avoiding what Charles Jencks called 'semantic confusion' by ensuring intuitive organization and appropriate materials that speak their structural language.`,
-          approach: `We believe in functional clarity and honest expression. The rectangular plan clearly indicates community meeting use, while large glazed openings signal transparency. Following Louis Sullivan's 'form follows function,' every element has a clear purpose. We're avoiding what Charles Jencks called 'semantic confusion' by ensuring intuitive organization and appropriate materials that speak their structural language.`,
-          isCorrect: false,
-          feedback: `The committee exchanges glances, and Dr. Chen responds with barely concealed concern: "I'm afraid there are some significant misunderstandings in your approach. First, Charles Jencks never used the term 'semantic confusion' - in fact, he advocated for what he called 'multivalent' architecture that deliberately embraces multiple meanings rather than avoiding them."
-
-James Mitchell adds: "More fundamentally, you're describing classic modernist principles - Sullivan's functionalism, Loos's architectural honesty - but we specifically briefed for a postmodern approach. Jencks famously declared modernism 'dead' precisely because this kind of reductive communication failed to engage with the complexity of contemporary culture."
-
-Maria Santos looks confused: "Are you suggesting that architectural communication should be limited to functional expression? What about the cultural, social, and symbolic dimensions that make buildings meaningful to communities?"
-
-Dr. Awhina Patel concludes: "Robert Venturi never advocated for 'meaningful simplicity' - quite the opposite. His famous response to Mies van der Rohe's 'less is more' was 'less is a bore.' He argued for complexity and contradiction as essential to meaningful architecture."
-
-Scenario Outcome: This response demonstrates fundamental misunderstanding of postmodern principles and misattributes concepts to theorists who opposed them. The committee is deeply concerned about your grasp of the brief. The scenario ends here with strong feedback about the difference between modernist and postmodern communication strategies, and you're encouraged to restart with a clearer understanding of postmodern theory.`,
-          lectureReference": ""
-        },
-        {
-          id: "s2-opD-multivalent-communication",
-          title: "Multivalent Communication Strategy",
-          description: `Our approach creates what Charles Jencks calls 'multivalent' architecture - buildings that communicate on multiple levels simultaneously. Families see inviting community spaces with playful forms and welcoming scales. Architects read the same elements as sophisticated geometric systems and spatial complexity. The building practices 'time-binding' by connecting to Wynyard's character without nostalgic copying.`,
-          approach: `Our approach creates what Charles Jencks calls 'multivalent' architecture - buildings that communicate on multiple levels simultaneously. Families see inviting community spaces with playful forms and welcoming scales. Architects read the same elements as sophisticated geometric systems and spatial complexity. The building practices 'time-binding' by connecting to Wynyard's character without nostalgic copying.`,
+          id: "advance-to-scene-2",
+          title: "Begin the Review",
+          description: "Start the design review process",
+          approach: "Proceed to the first design question",
           isCorrect: true,
-          feedback: `Dr. Chen smiles with genuine approval: "Now this demonstrates real understanding of postmodern communication theory. Your reference to multivalent architecture directly addresses Jencks' central insight that the best buildings speak to diverse audiences without talking down to any of them."
-
-Maria Santos responds enthusiastically: "This is exactly what we hoped to hear. You're describing architecture that works immediately for everyone while also offering more to those who want to engage more deeply. That's genuine inclusivity."
-
-James Mitchell nods: "The practical applications you've described - the variety of spatial types, the intuitive organization - show you understand that multivalent communication isn't just theoretical. It has to work in real spatial and social terms."
-
-Dr. Awhina Patel adds: "Your understanding of time-binding is particularly sophisticated. You're describing how buildings can honour context without copying it, which is exactly what successful postmodern architecture achieves."
-
-Dr. Chen concludes: "This response suggests you have the theoretical foundation to develop a truly successful postmodern pavilion. We're eager to see how you apply these communication principles to the specific challenges ahead."
-
-Scenario Outcome: Excellent response that demonstrates deep understanding of multivalent communication and postmodern theory. The committee is convinced of your conceptual approach and ready to explore more specific design decisions. The scenario continues with positive momentum, and your subsequent choices will build on this strong foundation.`,
-          lectureReference": ""
+          feedback: "Welcome to the review process!",
+          nextScene: "2"
         }
       ],
       correctFeedback: "",
       incorrectFeedback: ""
+    },
+    {
+      id: "2",
+      title: "Architectural Communication Strategy", 
+      description: "How will your design communicate with diverse audiences?",
+      context: "The committee settles back in their chairs, their initial impressions clearly positive. You've just finished outlining your basic pavilion concept—a flexible community space that can accommodate everything from small cultural gatherings to large public events.\n\nDr. Chen adjusts her glasses and leans forward with scholarly intensity. 'Your functional program sounds comprehensive,' she begins, 'but I'm particularly interested in your communication strategy. Wynyard Quarter attracts an incredibly diverse range of people—local families, international tourists, architecture students, business professionals, elderly residents, young children.'\n\nMaria Santos nods enthusiastically: 'That's exactly right. We need architecture that doesn't talk down to anyone or exclude anyone. Some buildings seem designed only for people with architecture degrees, while others are so simplified they become bland.'\n\nJames Mitchell adds: 'Charles Jencks wrote extensively about this challenge—how can architecture speak meaningfully to both popular culture and professional architectural discourse? It's one of postmodernism's central concerns.'\n\nDr. Patel concludes with a direct challenge: 'So here's our first substantive question: How exactly will your design communicate with this incredibly diverse audience? What's your strategy for ensuring the pavilion speaks meaningfully to different groups without excluding anyone?'",
+      question: "How will your pavilion communicate meaningfully with Wynyard Quarter's diverse audiences—from local families to architecture professionals—without excluding anyone?",
+      options: [
+        {
+          id: "2a",
+          title: "Multivalent Communication Strategy",
+          description: "Design elements work on multiple levels for different audiences",
+          approach: "Our approach recognizes that different groups read architectural elements differently, following Charles Jencks' concept of multivalent communication. The pavilion's design elements work on multiple levels—families will engage with welcoming forms and comfortable spaces, while those familiar with architectural history will recognize references to both classical proportions and contemporary design strategies. Local communities can interpret certain forms through their own cultural lenses, while visitors might read them differently. This layered approach means the building can communicate meaningfully with diverse audiences without requiring everyone to understand the same messages.",
+          isCorrect: true,
+          feedback: "Dr. Chen responds with clear approval: 'This demonstrates excellent understanding of Jencks' multivalent architecture. You're showing how the same building can speak to different audiences through different interpretative frameworks, rather than trying to make everyone see the same thing.'\n\nMaria Santos adds enthusiastically: 'The key insight here is that you're not dumbing down the architecture for popular audiences or making it overly complex for professionals. You're creating genuine richness that people can engage with at their own level of interest and knowledge.'\n\nJames Mitchell nods: 'This approach acknowledges that communities bring their own interpretative abilities to architecture. You're respecting people's intelligence while creating multiple entry points for engagement.'\n\nDr. Patel concludes: 'You're demonstrating how postmodern architecture succeeds by embracing interpretative diversity rather than trying to control how people understand the building. That's sophisticated community engagement.'",
+          lectureReference: "Perfect application of Jencks' multivalent communication theory",
+          nextScene: "3"
+        },
+        {
+          id: "2b", 
+          title: "Symbolic Encoding Strategy",
+          description: "Embedding cultural codes that reveal through interpretation",
+          approach: "We're embedding symbolic content that reveals itself through interpretation. The structural grid combines proportional systems from both European and Pacific traditions, while the three main spaces represent past, present, and future. Materials work symbolically too—stone base for geological foundation, lighter structures above for human activity. This follows Roland Barthes' ideas about cultural codes operating beneath surface appearances, creating architecture that rewards deeper engagement and cultural knowledge.",
+          isCorrect: false,
+          feedback: "Dr. Patel responds with visible concern: 'I'm afraid this approach reflects exactly the kind of tokenistic multiculturalism that postmodern theorists warned against. You're describing what James Clifford called \"cultural display\" rather than genuine pluralism.'\n\nDr. Chen adds: 'Roland Barthes never wrote about architectural cultural codes in the way you've described. His approach was much more subtle—he advocated for understanding how meaning operates in everyday culture, not for embedding academic symbols that require specialized knowledge to decode.'\n\nMaria Santos looks frustrated: 'This kind of approach often makes communities feel like their cultures are being used as decoration rather than genuinely respected. It's what critics call \"diversity theater\"—visible symbols without meaningful inclusion.'\n\nJames Mitchell concludes: 'There's also a practical issue. Static cultural symbols can't accommodate the dynamic, evolving nature of how communities actually use spaces. You're designing a museum display, not a living community building.'",
+          lectureReference: "Review the lecture section on 'Pluralism or Multivalence' where Jencks explains that pluralism works through architectural richness that can support diverse interpretations, not through symbolic decoration.",
+          nextScene: "2"
+        },
+        {
+          id: "2c",
+          title: "Direct Communicative Strategy",
+          description: "Functional clarity and honest material expression",
+          approach: "We believe in functional clarity and honest expression. The rectangular plan clearly indicates community meeting use, while large glazed openings signal transparency. Following Louis Sullivan's 'form follows function,' every element has a clear purpose. We're avoiding what Charles Jencks called 'semantic confusion' by ensuring intuitive organization and appropriate materials that speak their structural language.",
+          isCorrect: false,
+          feedback: "Dr. Chen responds with barely concealed concern: 'I'm afraid there are significant misunderstandings in your approach. First, Charles Jencks never used the term \"semantic confusion\"—in fact, he advocated for what he called \"multivalent\" architecture that deliberately embraces multiple meanings rather than avoiding them.'\n\nJames Mitchell adds: 'More fundamentally, you're describing classic modernist principles—Sullivan's functionalism, honest material expression—but we specifically briefed for a postmodern approach. Jencks famously declared modernism \"dead\" precisely because this kind of reductive communication failed to engage with contemporary cultural complexity.'\n\nMaria Santos looks confused: 'Are you suggesting architectural communication should be limited to functional expression? What about the cultural, social, and symbolic dimensions that make buildings meaningful to communities?'\n\nDr. Patel concludes: 'Robert Venturi never advocated for meaningful simplicity—quite the opposite. His famous response to Mies van der Rohe's \"less is more\" was \"less is a bore.\" He argued for complexity and contradiction as essential to meaningful architecture.'",
+          lectureReference: "Review the lecture section on 'Charles Jencks' where it explains that Jencks declared 'Modern architecture dies in St Luis, Missouri on July 15th, 1972 at 3:22 pm' because modernist approaches like Sullivan's functionalism failed to engage with community needs.",
+          nextScene: "2"
+        },
+        {
+          id: "2d",
+          title: "Community Interpretation Strategy", 
+          description: "Creating neutral framework for user-generated meaning",
+          approach: "Our approach follows what Jencks calls 'user-generated meaning'—instead of prescribing how the space should be used, we're creating a neutral framework that communities can interpret and adapt according to their own needs. The building's forms are deliberately ambiguous to avoid imposing specific cultural readings. We'll provide basic infrastructure—power, water, flexible lighting—and let different community groups bring their own furniture, decorations, and spatial arrangements.",
+          isCorrect: false,
+          feedback: "Dr. Chen responds with mixed concern: 'While community agency is certainly important to postmodern theory, I'm not sure Jencks ever advocated for \"user-generated meaning\" in quite this way. There's a difference between multivalent architecture and architecturally neutral space.'\n\nMaria Santos looks puzzled: 'This sounds like you're asking communities to do the architect's job. If we wanted a generic rental hall, we wouldn't need a design competition. We're looking for architecture that actively supports diverse uses, not just gets out of the way.'\n\nJames Mitchell adds: 'There's also a practical concern. Different community groups have very different resources. Some can afford elaborate setups, others can't. Your approach might inadvertently create inequality in who can effectively use the space.'\n\nDr. Patel concludes: 'Postmodern pluralism isn't about architectural neutrality—it's about architectural richness that can accommodate different interpretations. Jencks advocated for buildings with strong character that could still speak to diverse audiences, not blank slates.'",
+          lectureReference: "Review the lecture section on 'Pluralism or Multivalence' where it explains that Jencks believed 'form and function must be dissociated' but through architectural richness, not neutrality.",
+          nextScene: "2"
+        }
+      ],
+      correctFeedback: "Excellent response demonstrating deep understanding of multivalent communication and postmodern theory.",
+      incorrectFeedback: "Consider how postmodern architecture can communicate meaningfully with diverse audiences without exclusion or tokenism."
     },
     // Scene 3: Pluralistic Design Approach
     {
@@ -558,11 +524,11 @@ Outcome: Your analysis conflates different postmodern strategies and mischaracte
           description: `This house shows how postmodern architecture responds to suburban context through environmental integration and neighbourhood compatibility. Venturi designed the house to blend seamlessly with surrounding residential development while subtly elevating the architectural discourse of the neighbourhood. The house demonstrates what he termed 'contextual modernism' - contemporary architecture that respects existing urban fabric rather than disrupting it through formal contrast.`,
           approach: `This house shows how postmodern architecture responds to suburban context through environmental integration and neighbourhood compatibility. Venturi designed the house to blend seamlessly with surrounding residential development while subtly elevating the architectural discourse of the neighbourhood. The house demonstrates what he termed 'contextual modernism' - contemporary architecture that respects existing urban fabric rather than disrupting it through formal contrast.`,
           isCorrect: false,
-          feedback: `Dr. Chen responds with disagreement: "Venturi never wrote about 'contextual modernism' - this isn't a concept from postmodern theory. The Vanna Venturi House actually stands out quite dramatically from its suburban neighbors rather than blending in."
+          feedback: `Dr. Chen responds with disagreement: "Venturi never wrote about 'contextual modernism' - this isn't a concept from postmodern theory. The Vanna Venturi House actually stands out quite dramatically from its suburban neighbours rather than blending in."
 
 Maria Santos adds: "The house's significance lies partly in how it challenges conventional suburban architecture, not in how it integrates with it. Venturi was critiquing typical suburban development, not trying to harmonize with it."
 
-James Mitchell notes: "Environmental integration and neighborhood compatibility weren't primary concerns for this house - it was designed as an architectural statement about complexity and contradiction in domestic architecture."
+James Mitchell notes: "Environmental integration and neighbourhood compatibility weren't primary concerns for this house - it was designed as an architectural statement about complexity and contradiction in domestic architecture."
 
 Dr. Awhina Patel concludes: "This analysis misses the house's actual contribution to postmodern theory and doesn't connect to your pavilion strategies of multivalent communication and community engagement."
 
