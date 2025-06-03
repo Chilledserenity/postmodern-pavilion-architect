@@ -142,7 +142,7 @@ James Mitchell nods: "This is practical pluralism. You're showing how theoretica
 Dr. Awhina Patel concludes: "Your approach respects cultural differences without tokenism. The variety of spatial experiences allows different communities to use the building in ways that feel appropriate to them."
 
 Outcome: Excellent response. Continue to next scene.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s3-opB-cultural-symbols",
@@ -159,7 +159,7 @@ Maria Santos looks frustrated: "This kind of approach often makes communities fe
 James Mitchell concludes: "There's also a practical issue. Static cultural symbols can't accommodate the dynamic, evolving nature of how communities actually use spaces. You're designing a museum display, not a living community building."
 
 Outcome: This response demonstrates misunderstanding of pluralism vs. tokenism. Please review the lecture content on Jencks' concept of pluralism and Venturi's ideas about complexity and contradiction. Consider how genuine pluralism might work through spatial flexibility rather than symbolic representation, then try again.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s3-opC-universal-accessibility",
@@ -176,7 +176,7 @@ Maria Santos looks concerned: "Universal design for disability access is crucial
 Dr. Awhina Patel concludes: "This approach reflects what postmodern critics identified as modernism's fundamental failure - the assumption that human needs are universal when they're actually deeply shaped by cultural, social, and historical contexts."
 
 Outcome: This response confuses universal design principles with postmodern pluralism and misattributes concepts to Jencks. Please review the lecture content on modernism vs. postmodernism and Jencks' critique of universalist approaches. Consider how postmodern pluralism differs from modernist universalism, then try again.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s3-opD-interpretive-flexibility",
@@ -193,7 +193,7 @@ James Mitchell adds: "There's also a practical concern. Different community grou
 Dr. Awhina Patel concludes: "Postmodern pluralism isn't about architectural neutrality - it's about architectural richness that can accommodate different interpretations. Jencks advocated for buildings with strong character that could still speak to diverse audiences, not blank slates."
 
 Outcome: Your response shows some understanding of community agency but confuses architectural neutrality with postmodern pluralism. Review the lecture content on how pluralism works through architectural richness rather than generic flexibility. Consider how buildings can have strong character while still serving diverse communities. Please try again.`,
-          lectureReference": ""
+          lectureReference: ""
         }
       ],
       correctFeedback: "",
@@ -232,7 +232,7 @@ Dr. Awhina Patel adds: "This approach respects both the working-class history an
 Maria Santos concludes: "Community members will be able to see connections to the area's industrial character while also recognizing that this is something new and relevant to current needs. That's exactly the kind of historical sensitivity we hoped for."
 
 Outcome: Excellent response demonstrating deep understanding of time-binding principles. Continue to next scene.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s4-opB-radical-eclecticism",
@@ -249,7 +249,7 @@ Dr. Awhina Patel looks worried: "Your approach treats history as superficial vis
 Maria Santos concludes: "This kind of ironic approach can be alienating to communities with genuine connections to the area's history. What seems playful to architects might feel dismissive to people whose lives and livelihoods were shaped by these historical contexts."
 
 Outcome: Your response shows awareness of postmodern historical strategies but misunderstands key concepts and misattributes ideas to theorists. Review the lecture content on Jencks' distinction between meaningful historical engagement and superficial pastiche. Consider how time-binding differs from arbitrary historical mixing. Please try again.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s4-opC-heritage-preservation",
@@ -266,7 +266,7 @@ Dr. Awhina Patel looks disappointed: "This approach also raises equity questions
 Maria Santos concludes: "Postmodern architecture isn't about recreating the past but about creating new possibilities informed by historical understanding. Your approach would produce a theme park version of industrial heritage rather than meaningful contemporary architecture."
 
 Outcome: This response confuses historic preservation with postmodern historical engagement. Review the lecture content on Jencks' critique of nostalgic historicism and his concept of time-binding as alternative to both preservation and erasure. Consider how contemporary architecture can acknowledge history without imitating it, then try again.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s4-opD-future-oriented",
@@ -283,7 +283,7 @@ Maria Santos looks frustrated: "This approach would create architecture for a na
 Dr. Awhina Patel concludes: "You're also misunderstanding gentrification dynamics. Architecture that serves only 'young professionals and international visitors' contributes to displacing existing communities rather than creating inclusive public space."
 
 Outcome: This response demonstrates fundamental misunderstanding of postmodern principles and misattributes concepts to Jencks. Review the lecture content on postmodernism as critique of modernist universalism and future-oriented abstraction. Consider how postmodern architecture engages with historical context rather than ignoring it, then try again.`,
-          lectureReference": ""
+          lectureReference: ""
         }
       ],
       correctFeedback: "",
@@ -311,7 +311,7 @@ Dr. Awhina Patel concludes: "So here's our question: How will your pavilion achi
           description: `Our approach recognizes that different groups read architectural elements differently, following Charles Jencks' concept of multivalent communication. The pavilion's design elements work on multiple levels - families will engage with welcoming forms and comfortable spaces, while those familiar with architectural history will recognize references to both classical proportions and contemporary design strategies. Local communities can interpret certain forms through their own cultural lenses, while visitors might read them differently. This layered approach means the building can communicate meaningfully with diverse audiences without requiring everyone to understand the same messages.`,
           approach: `Our approach recognizes that different groups read architectural elements differently, following Charles Jencks' concept of multivalent communication. The pavilion's design elements work on multiple levels - families will engage with welcoming forms and comfortable spaces, while those familiar with architectural history will recognize references to both classical proportions and contemporary design strategies. Local communities can interpret certain forms through their own cultural lenses, while visitors might read them differently. This layered approach means the building can communicate meaningfully with diverse audiences without requiring everyone to understand the same messages.`,
           isCorrect: true,
-          feedback": `Dr. Chen responds with clear approval: "This demonstrates excellent understanding of Jencks' multivalent architecture. You're showing how the same building can speak to different audiences through different interpretative frameworks, rather than trying to make everyone see the same thing."
+          feedback: `Dr. Chen responds with clear approval: "This demonstrates excellent understanding of Jencks' multivalent architecture. You're showing how the same building can speak to different audiences through different interpretative frameworks, rather than trying to make everyone see the same thing."
 
 Maria Santos adds enthusiastically: "The key insight here is that you're not dumbing down the architecture for popular audiences or making it overly complex for professionals. You're creating genuine richness that people can engage with at their own level of interest and knowledge."
 
@@ -320,7 +320,7 @@ James Mitchell nods: "This approach acknowledges that communities bring their ow
 Dr. Awhina Patel concludes: "You're demonstrating how postmodern architecture succeeds by embracing interpretative diversity rather than trying to control how people understand the building. That's sophisticated community engagement."
 
 Outcome: Excellent response. Continue to final scene.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s5-opB-essential-design",
@@ -337,7 +337,7 @@ James Mitchell notes: "This approach risks creating the kind of generic public a
 Dr. Awhina Patel concludes: "Postmodern architecture specifically rejected this kind of universalist thinking. Jencks argued that meaningful architecture emerges from engaging with specific cultural contexts, not from abstract universal principles."
 
 Outcome: This response confuses modernist universalism with postmodern multivalence. Review how Jencks criticized simplified approaches that attempt universal appeal. Try again.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s5-opC-cultural-programming",
@@ -354,7 +354,7 @@ Maria Santos notes: "There's also a practical concern about programming sustaina
 Dr. Awhina Patel concludes: "You're thinking about functional diversity, which is important, but postmodern multivalence requires architectural elements that can be read differently by different audiences - not just different uses of the same space."
 
 Outcome: Shows some understanding but focuses on programming rather than architectural multivalence. Review how postmodern architecture achieves popular and professional appeal through design rather than events. Try again.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s5-opD-interpretive-architecture",
@@ -371,7 +371,7 @@ James Mitchell adds: "This approach also creates a hierarchy where architectural
 Dr. Awhina Patel concludes: "The goal isn't to educate popular audiences about architectural theory, but to create architecture that works immediately for everyone while offering additional layers for those who seek them."
 
 Outcome: This response misunderstands how postmodern architecture achieves multivalent appeal. Review how Jencks' concept works through design rather than interpretation. Try again.`,
-          lectureReference": ""
+          lectureReference: ""
         }
       ],
       correctFeedback: "",
@@ -382,7 +382,7 @@ Outcome: This response misunderstands how postmodern architecture achieves multi
       id: 6,
       title: "Committee Decision & Design Precedents",
       description: "The committee is largely satisfied and asks for an architectural precedent to ground your approach.",
-      context": `The committee members exchange satisfied glances and begin gathering their notes. Dr. Chen looks up with a smile.
+      context: `The committee members exchange satisfied glances and begin gathering their notes. Dr. Chen looks up with a smile.
 
 "Your understanding of multivalent architectural communication has been impressive throughout this presentation," she begins. "You've demonstrated solid grasp of postmodern principles and their practical application to community design."
 
@@ -397,8 +397,8 @@ Dr. Chen leans forward with renewed focus: "We'd like you to ground your theoret
 James Mitchell explains: "This isn't just academic - precedent analysis helps us understand whether your strategies have been tested in practice and what we might learn from similar projects."
 
 Dr. Awhina Patel concludes: "So please identify a key postmodern building that demonstrates your design approach, and explain specifically what postmodern characteristics make it relevant to your pavilion strategy."`,
-      question": "Your response:",
-      options": [
+      question: "Your response:",
+      options: [
         {
           id: "s6-opA-vanna-venturi",
           title: "Vanna Venturi House by Robert Venturi (1964)",
@@ -408,8 +408,8 @@ Dr. Awhina Patel concludes: "So please identify a key postmodern building that d
           feedback: `Dr. Chen responds with approval: " Excellent choice. The Vanna Venturi House demonstrates exactly the multivalent communication and human-scaled complexity you've been describing for your pavilion, and why it's relevant to your approach."
 
 Dr. Awhina Patel adds: "Your observation about complexity and contradiction is particularly apt. Venturi's house demonstrates exactly the kind of multivalent communication you've been describing - immediately readable yet architecturally sophisticated."`,
-          lectureReference": "",
-          nextScene": "6b"
+          lectureReference: "",
+          nextScene: "6b"
         },
         {
           id: "s6-opB-seagram-building",
@@ -422,7 +422,7 @@ Dr. Awhina Patel adds: "Your observation about complexity and contradiction is p
 Maria Santos adds: "This choice suggests some confusion about the difference between modernist and postmodern approaches. The Seagram Building's 'honest material expression' and 'rational structural logic' are modernist principles, not postmodern strategies."
 
 Outcome: Please review the lecture content on the differences between modernist and postmodern architecture. Consider how postmodern buildings differ from International Style modernism, then select a different precedent.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s6-opC-att-building",
@@ -437,7 +437,7 @@ Maria Santos adds: "The AT&T Building works as architectural statement and urban
 James Mitchell concludes: "There's also a scale issue. Your pavilion strategies focus on accommodating diverse community activities, while Johnson's approach emphasizes architectural monumentality and corporate presence. These are fundamentally different design problems."
 
 Outcome: While you've correctly identified a postmodern building, it doesn't align with the community-focused strategies you've been describing. Please select a precedent that demonstrates multivalent communication and human-scaled complexity rather than corporate monumentality.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s6-opD-sydney-opera",
@@ -450,7 +450,7 @@ Outcome: While you've correctly identified a postmodern building, it doesn't ali
 Dr. Awhina Patel adds: "The Opera House doesn't demonstrate the historical reference, irony, or cultural pluralism that characterize postmodern architecture. It's a masterpiece, but of a different architectural movement."
 
 Outcome: Please review the lecture content on postmodern characteristics and select a building that demonstrates specific postmodern strategies like historical reference, pluralism, or complexity and contradiction.`,
-          lectureReference": ""
+          lectureReference: ""
         }
       ],
       correctFeedback: "",
@@ -481,8 +481,8 @@ James Mitchell nods: "This analysis shows you understand how postmodern architec
 Dr. Awhina Patel concludes: "You've demonstrated how successful postmodern precedents can inform contemporary community design. This gives us confidence that your pavilion approach is grounded in proven architectural strategies."
 
 Outcome: Excellent analysis. Scenario Complete - Full Success!`,
-          lectureReference": "",
-          nextScene": "7" 
+          lectureReference: "",
+          nextScene: "7" 
         },
         {
           id: "s6b-opB-ornamental",
@@ -499,7 +499,7 @@ Maria Santos notes: "This analysis doesn't connect to your pavilion strategies e
 James Mitchell concludes: "The Vanna Venturi House demonstrates complexity and contradiction through architectural form, not decorative systems. Please reconsider what makes this house a relevant precedent for your community-focused approach."
 
 Outcome: Your analysis misidentifies the key characteristics of your chosen precedent. Review Venturi's actual design strategies in the house and how they relate to your pavilion approach, then try again.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s6b-opC-pastiche",
@@ -516,7 +516,7 @@ James Mitchell notes: "The house's power comes from its careful manipulation of 
 Maria Santos concludes: "This analysis also doesn't connect to your pavilion approach, which focuses on multivalent communication and community engagement rather than historical pastiche methods."
 
 Outcome: Your analysis conflates different postmodern strategies and mischaracterizes Venturi's design approach. Review how the house actually engages with architectural history and its relevance to community-focused design, then try again.`,
-          lectureReference": ""
+          lectureReference: ""
         },
         {
           id: "s6b-opD-contextual",
@@ -533,7 +533,7 @@ James Mitchell notes: "Environmental integration and neighbourhood compatibility
 Dr. Awhina Patel concludes: "This analysis misses the house's actual contribution to postmodern theory and doesn't connect to your pavilion strategies of multivalent communication and community engagement."
 
 Outcome: Your analysis uses concepts not associated with Venturi's work and mischaracterizes the house's relationship to its context. Consider how the house actually demonstrates postmodern principles relevant to your community pavilion approach, then try again.`,
-          lectureReference": ""
+          lectureReference: ""
         }
       ],
       correctFeedback: "",
@@ -581,9 +581,9 @@ EXAMPLES OF STRONG REFLECTION ELEMENTS:
 
 Submit your reflection to complete the ArchHTC237 Postmodern Pavilion learning module.`,
       question: "",
-      options": [],
+      options: [],
       correctFeedback: "",
-      incorrectFeedback": ""
+      incorrectFeedback: ""
     }
   ]
 };
