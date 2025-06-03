@@ -23,8 +23,8 @@ export const FeedbackModal: React.FC<FeedbackModalProps> = ({
   onRestart,
   onRetry
 }) => {
-  // Determine if this is actually the final scene (scene 7 or last scene with options)
-  const isActuallyLastScene = scene.id === 7 || scene.id === updatedScenarioData.scenes[updatedScenarioData.scenes.length - 1].id;
+  // Determine if this is actually the final scene
+  const isActuallyLastScene = scene.id === updatedScenarioData.scenes[updatedScenarioData.scenes.length - 1].id;
   
   const handleContinue = () => {
     if (isActuallyLastScene) {

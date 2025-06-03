@@ -28,6 +28,9 @@ export interface Scene {
   options: StrategyOption[];
   correctFeedback: string;
   incorrectFeedback: string;
+  speaker?: string;
+  speakerText?: string;
+  backgroundImage?: string;
 }
 
 export interface ScenarioData {
