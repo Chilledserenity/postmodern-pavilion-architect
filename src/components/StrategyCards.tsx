@@ -31,6 +31,11 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
     setExpandedOption(expandedOption === optionId ? null : optionId);
   };
 
+  const getFirstLine = (text: string | undefined): string => {
+    if (!text) return "";
+    return text.split('\n')[0];
+  };
+
   return (
     <div className="space-y-6">
       <ScrollArea className="h-[65vh] w-full rounded-md">
@@ -39,6 +44,7 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
             const isSelected = selectedOption === option.id;
             const isExpanded = expandedOption === option.id;
             const optionLabel = getOptionLabel(index);
+            const firstLineOfDescription = getFirstLine(option.description);
             
             return (
               <Card
@@ -49,17 +55,16 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                     : 'hover:shadow-md bg-white/90'
                 } backdrop-blur-sm border-0`}
               >
-                {/* Make the CardHeader and the new image/description section clickable for selection */}
                 <div onClick={() => onOptionSelect(option.id)} className="cursor-pointer">
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg font-semibold text-slate-800 flex items-center justify-between">
-                      <div className="flex items-center gap-3 mr-2 min-w-0"> {/* Added min-w-0 for flex child */}
+                      <div className="flex items-center gap-3 mr-2 min-w-0">
                         <div className={`w-7 h-7 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0 ${
                           isSelected ? 'bg-blue-500' : 'bg-slate-400'
                         }`}>
                           {isSelected ? '✓' : optionLabel}
                         </div>
-                        <span className="text-base leading-tight truncate">{option.title}</span> {/* Added truncate for long titles */}
+                        <span className="text-base leading-tight truncate">{option.title}</span>
                       </div>
                       <Button
                         variant="ghost"
@@ -77,20 +82,20 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                       </Button>
                     </CardTitle>
                     
-                    {/* Layout for Image and Truncated Description */}
-                    <div className="flex items-start gap-x-3 pt-2 ml-10"> {/* Indent to align with approach box */}
+                    <div className="flex items-start gap-x-4 pt-2 ml-10"> {/* Adjusted gap for image */}
                       {option.optionImage && (
                         <img 
                           src={option.optionImage} 
-                          alt="" // Decorative, as title provides context
-                          className="w-16 h-16 object-cover rounded-md shrink-0 mt-1 sm:w-20 sm:h-20" // Responsive image size
+                          alt="" // Alt can be `${option.title} illustration` if desired
+                          className="w-16 h-16 object-cover rounded-md shrink-0 mt-1 sm:w-20 sm:h-20"
                         />
                       )}
+                      {/* Apply CSS for single-line truncation with ellipsis */}
                       <CardDescription 
-                        className="text-slate-600 text-sm leading-relaxed flex-grow min-w-0 block overflow-hidden text-ellipsis whitespace-nowrap"
-                        title={option.description} // Show full description on hover
+                        className="text-slate-600 text-sm leading-relaxed flex-grow min-w-0 block whitespace-nowrap overflow-hidden text-ellipsis"
+                        title={option.description} {/* Show full original description on hover */}
                       >
-                        {option.description.split('\n')[0]} {/* Display only the first line */}
+                        {firstLineOfDescription}
                       </CardDescription>
                     </div>
                   </CardHeader>
@@ -101,7 +106,7 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                     <div className="bg-slate-50 p-4 rounded-lg border-l-4 border-blue-500 ml-10"> 
                       <div className="prose prose-sm max-w-none">
                         <p className="text-slate-700 leading-relaxed whitespace-pre-line text-sm">
-                          {option.approach} {/* This shows the full text */}
+                          {option.approach} {/* Full text from approach field */}
                         </p>
                       </div>
                     </div>
