@@ -1,7 +1,7 @@
-
+// src/components/StrategyCards.tsx
 import React, { useState } from 'react';
 import { StrategyOption } from '@/types/scenario';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'; // Added CardDescription back
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -13,22 +13,6 @@ interface StrategyCardsProps {
   onSubmit: () => void;
   canSubmit: boolean;
 }
-
-// Helper function to get the first line and add ellipsis if needed
-const truncateDescription = (text: string): string => {
-  if (!text) return "";
-  const lines = text.split('\n');
-  const firstLine = lines[0];
-
-  // Add ellipsis if there are more lines, or if the first line itself is very long 
-  // (e.g., > 120 characters, adjust as needed for your desired visual)
-  // and doesn't represent the entirety of a short description.
-  if (lines.length > 1 || (firstLine.length > 120 && text.length > firstLine.length) ) {
-    // Truncate the first line if it's too long before adding ellipsis
-    return (firstLine.length > 120 ? firstLine.substring(0, 120) : firstLine) + "...";
-  }
-  return firstLine; // Return just the first line if it's short and the only line
-};
 
 export const StrategyCards: React.FC<StrategyCardsProps> = ({
   options,
@@ -64,27 +48,27 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                     ? 'ring-4 ring-blue-500 shadow-xl bg-blue-50/50'
                     : 'hover:shadow-md bg-white/90'
                 } backdrop-blur-sm border-0`}
-                // Removed direct onClick here to prevent issues with button inside CardTitle
               >
-                <div onClick={() => onOptionSelect(option.id)} className="cursor-pointer"> {/* Wrap content that should be clickable for selection */}
+                {/* Make the CardHeader and the new image/description section clickable for selection */}
+                <div onClick={() => onOptionSelect(option.id)} className="cursor-pointer">
                   <CardHeader className="pb-3">
                     <CardTitle className="text-lg font-semibold text-slate-800 flex items-center justify-between">
-                      <div className="flex items-center gap-3 mr-2"> {/* Added mr-2 for spacing from button */}
+                      <div className="flex items-center gap-3 mr-2 min-w-0"> {/* Added min-w-0 for flex child */}
                         <div className={`w-7 h-7 rounded-full flex items-center justify-center text-white font-bold text-sm shrink-0 ${
                           isSelected ? 'bg-blue-500' : 'bg-slate-400'
                         }`}>
                           {isSelected ? '✓' : optionLabel}
                         </div>
-                        <span className="text-base leading-tight">{option.title}</span>
+                        <span className="text-base leading-tight truncate">{option.title}</span> {/* Added truncate for long titles */}
                       </div>
                       <Button
                         variant="ghost"
                         size="sm"
                         onClick={(e) => {
-                          e.stopPropagation(); // Prevent card's main onClick for selection
+                          e.stopPropagation(); 
                           toggleExpanded(option.id);
                         }}
-                        className="p-1 h-8 w-8 shrink-0" // Added shrink-0
+                        className="p-1 h-8 w-8 shrink-0"
                         aria-expanded={isExpanded}
                         aria-controls={`approach-${option.id}`}
                       >
@@ -92,29 +76,32 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                         <span className="sr-only">{isExpanded ? "Collapse" : "Expand"} details</span>
                       </Button>
                     </CardTitle>
+                    
                     {/* Layout for Image and Truncated Description */}
-                    <div className="flex items-start gap-x-3 pt-2 ml-10"> {/* Added ml-10 to align with expanded content indent */}
+                    <div className="flex items-start gap-x-3 pt-2 ml-10"> {/* Indent to align with approach box */}
                       {option.optionImage && (
                         <img 
                           src={option.optionImage} 
-                          alt="" // Decorative, alt provided by option title context
-                          className="w-20 h-auto max-h-20 object-contain rounded-md shrink-0 mt-1" // Adjusted size & object-contain
+                          alt="" // Decorative, as title provides context
+                          className="w-16 h-16 object-cover rounded-md shrink-0 mt-1 sm:w-20 sm:h-20" // Responsive image size
                         />
                       )}
-                      <CardDescription className="text-slate-600 text-sm leading-relaxed flex-grow min-w-0"> {/* Added flex-grow and min-w-0 */}
-                        {truncateDescription(option.description)}
+                      <CardDescription 
+                        className="text-slate-600 text-sm leading-relaxed flex-grow min-w-0 block overflow-hidden text-ellipsis whitespace-nowrap"
+                        title={option.description} // Show full description on hover
+                      >
+                        {option.description.split('\n')[0]} {/* Display only the first line */}
                       </CardDescription>
                     </div>
                   </CardHeader>
-                </div> {/* End of selection clickable area */}
+                </div>
                 
                 {isExpanded && (
                   <CardContent className="pt-0 pb-4" id={`approach-${option.id}`}>
-                    {/* ml-10 on the div below aligns it with the description text's indent */}
                     <div className="bg-slate-50 p-4 rounded-lg border-l-4 border-blue-500 ml-10"> 
                       <div className="prose prose-sm max-w-none">
                         <p className="text-slate-700 leading-relaxed whitespace-pre-line text-sm">
-                          {option.approach}
+                          {option.approach} {/* This shows the full text */}
                         </p>
                       </div>
                     </div>
