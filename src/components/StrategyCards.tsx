@@ -84,13 +84,13 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                       </Button>
                     </CardTitle>
                     
-                    {/* Container for Image and Collapsed Description */}
+                     {/* Container for Image and Collapsed Description */}
                     <div className="flex items-start gap-x-4 pt-2 ml-10">
                       {/* Image Display */}
                       {option.optionImage && (
                         <img 
                           src={option.optionImage} 
-                          alt={`${option.title} illustration`} // Good alt text
+                          alt={`${option.title} illustration`}
                           className="w-16 h-16 object-cover rounded-md shrink-0 mt-1 sm:w-20 sm:h-20 border border-slate-200"
                           onError={(e) => {
                             console.error(`IMAGE LOAD ERROR: Path "${option.optionImage}" for option "${option.title}"`);
@@ -102,10 +102,10 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                       {/* Text Content - Show TRUNCATED description ONLY when collapsed */}
                       {!isExpanded && option.description && (
                         <CardDescription 
-                          className="text-slate-600 text-sm leading-relaxed flex-grow min-w-0 block whitespace-nowrap overflow-hidden text-ellipsis" // CRITICAL: Truncation classes
-                          title={option.description} // Tooltip shows full original description (or first paragraph)
+                          className="text-slate-600 text-sm leading-relaxed flex-grow min-w-0 block whitespace-nowrap overflow-hidden text-ellipsis" // <-- THESE CLASSES ARE KEY FOR TRUNCATION
+                          title={option.description} // Tooltip shows full original description
                         >
-                          {firstLineOfDescription} {/* Displays only the first logical line */}
+                          {option.description.split('\n')[0]} {/* Displays only the first logical line */}
                         </CardDescription>
                       )}
                     </div>
