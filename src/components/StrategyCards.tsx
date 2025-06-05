@@ -82,31 +82,42 @@ export const StrategyCards: React.FC<StrategyCardsProps> = ({
                       </Button>
                     </CardTitle>
                     
-                    <div className="flex items-start gap-x-4 pt-2 ml-10"> {/* Adjusted gap for image */}
+                    <div className="flex items-start gap-x-4 pt-2 ml-10">
+                      {/* Image Display - Appears whether expanded or not */}
                       {option.optionImage && (
                         <img 
                           src={option.optionImage} 
-                          alt="" // Alt can be `${option.title} illustration` if desired
-                          className="w-16 h-16 object-cover rounded-md shrink-0 mt-1 sm:w-20 sm:h-20"
+                          alt={`${option.title} illustration`}
+                          className="w-16 h-16 object-cover rounded-md shrink-0 mt-1 sm:w-20 sm:h-20 border border-slate-200"
+                          onError={(e) => {
+                            console.error(`IMAGE LOAD ERROR: Failed to load image at path ${option.optionImage}`);
+                            // Hide the image element if it fails to load
+                            (e.target as HTMLImageElement).style.display = 'none'; 
+                          }}
                         />
                       )}
-                      {/* Apply CSS for single-line truncation with ellipsis */}
-                      <CardDescription 
-                        className="text-slate-600 text-sm leading-relaxed flex-grow min-w-0 block whitespace-nowrap overflow-hidden text-ellipsis"
-                        title={option.description} {/* Show full original description on hover */}
-                      >
-                        {firstLineOfDescription}
-                      </CardDescription>
+                      
+                      {/* Text Content - Only show TRUNCATED description when collapsed */}
+                      {!isExpanded && option.description && ( // Ensure option.description exists
+                        <CardDescription 
+                          className="text-slate-600 text-sm leading-relaxed flex-grow min-w-0 block whitespace-nowrap overflow-hidden text-ellipsis" // ADDED TRUNCATION CLASSES
+                          title={option.description} // Show full original description (or first paragraph) on hover
+                        >
+                          {firstLineOfDescription} {/* RENDER ONLY FIRST LOGICAL LINE */}
+                        </CardDescription>
+                      )}
                     </div>
                   </CardHeader>
                 </div>
                 
+                {/* Expanded Content - Only show approach when expanded */}
                 {isExpanded && (
                   <CardContent className="pt-0 pb-4" id={`approach-${option.id}`}>
-                    <div className="bg-slate-50 p-4 rounded-lg border-l-4 border-blue-500 ml-10"> 
+                    <div className="bg-slate-50 p-4 rounded-lg border-l-4 border-blue-500 ml-10">
+                      {/* Image is NOT rendered again here, it's in the header */}
                       <div className="prose prose-sm max-w-none">
-                        <p className="text-slate-700 leading-relaxed whitespace-pre-line text-sm">
-                          {option.approach} {/* Full text from approach field */}
+                        <p className="text-slate-700 leading-relaxed whitespace-pre-line text-sm mb-0">
+                          {option.approach}
                         </p>
                       </div>
                     </div>
