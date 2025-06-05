@@ -76,8 +76,9 @@ The Cultural Heritage Representative, Dr. Awhina Patel, concludes the committee'
         {
           id: "s2-opA-iconic-representation",
           title: "Iconic Representation Strategy",
-          description: `Our strategy uses iconic forms that people recognize through visual similarity. The pavilion's profile echoes Auckland's volcanic cones, while the entrance references harbour sailing vessels. We're using weathering steel to match the industrial structures around Wynyard, creating visual continuity. This follows Charles Jencks' approach to architectural iconography - familiar elements recomposed in new ways that create both recognition and interest.`,
+          description: `Our strategy uses iconic forms that people recognize through visual similarity. The pavilion's profile echoes...
           approach: `Our strategy uses iconic forms that people recognize through visual similarity. The pavilion's profile echoes Auckland's volcanic cones, while the entrance references harbour sailing vessels. We're using weathering steel to match the industrial structures around Wynyard, creating visual continuity. This follows Charles Jencks' approach to architectural iconography - familiar elements recomposed in new ways that create both recognition and interest.`,
+          optionImage: "/strategy_images/neutral_preview.png"
           isCorrect: true, // "partially correct", Outcome: "The scenario continues..."
           feedback: `Dr. Chen nods thoughtfully. "Your reference to iconic representation shows you understand Pierce's semiotic categories, and the connection to Jencks' work is appropriate. The volcanic cone reference is particularly clever - most Aucklanders would recognize that profile even if they couldn't articulate why."
 
@@ -93,8 +94,9 @@ Scenario Outcome: This is a solid postmodern approach that demonstrates understa
         {
           id: "s2-opB-symbolic-encoding",
           title: "Symbolic Encoding Strategy",
-          description: `We're embedding symbolic content that reveals itself through interpretation. The structural grid combines proportional systems from both European and Pacific traditions, while the three main spaces represent past, present, and future. Materials work symbolically too - stone base for geological foundation, lighter structures above for human activity. This follows Roland Barthes' ideas about cultural codes operating beneath surface appearances.`,
+          description: `We're embedding symbolic content that reveals itself through interpretation. The structural grid combines...
           approach: `We're embedding symbolic content that reveals itself through interpretation. The structural grid combines proportional systems from both European and Pacific traditions, while the three main spaces represent past, present, and future. Materials work symbolically too - stone base for geological foundation, lighter structures above for human activity. This follows Roland Barthes' ideas about cultural codes operating beneath surface appearances.`,
+          optionImage: "/strategy_images/symbolic_preview.png"
           isCorrect: false,
           feedback: `Dr. Awhina Patel responds with interest: "Your reference to symbolic communication shows sophisticated understanding of how meaning operates in architecture. The proportional system integration is particularly thoughtful - it suggests genuine engagement with cultural plurality rather than superficial decoration."
 
@@ -110,8 +112,9 @@ Scenario Outcome: Your symbolic approach demonstrates theoretical knowledge, but
         {
           id: "s2-opC-direct-communicative",
           title: "Direct Communicative Strategy",
-          description: `We believe in functional clarity and honest expression. The rectangular plan clearly indicates community meeting use, while large glazed openings signal transparency. Following Louis Sullivan's 'form follows function,' every element has a clear purpose. We're avoiding what Charles Jencks called 'semantic confusion' by ensuring intuitive organization and appropriate materials that speak their structural language.`,
+          description: `We believe in functional clarity and honest expression. The rectangular plan clearly indicates community...
           approach: `We believe in functional clarity and honest expression. The rectangular plan clearly indicates community meeting use, while large glazed openings signal transparency. Following Louis Sullivan's 'form follows function,' every element has a clear purpose. We're avoiding what Charles Jencks called 'semantic confusion' by ensuring intuitive organization and appropriate materials that speak their structural language.`,
+          optionImage: "/strategy_images/direct_preview.png"
           isCorrect: false,
           feedback: `The committee exchanges glances, and Dr. Chen responds with barely concealed concern: "I'm afraid there are some significant misunderstandings in your approach. First, Charles Jencks never used the term 'semantic confusion' - in fact, he advocated for what he called 'multivalent' architecture that deliberately embraces multiple meanings rather than avoiding them."
 
@@ -127,8 +130,9 @@ Scenario Outcome: This response demonstrates fundamental misunderstanding of pos
         {
           id: "s2-opD-multivalent-communication",
           title: "Multivalent Communication Strategy",
-          description: `Our approach creates what Charles Jencks calls 'multivalent' architecture - buildings that communicate on multiple levels simultaneously. Families see inviting community spaces with playful forms and welcoming scales. Architects read the same elements as sophisticated geometric systems and spatial complexity. The building practices 'time-binding' by connecting to Wynyard's character without nostalgic copying.`,
+          description: `Our approach creates what Charles Jencks calls 'multivalent' architecture - buildings that communicate...
           approach: `Our approach creates what Charles Jencks calls 'multivalent' architecture - buildings that communicate on multiple levels simultaneously. Families see inviting community spaces with playful forms and welcoming scales. Architects read the same elements as sophisticated geometric systems and spatial complexity. The building practices 'time-binding' by connecting to Wynyard's character without nostalgic copying.`,
+          optionImage: "/strategy_images/multivalent_preview.png"
           isCorrect: true,
           feedback: `Dr. Chen smiles with genuine approval: "Now this demonstrates real understanding of postmodern communication theory. Your reference to multivalent architecture directly addresses Jencks' central insight that the best buildings speak to diverse audiences without talking down to any of them."
 
@@ -168,8 +172,9 @@ The room falls quiet as all eyes turn to you. This is clearly a critical moment 
         {
           id: "s3-opA-spatial-pluralism",
           title: "Spatial Pluralism Strategy",
-          description: `Our pluralistic approach creates what Charles Jencks calls 'architectural variety' through diverse spatial experiences within a coherent whole. The pavilion includes intimate alcoves for quiet conversation, medium-scale gathering areas for community meetings, and a large flexible hall for major events. Each space has different acoustic properties, lighting conditions, and sight lines to support different activities and cultural practices. We've also designed transitional zones that allow people to move gradually between public and private experiences, respecting different cultural approaches to social interaction.`,
+          description: `Our pluralistic approach creates what Charles Jencks calls 'architectural variety' through diverse spatial experiences within...
           approach: `Our pluralistic approach creates what Charles Jencks calls 'architectural variety' through diverse spatial experiences within a coherent whole. The pavilion includes intimate alcoves for quiet conversation, medium-scale gathering areas for community meetings, and a large flexible hall for major events. Each space has different acoustic properties, lighting conditions, and sight lines to support different activities and cultural practices. We've also designed transitional zones that allow people to move gradually between public and private experiences, respecting different cultural approaches to social interaction.`,
+          optionImage: "/strategy_images/spatial_pluralism_preview.png"
           isCorrect: true,
           feedback: `Dr. Chen responds with evident approval: "This demonstrates sophisticated understanding of how pluralism actually works in architecture. You're describing what Jencks meant by architectural variety - not just visual differences, but functional and experiential diversity that serves different community needs."
 
@@ -185,8 +190,9 @@ Outcome: Excellent response. Continue to next scene.`,
         {
           id: "s3-opB-cultural-symbols",
           title: "Cultural Symbols Integration",
-          description: `We're incorporating symbolic elements from Auckland's major cultural communities throughout the design. The entrance features geometric patterns inspired by Māori kowhaiwhai, while the main gathering space includes Pacific navigation motifs and Asian-influenced garden elements. European classical proportions provide the underlying organizational structure. This follows what Robert Venturi described as 'inclusive symbolism' - bringing together diverse cultural languages in one architectural composition that represents our multicultural society.`,
+          description: `We're incorporating symbolic elements from Auckland's major cultural communities throughout the design. The entrance features...
           approach: `We're incorporating symbolic elements from Auckland's major cultural communities throughout the design. The entrance features geometric patterns inspired by Māori kowhaiwhai, while the main gathering space includes Pacific navigation motifs and Asian-influenced garden elements. European classical proportions provide the underlying organizational structure. This follows what Robert Venturi described as 'inclusive symbolism' - bringing together diverse cultural languages in one architectural composition that represents our multicultural society.`,
+          optionImage: "/strategy_images/cultural_symbols_preview.png"
           isCorrect: false,
           feedback: `Dr. Awhina Patel responds with visible concern: "I'm afraid this approach reflects exactly the kind of tokenistic multiculturalism that postmodern theorists warned against. You're describing what James Clifford called 'cultural display' rather than genuine pluralism."
 
@@ -202,8 +208,9 @@ Outcome: This response demonstrates misunderstanding of pluralism vs. tokenism. 
         {
           id: "s3-opC-universal-accessibility",
           title: "Universal Accessibility Approach",
-          description: `Our strategy focuses on creating spaces that work equally well for everyone, regardless of cultural background or architectural knowledge. We're following what Jencks called 'democratic modernism' - clean, simple forms with excellent functionality and barrier-free access. The design avoids specific cultural references that might exclude some groups, instead emphasizing universal human needs like shelter, gathering, and social connection. High-quality materials and generous proportions ensure the space feels welcoming to all users.`,
+          description: `Our strategy focuses on creating spaces that work equally well for everyone, regardless of cultural background or architectural...
           approach: `Our strategy focuses on creating spaces that work equally well for everyone, regardless of cultural background or architectural knowledge. We're following what Jencks called 'democratic modernism' - clean, simple forms with excellent functionality and barrier-free access. The design avoids specific cultural references that might exclude some groups, instead emphasizing universal human needs like shelter, gathering, and social connection. High-quality materials and generous proportions ensure the space feels welcoming to all users.`,
+          optionImage: "/strategy_images/universal_access_preview.png"
           isCorrect: false,
           feedback: `Dr. Chen responds with surprise: "Charles Jencks never advocated for 'democratic modernism' - quite the opposite. He famously criticized modernism's universalist claims as a form of cultural imperialism that ignored local differences and community specificities."
 
@@ -219,8 +226,9 @@ Outcome: This response confuses universal design principles with postmodern plur
         {
           id: "s3-opD-interpretive-flexibility",
           title: "Interpretive Flexibility Strategy",
-          description: `Our approach follows what Jencks calls 'user-generated meaning' - instead of prescribing how the space should be used, we're creating a neutral framework that communities can interpret and adapt according to their own needs. The building's forms are deliberately ambiguous to avoid imposing specific cultural readings. We'll provide basic infrastructure - power, water, flexible lighting - and let different community groups bring their own furniture, decorations, and spatial arrangements to make the space their own for each event or gathering.`,
+          description: `Our approach follows what Jencks calls 'user-generated meaning' - instead of prescribing how the space should be used, we're creating...
           approach: `Our approach follows what Jencks calls 'user-generated meaning' - instead of prescribing how the space should be used, we're creating a neutral framework that communities can interpret and adapt according to their own needs. The building's forms are deliberately ambiguous to avoid imposing specific cultural readings. We'll provide basic infrastructure - power, water, flexible lighting - and let different community groups bring their own furniture, decorations, and spatial arrangements to make the space their own for each event or gathering.`,
+          optionImage: "/strategy_images/framework_preview.png"
           isCorrect: false, 
           feedback: `Dr. Chen responds with mixed concern: "While community agency is certainly important to postmodern theory, I'm not sure Jencks ever advocated for 'user-generated meaning' in quite this way. There's a difference between multivalent architecture and architecturally neutral space."
 
@@ -258,8 +266,9 @@ Dr. Awhina Patel concludes: "So here's our question: How will your pavilion rela
         {
           id: "s4-opA-time-binding",
           title: "Time-Binding Integration",
-          description: `Our approach follows what Charles Jencks calls 'time-binding' - creating connections between past and present without nostalgic imitation. We're incorporating weathered steel elements that reference the industrial silos' materiality while using them in contemporary structural applications. The pavilion's proportions echo the rhythm of the old wharf buildings but adapt these scales for modern community use. Existing concrete foundations from demolished structures will be preserved and integrated as landscape features, creating what Jencks describes as 'temporal layering' where different eras remain visible and interconnected.`,
+          description: `Our approach follows what Charles Jencks calls 'time-binding' - creating connections between past and present without...
           approach: `Our approach follows what Charles Jencks calls 'time-binding' - creating connections between past and present without nostalgic imitation. We're incorporating weathered steel elements that reference the industrial silos' materiality while using them in contemporary structural applications. The pavilion's proportions echo the rhythm of the old wharf buildings but adapt these scales for modern community use. Existing concrete foundations from demolished structures will be preserved and integrated as landscape features, creating what Jencks describes as 'temporal layering' where different eras remain visible and interconnected.`,
+          optionImage: "/strategy_images/timebinding_preview.png"
           isCorrect: true,
           feedback: `Dr. Chen responds with clear approval: "This demonstrates excellent understanding of Jencks' time-binding concept. You're describing genuine historical connection without pastiche - using industrial materials in new ways rather than copying old forms."
 
@@ -275,8 +284,9 @@ Outcome: Excellent response demonstrating deep understanding of time-binding pri
         {
           id: "s4-opB-radical-eclecticism",
           title: "Radical Eclecticism Approach",
-          description: `We're following what Charles Jencks called 'historical pastiche' - playfully mixing architectural styles from different periods without worrying about authentic historical accuracy. The pavilion combines industrial warehouse aesthetics with classical columns, maritime rope details, and contemporary glass curtain walls in an ironic collage. This follows Robert Venturi's principle of 'architectural camp' - deliberately exaggerated historical references that comment on the artificiality of historical preservation. The result acknowledges Wynyard Quarter's layered history through entertaining visual quotations rather than serious historical engagement.`,
+          description: `We're following what Charles Jencks called 'historical pastiche' - playfully mixing architectural styles from different...
           approach: `We're following what Charles Jencks called 'historical pastiche' - playfully mixing architectural styles from different periods without worrying about authentic historical accuracy. The pavilion combines industrial warehouse aesthetics with classical columns, maritime rope details, and contemporary glass curtain walls in an ironic collage. This follows Robert Venturi's principle of 'architectural camp' - deliberately exaggerated historical references that comment on the artificiality of historical preservation. The result acknowledges Wynyard Quarter's layered history through entertaining visual quotations rather than serious historical engagement.`,
+          optionImage: "/strategy_images/pastiche_preview.png"
           isCorrect: false, 
           feedback: `Dr. Chen responds with concern: "While you show some understanding of postmodern attitudes toward history, you're misunderstanding key concepts. Jencks never advocated for 'historical pastiche' as a positive strategy - he actually criticized mindless pastiche as postmodernism's weakness, not its strength."
 
@@ -292,8 +302,9 @@ Outcome: Your response shows awareness of postmodern historical strategies but m
         {
           id: "s4-opC-heritage-preservation",
           title: "Heritage Preservation Focus",
-          description: `Our strategy prioritizes authentic historical preservation and interpretation. We're designing the pavilion to complement and showcase the remaining industrial heritage through careful material matching and scaled relationships. Following what Jencks called 'contextual sensitivity,' we'll use traditional construction methods and historically appropriate details to ensure visual harmony with surviving wharf structures. The building will include interpretive displays about the area's maritime and industrial history, helping visitors understand the authentic character that once defined this place.`,
+          description: `Our strategy prioritizes authentic historical preservation and interpretation. We're designing the pavilion to complement and...
           approach: `Our strategy prioritizes authentic historical preservation and interpretation. We're designing the pavilion to complement and showcase the remaining industrial heritage through careful material matching and scaled relationships. Following what Jencks called 'contextual sensitivity,' we'll use traditional construction methods and historically appropriate details to ensure visual harmony with surviving wharf structures. The building will include interpretive displays about the area's maritime and industrial history, helping visitors understand the authentic character that once defined this place.`,
+          optionImage: "/strategy_images/preservation_preview.png"
           isCorrect: false,
           feedback: `Dr. Chen responds with visible concern: "I'm afraid this approach misunderstands postmodern attitudes toward history. Jencks never advocated for 'contextual sensitivity' through direct imitation - that's exactly the kind of nostalgic historicism he criticized."
 
@@ -309,8 +320,9 @@ Outcome: This response confuses historic preservation with postmodern historical
         {
           id: "s4-opD-future-oriented",
           title: "Future-Oriented Transformation",
-          description: `We believe in embracing Wynyard Quarter's transformation toward a high-tech, internationally connected urban district. Our pavilion reflects what Jencks described as 'progressive modernism' - clean contemporary forms that embody innovation and forward-thinking. Rather than dwelling on industrial nostalgia, we're designing for the young professionals, international visitors, and technology companies that represent this area's future. The building's sleek materials and minimalist aesthetic will complement the adjacent corporate towers and luxury residential developments.`,
+          description: `We believe in embracing Wynyard Quarter's transformation toward a high-tech, internationally connected urban...
           approach: `We believe in embracing Wynyard Quarter's transformation toward a high-tech, internationally connected urban district. Our pavilion reflects what Jencks described as 'progressive modernism' - clean contemporary forms that embody innovation and forward-thinking. Rather than dwelling on industrial nostalgia, we're designing for the young professionals, international visitors, and technology companies that represent this area's future. The building's sleek materials and minimalist aesthetic will complement the adjacent corporate towers and luxury residential developments.`,
+          optionImage: "/strategy_images/futuristic_preview.png"
           isCorrect: false,
           feedback: `Dr. Chen responds with alarm: "Charles Jencks never wrote about 'progressive modernism' - this contradicts his entire critique of modernist ideology. You're describing exactly the kind of approach he opposed through his concept of postmodernism."
 
@@ -346,8 +358,9 @@ Dr. Awhina Patel concludes: "So here's our question: How will your pavilion achi
         {
           id: "s5-opA-multiple-audience",
           title: "Multiple Audience Strategy",
-          description: `Our approach recognizes that different groups read architectural elements differently, following Charles Jencks' concept of multivalent communication. The pavilion's design elements work on multiple levels - families will engage with welcoming forms and comfortable spaces, while those familiar with architectural history will recognize references to both classical proportions and contemporary design strategies. Local communities can interpret certain forms through their own cultural lenses, while visitors might read them differently. This layered approach means the building can communicate meaningfully with diverse audiences without requiring everyone to understand the same messages.`,
+          description: `Our approach recognizes that different groups read architectural elements differently, following Charles Jencks' concept of...
           approach: `Our approach recognizes that different groups read architectural elements differently, following Charles Jencks' concept of multivalent communication. The pavilion's design elements work on multiple levels - families will engage with welcoming forms and comfortable spaces, while those familiar with architectural history will recognize references to both classical proportions and contemporary design strategies. Local communities can interpret certain forms through their own cultural lenses, while visitors might read them differently. This layered approach means the building can communicate meaningfully with diverse audiences without requiring everyone to understand the same messages.`,
+          optionImage: "/strategy_images/layered_appeal_preview.png"
           isCorrect: true,
           feedback: `Dr. Chen responds with clear approval: "This demonstrates excellent understanding of Jencks' multivalent architecture. You're showing how the same building can speak to different audiences through different interpretative frameworks, rather than trying to make everyone see the same thing."
 
@@ -363,8 +376,9 @@ Outcome: Excellent response. Continue to final scene.`,
         {
           id: "s5-opB-essential-design",
           title: "Essential Design Principles",
-          description: `We believe the most effective approach combines fundamental design principles that transcend cultural differences with local Auckland references. The pavilion uses geometric forms based on mathematical ratios that Jencks recognized as universally appealing, combined with materials and colors drawn from the local environment. This approach avoids both populist superficiality and elitist complexity by focusing on what Jencks called 'architectural essentials' - proportions, light, and spatial relationships that work across different cultural backgrounds while remaining grounded in this specific place.`,
+          description: `We believe the most effective approach combines fundamental design principles that transcend cultural differences with local...
           approach: `We believe the most effective approach combines fundamental design principles that transcend cultural differences with local Auckland references. The pavilion uses geometric forms based on mathematical ratios that Jencks recognized as universally appealing, combined with materials and colors drawn from the local environment. This approach avoids both populist superficiality and elitist complexity by focusing on what Jencks called 'architectural essentials' - proportions, light, and spatial relationships that work across different cultural backgrounds while remaining grounded in this specific place.`,
+          optionImage: "/strategy_images/democratic_simplification_preview.png"
           isCorrect: false,
           feedback: `Dr. Chen responds with concern: "Jencks never wrote about 'architectural essentials' in the way you describe. This sounds more like modernist universalism - the idea that certain design principles work the same way for everyone regardless of cultural context."
 
@@ -380,8 +394,9 @@ Outcome: This response confuses modernist universalism with postmodern multivale
         {
           id: "s5-opC-cultural-programming",
           title: "Cultural Programming Integration",
-          description: `Our strategy balances popular and professional appeal through flexible programming that can accommodate both community events and architectural discourse. The pavilion includes exhibition spaces where local schools can display student work alongside professional design exhibitions. We're planning lecture series that alternate between topics like 'Home Gardening Tips' and 'Contemporary Architecture Theory.' The building itself uses approachable materials like timber and brick combined with innovative structural systems that demonstrate technical sophistication to industry professionals.`,
+          description: `Our strategy balances popular and professional appeal through flexible programming that can accommodate both community events and...
           approach: `Our strategy balances popular and professional appeal through flexible programming that can accommodate both community events and architectural discourse. The pavilion includes exhibition spaces where local schools can display student work alongside professional design exhibitions. We're planning lecture series that alternate between topics like 'Home Gardening Tips' and 'Contemporary Architecture Theory.' The building itself uses approachable materials like timber and brick combined with innovative structural systems that demonstrate technical sophistication to industry professionals.`,
+          optionImage: "/strategy_images/programming_integration_preview.png"
           isCorrect: false,
           feedback: `Dr. Chen responds thoughtfully: "Programming diversity is certainly valuable, and combining community and professional events shows some understanding of serving multiple audiences. However, you're focusing on activities rather than architectural strategies."
 
@@ -397,8 +412,9 @@ Outcome: Shows some understanding but focuses on programming rather than archite
         {
           id: "s5-opD-interpretive-architecture",
           title: "Interpretive Architecture Strategy",
-          description: `We're creating what Jencks called 'pedagogical postmodernism' - architecture that teaches popular audiences about design sophistication through built-in interpretation. The pavilion includes explanatory plaques describing architectural features, QR codes linking to design process videos, and guided tour routes that help visitors understand the building's conceptual framework. This educational approach ensures that community members can appreciate the architectural sophistication while professionals can engage with the theoretical concepts embedded in the design.`,
+          description: `We're creating what Jencks called 'pedagogical postmodernism' - architecture that teaches popular audiences about design...
           approach: `We're creating what Jencks called 'pedagogical postmodernism' - architecture that teaches popular audiences about design sophistication through built-in interpretation. The pavilion includes explanatory plaques describing architectural features, QR codes linking to design process videos, and guided tour routes that help visitors understand the building's conceptual framework. This educational approach ensures that community members can appreciate the architectural sophistication while professionals can engage with the theoretical concepts embedded in the design.`,
+          optionImage: "/strategy_images/interpretive_preview.png"
           isCorrect: false,
           feedback: `Dr. Chen responds with clear disagreement: "Jencks never wrote about 'pedagogical postmodernism' in the way you describe. This approach assumes that popular audiences need education to appreciate architecture, which contradicts postmodern principles of immediate accessibility."
 
@@ -440,8 +456,9 @@ Dr. Awhina Patel concludes: "So please identify a key postmodern building that d
         {
           id: "s6-opA-vanna-venturi",
           title: "Vanna Venturi House by Robert Venturi (1964)",
-          description: `I'd cite Robert Venturi's Vanna Venturi House in Philadelphia as a key precedent for our approach. This house demonstrates how postmodern architecture can embrace complexity and contradiction while remaining approachable and human-scaled. Like our pavilion, it combines familiar elements - the iconic American house form - with unexpected spatial and formal strategies that reward closer examination. The house works immediately as a recognizable home while offering architectural sophistication for those who engage more deeply with its design.`,
+          description: `I'd cite Robert Venturi's Vanna Venturi House in Philadelphia as a key precedent for our approach. This house demonstrates...
           approach: `I'd cite Robert Venturi's Vanna Venturi House in Philadelphia as a key precedent for our approach. This house demonstrates how postmodern architecture can embrace complexity and contradiction while remaining approachable and human-scaled. Like our pavilion, it combines familiar elements - the iconic American house form - with unexpected spatial and formal strategies that reward closer examination. The house works immediately as a recognizable home while offering architectural sophistication for those who engage more deeply with its design.`,
+          optionImage: "/strategy_images/vanna_venturi_house.jpg"
           isCorrect: true,
           feedback: `Dr. Chen responds with approval: " Excellent choice. The Vanna Venturi House demonstrates exactly the multivalent communication and human-scaled complexity you've been describing for your pavilion, and why it's relevant to your approach."
 
@@ -452,8 +469,9 @@ Dr. Awhina Patel adds: "Your observation about complexity and contradiction is p
         {
           id: "s6-opB-seagram-building",
           title: "Seagram Building by Mies van der Rohe (1958)",
-          description: `The Seagram Building in New York exemplifies the kind of refined modernist principles that inform our pavilion design. Its clean lines, honest material expression, and elegant proportions demonstrate how minimalist architecture can achieve both popular appeal and professional respect. The building's bronze and glass facade creates a sophisticated urban presence while its rational structural expression makes its architectural logic clear to any observer. This precedent shows how restraint and clarity can create lasting architectural significance.`,
+          description: `The Seagram Building in New York exemplifies the kind of refined modernist principles that inform our pavilion...
           approach: `The Seagram Building in New York exemplifies the kind of refined modernist principles that inform our pavilion design. Its clean lines, honest material expression, and elegant proportions demonstrate how minimalist architecture can achieve both popular appeal and professional respect. The building's bronze and glass facade creates a sophisticated urban presence while its rational structural expression makes its architectural logic clear to any observer. This precedent shows how restraint and clarity can create lasting architectural significance.`,
+          optionImage: "/strategy_images/seagram_building.jpg"
           isCorrect: false,
           feedback: `Dr. Chen responds with concern: "The Seagram Building is a classic example of International Style modernism, not postmodernism. Mies van der Rohe's work represents exactly the kind of minimalist universalism that postmodern architects like Jencks and Venturi criticized."
 
@@ -465,8 +483,9 @@ Outcome: Please review the lecture content on the differences between modernist 
         {
           id: "s6-opC-att-building",
           title: "AT&T Building by Philip Johnson (1984)",
-          description: `Philip Johnson's AT&T Building in New York serves as an important postmodern precedent for our civic architecture approach. This building demonstrates how postmodern design can challenge modernist orthodoxy through historical reference - its famous Chippendale-inspired crown and classical base reject the modernist glass box. The building uses architectural irony and historical quotation to create a distinctive urban landmark that speaks to both popular recognition and architectural discourse.`,
+          description: `Philip Johnson's AT&T Building in New York serves as an important postmodern precedent for our civic architecture...
           approach: `Philip Johnson's AT&T Building in New York serves as an important postmodern precedent for our civic architecture approach. This building demonstrates how postmodern design can challenge modernist orthodoxy through historical reference - its famous Chippendale-inspired crown and classical base reject the modernist glass box. The building uses architectural irony and historical quotation to create a distinctive urban landmark that speaks to both popular recognition and architectural discourse.`,
+          optionImage: "/strategy_images/AT&T_Building.jpg"
           isCorrect: false,
           feedback: `Dr. Chen responds with concern: "While the AT&T Building is indeed a significant postmodern work, it represents a very different approach from what you've been describing. Johnson's building is about corporate identity and urban monumentality, not community engagement and multivalent communication."
 
@@ -480,8 +499,9 @@ Outcome: While you've correctly identified a postmodern building, it doesn't ali
         {
           id: "s6-opD-sydney-opera",
           title: "Sydney Opera House by Jørn Utzon (1973)",
-          description: `Utzon's Sydney Opera House provides an excellent precedent for our approach to iconic architecture that serves diverse audiences. The building's distinctive shell forms create immediate popular recognition while demonstrating innovative structural and spatial strategies that architects worldwide have studied and admired. Its integration with the harbor setting shows how contemporary architecture can respond to specific place while achieving international significance, similar to our goals for the Wynyard pavilion.`,
+          description: `Utzon's Sydney Opera House provides an excellent precedent for our approach to iconic architecture that...
           approach: `Utzon's Sydney Opera House provides an excellent precedent for our approach to iconic architecture that serves diverse audiences. The building's distinctive shell forms create immediate popular recognition while demonstrating innovative structural and spatial strategies that architects worldwide have studied and admired. Its integration with the harbor setting shows how contemporary architecture can respond to specific place while achieving international significance, similar to our goals for the Wynyard pavilion.`,
+          optionImage: "/strategy_images/sydney_opera_house.jpg"
           isCorrect: false,
           feedback: `Dr. Chen responds thoughtfully: "While the Sydney Opera House is certainly iconic and demonstrates innovative architecture, it's not typically classified as postmodern. Utzon's approach was more aligned with organic modernism and sculptural expressionism than with postmodern theoretical concerns."
 
@@ -507,8 +527,9 @@ Dr. Awhina Patel adds: "Your observation about complexity and contradiction is p
         {
           id: "s6b-opA-multivalent",
           title: "Multivalent Architectural Communication",
-          description: `The Vanna Venturi House demonstrates exactly the kind of multivalent communication we're planning for our pavilion. The house reads immediately as a familiar American home - anyone can recognize the gable roof and front porch - but it also contains sophisticated architectural moves like the split pediment and complex interior spatial relationships. Families see a welcoming house; architects read Venturi's commentary on architectural convention. This shows how buildings can speak to popular and professional audiences simultaneously without compromising either message.`,
+          description: `The Vanna Venturi House demonstrates exactly the kind of multivalent communication we're planning...
           approach: `The Vanna Venturi House demonstrates exactly the kind of multivalent communication we're planning for our pavilion. The house reads immediately as a familiar American home - anyone can recognize the gable roof and front porch - but it also contains sophisticated architectural moves like the split pediment and complex interior spatial relationships. Families see a welcoming house; architects read Venturi's commentary on architectural convention. This shows how buildings can speak to popular and professional audiences simultaneously without compromising either message.`,
+          optionImage: "/strategy_images/vanna_venturi_multivalent.png"
           isCorrect: true,
           feedback: `Dr. Chen responds with clear satisfaction: "Perfect analysis. You've identified exactly what makes the Vanna Venturi House relevant to your pavilion approach - its ability to communicate simultaneously with different audiences without talking down to anyone."
 
@@ -525,8 +546,9 @@ Outcome: Excellent analysis. Scenario Complete - Full Success!`,
         {
           id: "s6b-opB-ornamental",
           title: "Postmodern Ornamental Systems",
-          description: `This house exemplifies what Charles Jencks called 'neo-decorative architecture' through its elaborate surface treatments and ornamental complexity. Venturi uses multiple decorative systems - classical pediments, Gothic arches, and contemporary abstract patterns - to create what he termed 'maximum visual density.' The house demonstrates how postmodern architecture rejected modernist restraint in favour of ornamental abundance, showing how decoration can carry architectural meaning and cultural significance.`,
+          description: `This house exemplifies what Charles Jencks called 'neo-decorative architecture' through its elaborate...
           approach: `This house exemplifies what Charles Jencks called 'neo-decorative architecture' through its elaborate surface treatments and ornamental complexity. Venturi uses multiple decorative systems - classical pediments, Gothic arches, and contemporary abstract patterns - to create what he termed 'maximum visual density.' The house demonstrates how postmodern architecture rejected modernist restraint in favour of ornamental abundance, showing how decoration can carry architectural meaning and cultural significance.`,
+          optionImage: "/strategy_images/vanna_venturi_ornament.png"
           isCorrect: false,
           feedback: `Dr. Chen responds with confusion: "I'm afraid you're mischaracterizing the Vanna Venturi House. It's actually quite restrained in its use of ornament - Jencks never described Venturi's work as 'neo-decorative architecture' or advocating for 'maximum visual density.'"
 
@@ -542,8 +564,9 @@ Outcome: Your analysis misidentifies the key characteristics of your chosen prec
         {
           id: "s6b-opC-pastiche",
           title: "Historical Pastiche Methods",
-          description: `The Vanna Venturi House represents Venturi's approach to 'creative historicism' - combining architectural elements from different historical periods in new synthetic arrangements. The house mixes colonial American forms with European classical details and modernist spatial concepts to create what he called 'temporal collage.' This demonstrates how postmodern architects could freely combine historical references without concerns about stylistic purity or chronological accuracy.`,
+          description: `The Vanna Venturi House represents Venturi's approach to 'creative historicism' - combining architectural elements from...
           approach: `The Vanna Venturi House represents Venturi's approach to 'creative historicism' - combining architectural elements from different historical periods in new synthetic arrangements. The house mixes colonial American forms with European classical details and modernist spatial concepts to create what he called 'temporal collage.' This demonstrates how postmodern architects could freely combine historical references without concerns about stylistic purity or chronological accuracy.`,
+          optionImage: "/strategy_images/vanna_venturi_pastiche.png"
           isCorrect: false,
           feedback: `Dr. Chen responds with concern: "This analysis misunderstands Venturi's approach to history. The Vanna Venturi House doesn't combine 'elements from different historical periods' - it's quite specific in its references to American domestic architecture."
 
@@ -559,8 +582,9 @@ Outcome: Your analysis conflates different postmodern strategies and mischaracte
         {
           id: "s6b-opD-contextual",
           title: "Contextual Integration Strategies",
-          description: `This house shows how postmodern architecture responds to suburban context through environmental integration and neighbourhood compatibility. Venturi designed the house to blend seamlessly with surrounding residential development while subtly elevating the architectural discourse of the neighbourhood. The house demonstrates what he termed 'contextual modernism' - contemporary architecture that respects existing urban fabric rather than disrupting it through formal contrast.`,
+          description: `This house shows how postmodern architecture responds to suburban context through environmental...
           approach: `This house shows how postmodern architecture responds to suburban context through environmental integration and neighbourhood compatibility. Venturi designed the house to blend seamlessly with surrounding residential development while subtly elevating the architectural discourse of the neighbourhood. The house demonstrates what he termed 'contextual modernism' - contemporary architecture that respects existing urban fabric rather than disrupting it through formal contrast.`,
+          optionImage: "/strategy_images/vanna_venturi_context.png"
           isCorrect: false,
           feedback: `Dr. Chen responds with disagreement: "Venturi never wrote about 'contextual modernism' - this isn't a concept from postmodern theory. The Vanna Venturi House actually stands out quite dramatically from its suburban neighbors rather than blending in."
 
