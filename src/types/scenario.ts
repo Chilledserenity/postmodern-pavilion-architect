@@ -1,4 +1,4 @@
-
+// src/types/scenario.ts
 export interface Character {
   id: string;
   name: string;
@@ -11,10 +11,11 @@ export interface Character {
 export interface StrategyOption {
   id: string;
   title: string;
-  description: string;
-  approach: string;
+  description: string; // This will be the text used for the truncated first line
+  approach: string;    // This is the full detail shown on expand
   isCorrect: boolean;
   feedback: string;
+  optionImage?: string; // << NEW FIELD for the image path (optional)
   lectureReference?: string;
   nextScene?: string | number;
 }
@@ -28,9 +29,6 @@ export interface Scene {
   options: StrategyOption[];
   correctFeedback: string;
   incorrectFeedback: string;
-  speaker?: string;
-  speakerText?: string;
-  backgroundImage?: string;
 }
 
 export interface ScenarioData {
