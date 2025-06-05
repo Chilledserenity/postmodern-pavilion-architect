@@ -78,7 +78,7 @@ The Cultural Heritage Representative, Dr. Awhina Patel, concludes the committee'
           title: "Iconic Representation Strategy",
           description: `Our strategy uses iconic forms that people recognize through visual similarity. The pavilion's profile echoes...
           approach: `Our strategy uses iconic forms that people recognize through visual similarity. The pavilion's profile echoes Auckland's volcanic cones, while the entrance references harbour sailing vessels. We're using weathering steel to match the industrial structures around Wynyard, creating visual continuity. This follows Charles Jencks' approach to architectural iconography - familiar elements recomposed in new ways that create both recognition and interest.`,
-          optionImage: "/strategy_images/neutral_preview.png"
+          optionImage: "public/strategy_images/neutral_preview.png"
           isCorrect: true, // "partially correct", Outcome: "The scenario continues..."
           feedback: `Dr. Chen nods thoughtfully. "Your reference to iconic representation shows you understand Pierce's semiotic categories, and the connection to Jencks' work is appropriate. The volcanic cone reference is particularly clever - most Aucklanders would recognize that profile even if they couldn't articulate why."
 
@@ -96,7 +96,7 @@ Scenario Outcome: This is a solid postmodern approach that demonstrates understa
           title: "Symbolic Encoding Strategy",
           description: `We're embedding symbolic content that reveals itself through interpretation. The structural grid combines...
           approach: `We're embedding symbolic content that reveals itself through interpretation. The structural grid combines proportional systems from both European and Pacific traditions, while the three main spaces represent past, present, and future. Materials work symbolically too - stone base for geological foundation, lighter structures above for human activity. This follows Roland Barthes' ideas about cultural codes operating beneath surface appearances.`,
-          optionImage: "/strategy_images/symbolic_preview.png"
+          optionImage: "public/strategy_images/symbolic_preview.png"
           isCorrect: false,
           feedback: `Dr. Awhina Patel responds with interest: "Your reference to symbolic communication shows sophisticated understanding of how meaning operates in architecture. The proportional system integration is particularly thoughtful - it suggests genuine engagement with cultural plurality rather than superficial decoration."
 
@@ -114,7 +114,7 @@ Scenario Outcome: Your symbolic approach demonstrates theoretical knowledge, but
           title: "Direct Communicative Strategy",
           description: `We believe in functional clarity and honest expression. The rectangular plan clearly indicates community...
           approach: `We believe in functional clarity and honest expression. The rectangular plan clearly indicates community meeting use, while large glazed openings signal transparency. Following Louis Sullivan's 'form follows function,' every element has a clear purpose. We're avoiding what Charles Jencks called 'semantic confusion' by ensuring intuitive organization and appropriate materials that speak their structural language.`,
-          optionImage: "/strategy_images/direct_preview.png"
+          optionImage: "public/strategy_images/direct_preview.png"
           isCorrect: false,
           feedback: `The committee exchanges glances, and Dr. Chen responds with barely concealed concern: "I'm afraid there are some significant misunderstandings in your approach. First, Charles Jencks never used the term 'semantic confusion' - in fact, he advocated for what he called 'multivalent' architecture that deliberately embraces multiple meanings rather than avoiding them."
 
@@ -132,7 +132,7 @@ Scenario Outcome: This response demonstrates fundamental misunderstanding of pos
           title: "Multivalent Communication Strategy",
           description: `Our approach creates what Charles Jencks calls 'multivalent' architecture - buildings that communicate...
           approach: `Our approach creates what Charles Jencks calls 'multivalent' architecture - buildings that communicate on multiple levels simultaneously. Families see inviting community spaces with playful forms and welcoming scales. Architects read the same elements as sophisticated geometric systems and spatial complexity. The building practices 'time-binding' by connecting to Wynyard's character without nostalgic copying.`,
-          optionImage: "/strategy_images/multivalent_preview.png"
+          optionImage: "public/strategy_images/multivalent_preview.png"
           isCorrect: true,
           feedback: `Dr. Chen smiles with genuine approval: "Now this demonstrates real understanding of postmodern communication theory. Your reference to multivalent architecture directly addresses Jencks' central insight that the best buildings speak to diverse audiences without talking down to any of them."
 
